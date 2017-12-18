@@ -3,8 +3,6 @@
 - git add to add to following file to the commit set
 - git commit -m "message of the commit"
 - git push pushes the commit on Github
-- git pull donwloads the changes 
-
-
-
-- prova
+- git pull donwloads the changes
+- git branch creates a new branch
+- git checkout .namebranch. to access the branch.
