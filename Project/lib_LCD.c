@@ -236,7 +236,7 @@ static void delay_ms(uint16_t ms)
 * Return         : None
 * Attention		 : None
 *******************************************************************************/
-void LCD_Initializtion(void)
+void LCD_Initialization(void)
 {
 	
 	LCD_Configuration();

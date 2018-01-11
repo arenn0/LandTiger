@@ -55,7 +55,7 @@
 #define White           0xFFFF      /* 255, 255, 255 */
 
 
-void LCD_Initializtion(void);
+void LCD_Initialization(void);
 void LCD_Clear(uint16_t Color);
 uint16_t LCD_GetPoint(uint16_t Xpos,uint16_t Ypos);
 void LCD_SetPoint(uint16_t Xpos,uint16_t Ypos,uint16_t point);
