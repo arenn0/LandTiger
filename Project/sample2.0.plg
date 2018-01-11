@@ -1,0 +1,168 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Project:</h2>
+D:\Politecnico\Computer architectures\Special Project\Project\sample2.0.uvproj
+Project File Date:  01/11/2018
+
+<h2>Output:</h2>
+Build target 'Target 1'
+assembling startup_LPC17xx.s...
+compiling lib_LCD.c...
+lib_LCD.c(2): error:  #5: cannot open source input file "GLCD.h": No such file or directory
+compiling Main.c...
+Main.c(24): error:  #5: cannot open source input file "GLCD.h": No such file or directory
+compiling AsciiLib.c...
+AsciiLib.h(26): error:  #13: expected a file name
+compiling HzLib.c...
+HzLib.h(27): error:  #13: expected a file name
+Target not created
+Build target 'Target 1'
+compiling lib_LCD.c...
+LCD.h(68): warning:  #1-D: last line of file ends without a newline
+HzLib.h(27): error:  #13: expected a file name
+compiling Main.c...
+LCD.h(68): warning:  #1-D: last line of file ends without a newline
+Main.c(72): warning:  #1-D: last line of file ends without a newline
+compiling AsciiLib.c...
+AsciiLib.h(26): error:  #13: expected a file name
+compiling HzLib.c...
+HzLib.h(27): error:  #13: expected a file name
+Target not created
+Build target 'Target 1'
+compiling lib_LCD.c...
+LCD.h(68): warning:  #1-D: last line of file ends without a newline
+AsciiLib.h(26): error:  #13: expected a file name
+compiling AsciiLib.c...
+AsciiLib.h(26): error:  #13: expected a file name
+compiling HzLib.c...
+HzLib.c(20346): warning:  #223-D: function "memcpy" declared implicitly
+Target not created
+Build target 'Target 1'
+compiling lib_LCD.c...
+LCD.h(68): warning:  #1-D: last line of file ends without a newline
+lib_LCD.c(244): warning:  #550-D: variable "DeviceCode" was set but never used
+lib_LCD.c(7): warning:  #550-D: variable "LCD_Code" was set but never used
+lib_LCD.c(326): warning:  #177-D: function "LCD_BGR2RGB" was declared but never referenced
+compiling AsciiLib.c...
+AsciiLib.c(430): warning:  #223-D: function "memcpy" declared implicitly
+AsciiLib.c(436): warning:  #1-D: last line of file ends without a newline
+linking...
+sample2.0.axf: error: L6047U: The size of this image (228736 bytes) exceeds the maximum allowed for this version of the linker
+Target not created
+Build target 'Target 1'
+assembling startup_LPC17xx.s...
+compiling lib_LCD.c...
+LCD.h(68): warning:  #1-D: last line of file ends without a newline
+lib_LCD.c(243): warning:  #550-D: variable "DeviceCode" was set but never used
+lib_LCD.c(564): warning:  #223-D: function "GetGBKCode" declared implicitly
+lib_LCD.c(6): warning:  #550-D: variable "LCD_Code" was set but never used
+lib_LCD.c(325): warning:  #177-D: function "LCD_BGR2RGB" was declared but never referenced
+compiling Main.c...
+LCD.h(68): warning:  #1-D: last line of file ends without a newline
+Main.c(72): warning:  #1-D: last line of file ends without a newline
+compiling AsciiLib.c...
+AsciiLib.c(430): warning:  #223-D: function "memcpy" declared implicitly
+AsciiLib.c(436): warning:  #1-D: last line of file ends without a newline
+linking...
+sample2.0.axf: Error: L6218E: Undefined symbol GetGBKCode (referred from lib_lcd.o).
+Target not created
+Build target 'Target 1'
+assembling startup_LPC17xx.s...
+compiling lib_LCD.c...
+LCD.h(68): warning:  #1-D: last line of file ends without a newline
+lib_LCD.c(243): warning:  #550-D: variable "DeviceCode" was set but never used
+lib_LCD.c(564): warning:  #223-D: function "GetGBKCode" declared implicitly
+lib_LCD.c(6): warning:  #550-D: variable "LCD_Code" was set but never used
+lib_LCD.c(325): warning:  #177-D: function "LCD_BGR2RGB" was declared but never referenced
+compiling Main.c...
+LCD.h(68): warning:  #1-D: last line of file ends without a newline
+Main.c(72): warning:  #1-D: last line of file ends without a newline
+compiling AsciiLib.c...
+AsciiLib.c(430): warning:  #223-D: function "memcpy" declared implicitly
+linking...
+sample2.0.axf: Error: L6218E: Undefined symbol GetGBKCode (referred from lib_lcd.o).
+Target not created
+Build target 'Target 1'
+linking...
+sample2.0.axf: Error: L6218E: Undefined symbol GetGBKCode (referred from lib_lcd.o).
+Target not created
+Build target 'Target 1'
+linking...
+sample2.0.axf: Error: L6218E: Undefined symbol GetGBKCode (referred from lib_lcd.o).
+Target not created
+Build target 'Target 1'
+compiling lib_LCD.c...
+LCD.h(66): warning:  #1-D: last line of file ends without a newline
+lib_LCD.c(243): warning:  #550-D: variable "DeviceCode" was set but never used
+lib_LCD.c(6): warning:  #550-D: variable "LCD_Code" was set but never used
+lib_LCD.c(325): warning:  #177-D: function "LCD_BGR2RGB" was declared but never referenced
+compiling Main.c...
+LCD.h(66): warning:  #1-D: last line of file ends without a newline
+Main.c(72): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=10158 RO-data=1758 RW-data=4 ZI-data=612  
+"sample2.0.axf" - 0 Error(s), 6 Warning(s).
+Build target 'Target 1'
+compiling lib_LCD.c...
+lib_LCD.c(243): warning:  #550-D: variable "DeviceCode" was set but never used
+lib_LCD.c(6): warning:  #550-D: variable "LCD_Code" was set but never used
+lib_LCD.c(325): warning:  #177-D: function "LCD_BGR2RGB" was declared but never referenced
+compiling Main.c...
+Main.c(73): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=10158 RO-data=1758 RW-data=4 ZI-data=612  
+"sample2.0.axf" - 0 Error(s), 4 Warning(s).
+Build target 'Target 1'
+compiling lib_LCD.c...
+lib_LCD.c(243): warning:  #550-D: variable "DeviceCode" was set but never used
+lib_LCD.c(6): warning:  #550-D: variable "LCD_Code" was set but never used
+linking...
+Program Size: Code=10130 RO-data=1758 RW-data=4 ZI-data=612  
+"sample2.0.axf" - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+compiling lib_LCD.c...
+lib_LCD.c(246): error:  #20: identifier "DeviceCode" is undefined
+lib_LCD.c(6): warning:  #550-D: variable "LCD_Code" was set but never used
+Target not created
+Build target 'Target 1'
+compiling lib_LCD.c...
+lib_LCD.c(6): warning:  #550-D: variable "LCD_Code" was set but never used
+lib_LCD.c(175): warning:  #177-D: function "LCD_ReadReg" was declared but never referenced
+linking...
+Program Size: Code=9814 RO-data=1758 RW-data=4 ZI-data=612  
+"sample2.0.axf" - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+compiling lib_LCD.c...
+lib_LCD.c(245): error:  #20: identifier "LCD_Code" is undefined
+lib_LCD.c(173): warning:  #177-D: function "LCD_ReadReg" was declared but never referenced
+Target not created
+Build target 'Target 1'
+compiling lib_LCD.c...
+lib_LCD.c(173): warning:  #177-D: function "LCD_ReadReg" was declared but never referenced
+linking...
+Program Size: Code=9764 RO-data=1740 RW-data=0 ZI-data=608  
+"sample2.0.axf" - 0 Error(s), 1 Warning(s).
+Build target 'Target 1'
+linking...
+Program Size: Code=9764 RO-data=1740 RW-data=0 ZI-data=608  
+"sample2.0.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+linking...
+Program Size: Code=9764 RO-data=1740 RW-data=0 ZI-data=608  
+"sample2.0.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+linking...
+Program Size: Code=9764 RO-data=1740 RW-data=0 ZI-data=608  
+"sample2.0.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+linking...
+Program Size: Code=9764 RO-data=1740 RW-data=0 ZI-data=608  
+"sample2.0.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling lib_LCD.c...
+lib_LCD.c(173): warning:  #177-D: function "LCD_ReadReg" was declared but never referenced
+linking...
+Program Size: Code=9764 RO-data=1740 RW-data=0 ZI-data=608  
+"sample2.0.axf" - 0 Error(s), 1 Warning(s).

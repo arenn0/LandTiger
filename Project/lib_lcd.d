@@ -1,0 +1,9 @@
+lib_lcd.o: lib_LCD.c
+lib_lcd.o: LCD.h
+lib_lcd.o: LPC17xx.h
+lib_lcd.o: C:\Keil\ARM\RV31\INC\core_cm3.h
+lib_lcd.o: C:\Keil\ARM\RV31\INC\stdint.h
+lib_lcd.o: C:\Keil\ARM\RV31\INC\core_cmInstr.h
+lib_lcd.o: C:\Keil\ARM\RV31\INC\core_cmFunc.h
+lib_lcd.o: C:\Keil\ARM\INC\NXP\LPC17xx\system_LPC17xx.h
+lib_lcd.o: AsciiLib.h
