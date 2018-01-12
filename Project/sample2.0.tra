@@ -12,7 +12,7 @@
 ### ADS-LD Output File: 'sample2.0.axf'
 ### ADS-LD Command File: 'sample2.0.lnp'
 ### Checking for dirty Components...
-### Creating CmdFile 'sample2.0.lnp', Handle=0x00000D3C
+### Creating CmdFile 'sample2.0.lnp', Handle=0x000007F0
 ### Writing '.lnp' file
 ### ADS-LD Command file 'sample2.0.lnp' is ready.
 ### ADS-LD: About to start ADS-LD Thread.
