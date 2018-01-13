@@ -385,56 +385,6 @@
       <Groups>
         <Group>
           <GroupName>Source Group 1</GroupName>
-          <Files>
-            <File>
-              <FileName>startup_LPC17xx.s</FileName>
-              <FileType>2</FileType>
-              <FilePath>.\startup_LPC17xx.s</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
-          <GroupName>LCD_Library</GroupName>
-          <Files>
-            <File>
-              <FileName>lib_LCD.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\lib_LCD.c</FilePath>
-            </File>
-            <File>
-              <FileName>LCD.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\LCD.h</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
-          <GroupName>Touchscreen_Library</GroupName>
-        </Group>
-        <Group>
-          <GroupName>MISC_Library</GroupName>
-          <Files>
-            <File>
-              <FileName>lpc17xx.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\lpc17xx.h</FilePath>
-            </File>
-            <File>
-              <FileName>AsciiLib.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\AsciiLib.h</FilePath>
-            </File>
-            <File>
-              <FileName>Main.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\Main.c</FilePath>
-            </File>
-            <File>
-              <FileName>AsciiLib.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\AsciiLib.c</FilePath>
-            </File>
-          </Files>
         </Group>
       </Groups>
     </Target>
