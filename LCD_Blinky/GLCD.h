@@ -40,6 +40,7 @@
 #define White           0xFFFF      /* 255, 255, 255 */
 
 
+
 extern void GLCD_Init           (void);
 extern void GLCD_WindowMax      (void);
 extern void GLCD_PutPixel       (unsigned int x, unsigned int y);
@@ -54,6 +55,7 @@ extern void GLCD_Bargraph       (unsigned int x, unsigned int y, unsigned int w,
 extern void GLCD_Bitmap         (unsigned int x, unsigned int y, unsigned int w, unsigned int h, unsigned char *bitmap);
 extern void GLCD_Bmp            (unsigned int x, unsigned int y, unsigned int w, unsigned int h, unsigned char *bmp);
 extern void GLCD_DisplayLine    (unsigned int x0, unsigned int y0, unsigned int x1, unsigned int y1, unsigned int color, unsigned int thickness);
+extern void GLCD_DisplayDiagonalLine		(unsigned int x, unsigned int y, unsigned int height, unsigned int color, unsigned int thickness);
+extern void GLCD_DisplayAntidiagonalLine(unsigned int x, unsigned int y, unsigned int height, unsigned int color, unsigned int thickness);
 extern void GLCD_DisplayVerticalString (unsigned int x, unsigned int y, unsigned char *s); 
-extern void GLCD_DisplayTTTLattice(unsigned int x0, unsigned int y0, unsigned int width, unsigned int height, unsigned int color, unsigned int thickness);
 #endif /* _GLCD_H */

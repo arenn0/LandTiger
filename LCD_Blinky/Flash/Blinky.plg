@@ -3,64 +3,22 @@
 <pre>
 <h1>µVision Build Log</h1>
 <h2>Project:</h2>
-C:\Users\aless\Desktop\LCD_Blinky\Blinky.uvproj
+C:\Users\aless\Documents\GitHub\LandTiger\LCD_Blinky\Blinky.uvproj
 Project File Date:  01/13/2018
 
 <h2>Output:</h2>
 Build target 'LPC1768 Flash'
-assembling startup_LPC17xx.s...
-compiling system_LPC17xx.c...
-compiling core_cm3.c...
 compiling Blinky.c...
-compiling IRQ.c...
+compiling GLCD_LPC1700.c...
+GLCD_LPC1700.c(942): error:  #20: identifier "y0" is undefined
+GLCD_LPC1700.c(943): error:  #20: identifier "x0" is undefined
+Target not created
+Build target 'LPC1768 Flash'
 compiling GLCD_LPC1700.c...
 linking...
-Program Size: Code=4534 RO-data=5614 RW-data=20 ZI-data=516  
+Program Size: Code=4666 RO-data=5614 RW-data=20 ZI-data=516  
 FromELF: creating hex file...
 ".\Flash\Blinky.axf" - 0 Error(s), 0 Warning(s).
-Load "C:\\Users\\aless\\Desktop\\LCD_Blinky\\Flash\\Blinky.AXF" 
-Set JLink Project File to "C:\Users\aless\Desktop\LCD_Blinky\JLinkSettings.ini"
- 
-JLink info:
-------------
-DLL: V4.20c, compiled Sep 24 2010 19:46:42
-Firmware: J-Link ARM-OB STM32 compiled Aug 22 2012 19:52:04
-Hardware: V7.00
-Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFull 
- 
-* JLink Info: TotalIRLen = 4, IRPrint = 0x01
-* JLink Info: Found Cortex-M3 r2p0, Little endian.
-* JLink Info: TPIU fitted.
-* JLink Info: ETM fitted.
-* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
-ROMTableAddr = 0xE00FF003
- 
-Target info:
-------------
-Device: LPC1768
-VTarget = 3.300V
-State of Pins: 
-TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
-* JLink Info: TotalIRLen = 4, IRPrint = 0x01
-* JLink Info: Found Cortex-M3 r2p0, Little endian.
-* JLink Info: TPIU fitted.
-* JLink Info: ETM fitted.
-* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
-Hardware-Breakpoints: 6
-Software-Breakpoints: 2048
-Watchpoints:          4
-JTAG speed: 2666 kHz
- 
-Erase Done.
-Programming Done.
-Verify OK.
-* JLink Info: TotalIRLen = 4, IRPrint = 0x01
-* JLink Info: Found Cortex-M3 r2p0, Little endian.
-* JLink Info: TPIU fitted.
-* JLink Info: ETM fitted.
-* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
-**JLink Warning: CPU did not halt after bootloader.
-Application running ...
 Build target 'LPC1768 Flash'
 assembling startup_LPC17xx.s...
 compiling system_LPC17xx.c...
@@ -69,52 +27,25 @@ compiling Blinky.c...
 compiling IRQ.c...
 compiling GLCD_LPC1700.c...
 linking...
-Program Size: Code=4534 RO-data=5614 RW-data=20 ZI-data=516  
+Program Size: Code=4666 RO-data=5614 RW-data=20 ZI-data=516  
 FromELF: creating hex file...
 ".\Flash\Blinky.axf" - 0 Error(s), 0 Warning(s).
-Load "C:\\Users\\aless\\Desktop\\LCD_Blinky\\Flash\\Blinky.AXF" 
-Set JLink Project File to "C:\Users\aless\Desktop\LCD_Blinky\JLinkSettings.ini"
- 
-JLink info:
-------------
-DLL: V4.20c, compiled Sep 24 2010 19:46:42
-Firmware: J-Link ARM-OB STM32 compiled Aug 22 2012 19:52:04
-Hardware: V7.00
-Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFull 
- 
-* JLink Info: TotalIRLen = 4, IRPrint = 0x01
-* JLink Info: Found Cortex-M3 r2p0, Little endian.
-* JLink Info: TPIU fitted.
-* JLink Info: ETM fitted.
-* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
-ROMTableAddr = 0xE00FF003
- 
-Target info:
-------------
-Device: LPC1768
-VTarget = 3.300V
-State of Pins: 
-TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
-* JLink Info: TotalIRLen = 4, IRPrint = 0x01
-* JLink Info: Found Cortex-M3 r2p0, Little endian.
-* JLink Info: TPIU fitted.
-* JLink Info: ETM fitted.
-* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
-Hardware-Breakpoints: 6
-Software-Breakpoints: 2048
-Watchpoints:          4
-JTAG speed: 2666 kHz
- 
-Erase Done.
-Programming Done.
-Verify OK.
-* JLink Info: TotalIRLen = 4, IRPrint = 0x01
-* JLink Info: Found Cortex-M3 r2p0, Little endian.
-* JLink Info: TPIU fitted.
-* JLink Info: ETM fitted.
-* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
-**JLink Warning: CPU did not halt after bootloader.
-Application running ...
+Build target 'LPC1768 Flash'
+assembling startup_LPC17xx.s...
+compiling system_LPC17xx.c...
+compiling core_cm3.c...
+compiling Blinky.c...
+Blinky.c(36): error:  #11-D: unrecognized preprocessing directive
+Blinky.c(48): error:  #11-D: unrecognized preprocessing directive
+compiling IRQ.c...
+compiling GLCD_LPC1700.c...
+Target not created
+Build target 'LPC1768 Flash'
+compiling Blinky.c...
+linking...
+Program Size: Code=4712 RO-data=5612 RW-data=20 ZI-data=516  
+FromELF: creating hex file...
+".\Flash\Blinky.axf" - 0 Error(s), 0 Warning(s).
 Build target 'LPC1768 Flash'
 assembling startup_LPC17xx.s...
 compiling system_LPC17xx.c...
@@ -123,227 +54,11 @@ compiling Blinky.c...
 compiling IRQ.c...
 compiling GLCD_LPC1700.c...
 linking...
-Program Size: Code=4534 RO-data=5614 RW-data=20 ZI-data=516  
+Program Size: Code=4712 RO-data=5612 RW-data=20 ZI-data=516  
 FromELF: creating hex file...
 ".\Flash\Blinky.axf" - 0 Error(s), 0 Warning(s).
-Load "C:\\Users\\aless\\Desktop\\LCD_Blinky\\Flash\\Blinky.AXF" 
-Set JLink Project File to "C:\Users\aless\Desktop\LCD_Blinky\JLinkSettings.ini"
- 
-JLink info:
-------------
-DLL: V4.20c, compiled Sep 24 2010 19:46:42
-Firmware: J-Link ARM-OB STM32 compiled Aug 22 2012 19:52:04
-Hardware: V7.00
-Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFull 
- 
-* JLink Info: TotalIRLen = 4, IRPrint = 0x01
-* JLink Info: Found Cortex-M3 r2p0, Little endian.
-* JLink Info: TPIU fitted.
-* JLink Info: ETM fitted.
-* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
-ROMTableAddr = 0xE00FF003
- 
-Target info:
-------------
-Device: LPC1768
-VTarget = 3.300V
-State of Pins: 
-TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
-* JLink Info: TotalIRLen = 4, IRPrint = 0x01
-* JLink Info: Found Cortex-M3 r2p0, Little endian.
-* JLink Info: TPIU fitted.
-* JLink Info: ETM fitted.
-* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
-Hardware-Breakpoints: 6
-Software-Breakpoints: 2048
-Watchpoints:          4
-JTAG speed: 2666 kHz
- 
-Erase Done.
-Programming Done.
-Verify OK.
-* JLink Info: TotalIRLen = 4, IRPrint = 0x01
-* JLink Info: Found Cortex-M3 r2p0, Little endian.
-* JLink Info: TPIU fitted.
-* JLink Info: ETM fitted.
-* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
-**JLink Warning: CPU did not halt after bootloader.
-Application running ...
-Build target 'LPC1768 Flash'
-assembling startup_LPC17xx.s...
-compiling system_LPC17xx.c...
-compiling core_cm3.c...
-compiling Blinky.c...
-compiling IRQ.c...
-compiling GLCD_LPC1700.c...
-linking...
-Program Size: Code=4546 RO-data=5614 RW-data=20 ZI-data=516  
-FromELF: creating hex file...
-".\Flash\Blinky.axf" - 0 Error(s), 0 Warning(s).
-Load "C:\\Users\\aless\\Desktop\\LCD_Blinky\\Flash\\Blinky.AXF" 
-Set JLink Project File to "C:\Users\aless\Desktop\LCD_Blinky\JLinkSettings.ini"
- 
-JLink info:
-------------
-DLL: V4.20c, compiled Sep 24 2010 19:46:42
-Firmware: J-Link ARM-OB STM32 compiled Aug 22 2012 19:52:04
-Hardware: V7.00
-Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFull 
- 
-* JLink Info: TotalIRLen = 4, IRPrint = 0x01
-* JLink Info: Found Cortex-M3 r2p0, Little endian.
-* JLink Info: TPIU fitted.
-* JLink Info: ETM fitted.
-* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
-ROMTableAddr = 0xE00FF003
- 
-Target info:
-------------
-Device: LPC1768
-VTarget = 3.300V
-State of Pins: 
-TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
-* JLink Info: TotalIRLen = 4, IRPrint = 0x01
-* JLink Info: Found Cortex-M3 r2p0, Little endian.
-* JLink Info: TPIU fitted.
-* JLink Info: ETM fitted.
-* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
-Hardware-Breakpoints: 6
-Software-Breakpoints: 2048
-Watchpoints:          4
-JTAG speed: 2666 kHz
- 
-Erase Done.
-Programming Done.
-Verify OK.
-* JLink Info: TotalIRLen = 4, IRPrint = 0x01
-* JLink Info: Found Cortex-M3 r2p0, Little endian.
-* JLink Info: TPIU fitted.
-* JLink Info: ETM fitted.
-* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
-**JLink Warning: CPU did not halt after bootloader.
-Application running ...
-Build target 'LPC1768 Flash'
-assembling startup_LPC17xx.s...
-compiling system_LPC17xx.c...
-compiling core_cm3.c...
-compiling Blinky.c...
-compiling IRQ.c...
-compiling GLCD_LPC1700.c...
-linking...
-Program Size: Code=4538 RO-data=5614 RW-data=20 ZI-data=516  
-FromELF: creating hex file...
-".\Flash\Blinky.axf" - 0 Error(s), 0 Warning(s).
-Load "C:\\Users\\aless\\Desktop\\LCD_Blinky\\Flash\\Blinky.AXF" 
-Set JLink Project File to "C:\Users\aless\Desktop\LCD_Blinky\JLinkSettings.ini"
- 
-JLink info:
-------------
-DLL: V4.20c, compiled Sep 24 2010 19:46:42
-Firmware: J-Link ARM-OB STM32 compiled Aug 22 2012 19:52:04
-Hardware: V7.00
-Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFull 
- 
-* JLink Info: TotalIRLen = 4, IRPrint = 0x01
-* JLink Info: Found Cortex-M3 r2p0, Little endian.
-* JLink Info: TPIU fitted.
-* JLink Info: ETM fitted.
-* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
-ROMTableAddr = 0xE00FF003
- 
-Target info:
-------------
-Device: LPC1768
-VTarget = 3.300V
-State of Pins: 
-TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
-* JLink Info: TotalIRLen = 4, IRPrint = 0x01
-* JLink Info: Found Cortex-M3 r2p0, Little endian.
-* JLink Info: TPIU fitted.
-* JLink Info: ETM fitted.
-* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
-Hardware-Breakpoints: 6
-Software-Breakpoints: 2048
-Watchpoints:          4
-JTAG speed: 2666 kHz
- 
-Erase Done.
-Programming Done.
-Verify OK.
-* JLink Info: TotalIRLen = 4, IRPrint = 0x01
-* JLink Info: Found Cortex-M3 r2p0, Little endian.
-* JLink Info: TPIU fitted.
-* JLink Info: ETM fitted.
-* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
-**JLink Warning: CPU did not halt after bootloader.
-Application running ...
-Build target 'LPC1768 Flash'
-assembling startup_LPC17xx.s...
-compiling system_LPC17xx.c...
-compiling core_cm3.c...
-compiling Blinky.c...
-compiling IRQ.c...
-compiling GLCD_LPC1700.c...
-linking...
-Program Size: Code=4538 RO-data=5614 RW-data=20 ZI-data=516  
-FromELF: creating hex file...
-".\Flash\Blinky.axf" - 0 Error(s), 0 Warning(s).
-Load "C:\\Users\\aless\\Desktop\\LCD_Blinky\\Flash\\Blinky.AXF" 
-Set JLink Project File to "C:\Users\aless\Desktop\LCD_Blinky\JLinkSettings.ini"
- 
-JLink info:
-------------
-DLL: V4.20c, compiled Sep 24 2010 19:46:42
-Firmware: J-Link ARM-OB STM32 compiled Aug 22 2012 19:52:04
-Hardware: V7.00
-Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFull 
- 
-* JLink Info: TotalIRLen = 4, IRPrint = 0x01
-* JLink Info: Found Cortex-M3 r2p0, Little endian.
-* JLink Info: TPIU fitted.
-* JLink Info: ETM fitted.
-* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
-ROMTableAddr = 0xE00FF003
- 
-Target info:
-------------
-Device: LPC1768
-VTarget = 3.300V
-State of Pins: 
-TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
-* JLink Info: TotalIRLen = 4, IRPrint = 0x01
-* JLink Info: Found Cortex-M3 r2p0, Little endian.
-* JLink Info: TPIU fitted.
-* JLink Info: ETM fitted.
-* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
-Hardware-Breakpoints: 6
-Software-Breakpoints: 2048
-Watchpoints:          4
-JTAG speed: 2666 kHz
- 
-Erase Done.
-Programming Done.
-Verify OK.
-* JLink Info: TotalIRLen = 4, IRPrint = 0x01
-* JLink Info: Found Cortex-M3 r2p0, Little endian.
-* JLink Info: TPIU fitted.
-* JLink Info: ETM fitted.
-* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
-**JLink Warning: CPU did not halt after bootloader.
-Application running ...
-Build target 'LPC1768 Flash'
-assembling startup_LPC17xx.s...
-compiling system_LPC17xx.c...
-compiling core_cm3.c...
-compiling Blinky.c...
-compiling IRQ.c...
-compiling GLCD_LPC1700.c...
-linking...
-Program Size: Code=4550 RO-data=5614 RW-data=20 ZI-data=516  
-FromELF: creating hex file...
-".\Flash\Blinky.axf" - 0 Error(s), 0 Warning(s).
-Load "C:\\Users\\aless\\Desktop\\LCD_Blinky\\Flash\\Blinky.AXF" 
-Set JLink Project File to "C:\Users\aless\Desktop\LCD_Blinky\JLinkSettings.ini"
+Load "C:\\Users\\aless\\Documents\\GitHub\\LandTiger\\LCD_Blinky\\Flash\\Blinky.AXF" 
+Set JLink Project File to "C:\Users\aless\Documents\GitHub\LandTiger\LCD_Blinky\JLinkSettings.ini"
  
 JLink info:
 ------------
@@ -387,13 +102,12 @@ Verify OK.
 Application running ...
 Build target 'LPC1768 Flash'
 compiling Blinky.c...
-compiling GLCD_LPC1700.c...
 linking...
-Program Size: Code=4534 RO-data=5614 RW-data=20 ZI-data=516  
+Program Size: Code=4712 RO-data=5612 RW-data=20 ZI-data=516  
 FromELF: creating hex file...
 ".\Flash\Blinky.axf" - 0 Error(s), 0 Warning(s).
-Load "C:\\Users\\aless\\Desktop\\LCD_Blinky\\Flash\\Blinky.AXF" 
-Set JLink Project File to "C:\Users\aless\Desktop\LCD_Blinky\JLinkSettings.ini"
+Load "C:\\Users\\aless\\Documents\\GitHub\\LandTiger\\LCD_Blinky\\Flash\\Blinky.AXF" 
+Set JLink Project File to "C:\Users\aless\Documents\GitHub\LandTiger\LCD_Blinky\JLinkSettings.ini"
  
 JLink info:
 ------------
@@ -436,18 +150,13 @@ Verify OK.
 **JLink Warning: CPU did not halt after bootloader.
 Application running ...
 Build target 'LPC1768 Flash'
-assembling startup_LPC17xx.s...
-compiling system_LPC17xx.c...
-compiling core_cm3.c...
 compiling Blinky.c...
-compiling IRQ.c...
-compiling GLCD_LPC1700.c...
 linking...
-Program Size: Code=4534 RO-data=5614 RW-data=20 ZI-data=516  
+Program Size: Code=4688 RO-data=5612 RW-data=20 ZI-data=516  
 FromELF: creating hex file...
 ".\Flash\Blinky.axf" - 0 Error(s), 0 Warning(s).
-Load "C:\\Users\\aless\\Desktop\\LCD_Blinky\\Flash\\Blinky.AXF" 
-Set JLink Project File to "C:\Users\aless\Desktop\LCD_Blinky\JLinkSettings.ini"
+Load "C:\\Users\\aless\\Documents\\GitHub\\LandTiger\\LCD_Blinky\\Flash\\Blinky.AXF" 
+Set JLink Project File to "C:\Users\aless\Documents\GitHub\LandTiger\LCD_Blinky\JLinkSettings.ini"
  
 JLink info:
 ------------
@@ -490,18 +199,258 @@ Verify OK.
 **JLink Warning: CPU did not halt after bootloader.
 Application running ...
 Build target 'LPC1768 Flash'
-assembling startup_LPC17xx.s...
-compiling system_LPC17xx.c...
-compiling core_cm3.c...
-compiling Blinky.c...
-compiling IRQ.c...
 compiling GLCD_LPC1700.c...
 linking...
-Program Size: Code=4538 RO-data=5614 RW-data=20 ZI-data=516  
+Program Size: Code=4696 RO-data=5612 RW-data=20 ZI-data=516  
 FromELF: creating hex file...
 ".\Flash\Blinky.axf" - 0 Error(s), 0 Warning(s).
-Load "C:\\Users\\aless\\Desktop\\LCD_Blinky\\Flash\\Blinky.AXF" 
-Set JLink Project File to "C:\Users\aless\Desktop\LCD_Blinky\JLinkSettings.ini"
+Load "C:\\Users\\aless\\Documents\\GitHub\\LandTiger\\LCD_Blinky\\Flash\\Blinky.AXF" 
+Set JLink Project File to "C:\Users\aless\Documents\GitHub\LandTiger\LCD_Blinky\JLinkSettings.ini"
+ 
+JLink info:
+------------
+DLL: V4.20c, compiled Sep 24 2010 19:46:42
+Firmware: J-Link ARM-OB STM32 compiled Aug 22 2012 19:52:04
+Hardware: V7.00
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFull 
+ 
+* JLink Info: TotalIRLen = 4, IRPrint = 0x01
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: LPC1768
+VTarget = 3.300V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+* JLink Info: TotalIRLen = 4, IRPrint = 0x01
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Hardware-Breakpoints: 6
+Software-Breakpoints: 2048
+Watchpoints:          4
+JTAG speed: 2666 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+* JLink Info: TotalIRLen = 4, IRPrint = 0x01
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+**JLink Warning: CPU did not halt after bootloader.
+Application running ...
+Build target 'LPC1768 Flash'
+compiling Blinky.c...
+linking...
+Program Size: Code=4696 RO-data=5612 RW-data=20 ZI-data=516  
+FromELF: creating hex file...
+".\Flash\Blinky.axf" - 0 Error(s), 0 Warning(s).
+Load "C:\\Users\\aless\\Documents\\GitHub\\LandTiger\\LCD_Blinky\\Flash\\Blinky.AXF" 
+Set JLink Project File to "C:\Users\aless\Documents\GitHub\LandTiger\LCD_Blinky\JLinkSettings.ini"
+ 
+JLink info:
+------------
+DLL: V4.20c, compiled Sep 24 2010 19:46:42
+Firmware: J-Link ARM-OB STM32 compiled Aug 22 2012 19:52:04
+Hardware: V7.00
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFull 
+ 
+* JLink Info: TotalIRLen = 4, IRPrint = 0x01
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: LPC1768
+VTarget = 3.300V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+* JLink Info: TotalIRLen = 4, IRPrint = 0x01
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Hardware-Breakpoints: 6
+Software-Breakpoints: 2048
+Watchpoints:          4
+JTAG speed: 2666 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+* JLink Info: TotalIRLen = 4, IRPrint = 0x01
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+**JLink Warning: CPU did not halt after bootloader.
+Application running ...
+Build target 'LPC1768 Flash'
+compiling Blinky.c...
+linking...
+Program Size: Code=4696 RO-data=5612 RW-data=20 ZI-data=516  
+FromELF: creating hex file...
+".\Flash\Blinky.axf" - 0 Error(s), 0 Warning(s).
+Load "C:\\Users\\aless\\Documents\\GitHub\\LandTiger\\LCD_Blinky\\Flash\\Blinky.AXF" 
+Set JLink Project File to "C:\Users\aless\Documents\GitHub\LandTiger\LCD_Blinky\JLinkSettings.ini"
+ 
+JLink info:
+------------
+DLL: V4.20c, compiled Sep 24 2010 19:46:42
+Firmware: J-Link ARM-OB STM32 compiled Aug 22 2012 19:52:04
+Hardware: V7.00
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFull 
+ 
+* JLink Info: TotalIRLen = 4, IRPrint = 0x01
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: LPC1768
+VTarget = 3.300V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+* JLink Info: TotalIRLen = 4, IRPrint = 0x01
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Hardware-Breakpoints: 6
+Software-Breakpoints: 2048
+Watchpoints:          4
+JTAG speed: 2666 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+* JLink Info: TotalIRLen = 4, IRPrint = 0x01
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+**JLink Warning: CPU did not halt after bootloader.
+Application running ...
+Build target 'LPC1768 Flash'
+compiling Blinky.c...
+linking...
+Program Size: Code=4696 RO-data=5612 RW-data=20 ZI-data=516  
+FromELF: creating hex file...
+".\Flash\Blinky.axf" - 0 Error(s), 0 Warning(s).
+Load "C:\\Users\\aless\\Documents\\GitHub\\LandTiger\\LCD_Blinky\\Flash\\Blinky.AXF" 
+Set JLink Project File to "C:\Users\aless\Documents\GitHub\LandTiger\LCD_Blinky\JLinkSettings.ini"
+ 
+JLink info:
+------------
+DLL: V4.20c, compiled Sep 24 2010 19:46:42
+Firmware: J-Link ARM-OB STM32 compiled Aug 22 2012 19:52:04
+Hardware: V7.00
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFull 
+ 
+* JLink Info: TotalIRLen = 4, IRPrint = 0x01
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: LPC1768
+VTarget = 3.300V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+* JLink Info: TotalIRLen = 4, IRPrint = 0x01
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Hardware-Breakpoints: 6
+Software-Breakpoints: 2048
+Watchpoints:          4
+JTAG speed: 2666 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+* JLink Info: TotalIRLen = 4, IRPrint = 0x01
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+**JLink Warning: CPU did not halt after bootloader.
+Application running ...
+Build target 'LPC1768 Flash'
+compiling Blinky.c...
+linking...
+Program Size: Code=4696 RO-data=5612 RW-data=20 ZI-data=516  
+FromELF: creating hex file...
+".\Flash\Blinky.axf" - 0 Error(s), 0 Warning(s).
+Load "C:\\Users\\aless\\Documents\\GitHub\\LandTiger\\LCD_Blinky\\Flash\\Blinky.AXF" 
+Set JLink Project File to "C:\Users\aless\Documents\GitHub\LandTiger\LCD_Blinky\JLinkSettings.ini"
+ 
+JLink info:
+------------
+DLL: V4.20c, compiled Sep 24 2010 19:46:42
+Firmware: J-Link ARM-OB STM32 compiled Aug 22 2012 19:52:04
+Hardware: V7.00
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFull 
+ 
+* JLink Info: TotalIRLen = 4, IRPrint = 0x01
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: LPC1768
+VTarget = 3.300V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+* JLink Info: TotalIRLen = 4, IRPrint = 0x01
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Hardware-Breakpoints: 6
+Software-Breakpoints: 2048
+Watchpoints:          4
+JTAG speed: 2666 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+* JLink Info: TotalIRLen = 4, IRPrint = 0x01
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+**JLink Warning: CPU did not halt after bootloader.
+Application running ...
+Build target 'LPC1768 Flash'
+compiling Blinky.c...
+linking...
+Program Size: Code=4696 RO-data=5612 RW-data=20 ZI-data=516  
+FromELF: creating hex file...
+".\Flash\Blinky.axf" - 0 Error(s), 0 Warning(s).
+Load "C:\\Users\\aless\\Documents\\GitHub\\LandTiger\\LCD_Blinky\\Flash\\Blinky.AXF" 
+Set JLink Project File to "C:\Users\aless\Documents\GitHub\LandTiger\LCD_Blinky\JLinkSettings.ini"
  
 JLink info:
 ------------
@@ -551,11 +500,11 @@ compiling Blinky.c...
 compiling IRQ.c...
 compiling GLCD_LPC1700.c...
 linking...
-Program Size: Code=4538 RO-data=5614 RW-data=20 ZI-data=516  
+Program Size: Code=4760 RO-data=5612 RW-data=20 ZI-data=516  
 FromELF: creating hex file...
 ".\Flash\Blinky.axf" - 0 Error(s), 0 Warning(s).
-Load "C:\\Users\\aless\\Desktop\\LCD_Blinky\\Flash\\Blinky.AXF" 
-Set JLink Project File to "C:\Users\aless\Desktop\LCD_Blinky\JLinkSettings.ini"
+Load "C:\\Users\\aless\\Documents\\GitHub\\LandTiger\\LCD_Blinky\\Flash\\Blinky.AXF" 
+Set JLink Project File to "C:\Users\aless\Documents\GitHub\LandTiger\LCD_Blinky\JLinkSettings.ini"
  
 JLink info:
 ------------
@@ -605,11 +554,479 @@ compiling Blinky.c...
 compiling IRQ.c...
 compiling GLCD_LPC1700.c...
 linking...
-Program Size: Code=4538 RO-data=5614 RW-data=20 ZI-data=516  
+Program Size: Code=4776 RO-data=5612 RW-data=20 ZI-data=516  
 FromELF: creating hex file...
 ".\Flash\Blinky.axf" - 0 Error(s), 0 Warning(s).
-Load "C:\\Users\\aless\\Desktop\\LCD_Blinky\\Flash\\Blinky.AXF" 
-Set JLink Project File to "C:\Users\aless\Desktop\LCD_Blinky\JLinkSettings.ini"
+Load "C:\\Users\\aless\\Documents\\GitHub\\LandTiger\\LCD_Blinky\\Flash\\Blinky.AXF" 
+Set JLink Project File to "C:\Users\aless\Documents\GitHub\LandTiger\LCD_Blinky\JLinkSettings.ini"
+ 
+JLink info:
+------------
+DLL: V4.20c, compiled Sep 24 2010 19:46:42
+Firmware: J-Link ARM-OB STM32 compiled Aug 22 2012 19:52:04
+Hardware: V7.00
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFull 
+ 
+* JLink Info: TotalIRLen = 4, IRPrint = 0x01
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: LPC1768
+VTarget = 3.300V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+* JLink Info: TotalIRLen = 4, IRPrint = 0x01
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Hardware-Breakpoints: 6
+Software-Breakpoints: 2048
+Watchpoints:          4
+JTAG speed: 2666 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+* JLink Info: TotalIRLen = 4, IRPrint = 0x01
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+**JLink Warning: CPU did not halt after bootloader.
+Application running ...
+Build target 'LPC1768 Flash'
+compiling Blinky.c...
+linking...
+Program Size: Code=4776 RO-data=5612 RW-data=20 ZI-data=516  
+FromELF: creating hex file...
+".\Flash\Blinky.axf" - 0 Error(s), 0 Warning(s).
+Load "C:\\Users\\aless\\Documents\\GitHub\\LandTiger\\LCD_Blinky\\Flash\\Blinky.AXF" 
+Set JLink Project File to "C:\Users\aless\Documents\GitHub\LandTiger\LCD_Blinky\JLinkSettings.ini"
+ 
+JLink info:
+------------
+DLL: V4.20c, compiled Sep 24 2010 19:46:42
+Firmware: J-Link ARM-OB STM32 compiled Aug 22 2012 19:52:04
+Hardware: V7.00
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFull 
+ 
+* JLink Info: TotalIRLen = 4, IRPrint = 0x01
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: LPC1768
+VTarget = 3.300V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+* JLink Info: TotalIRLen = 4, IRPrint = 0x01
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Hardware-Breakpoints: 6
+Software-Breakpoints: 2048
+Watchpoints:          4
+JTAG speed: 2666 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+* JLink Info: TotalIRLen = 4, IRPrint = 0x01
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+**JLink Warning: CPU did not halt after bootloader.
+Application running ...
+Build target 'LPC1768 Flash'
+compiling Blinky.c...
+linking...
+Program Size: Code=4776 RO-data=5612 RW-data=20 ZI-data=516  
+FromELF: creating hex file...
+".\Flash\Blinky.axf" - 0 Error(s), 0 Warning(s).
+Load "C:\\Users\\aless\\Documents\\GitHub\\LandTiger\\LCD_Blinky\\Flash\\Blinky.AXF" 
+Set JLink Project File to "C:\Users\aless\Documents\GitHub\LandTiger\LCD_Blinky\JLinkSettings.ini"
+ 
+JLink info:
+------------
+DLL: V4.20c, compiled Sep 24 2010 19:46:42
+Firmware: J-Link ARM-OB STM32 compiled Aug 22 2012 19:52:04
+Hardware: V7.00
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFull 
+ 
+* JLink Info: TotalIRLen = 4, IRPrint = 0x01
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: LPC1768
+VTarget = 3.300V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+* JLink Info: TotalIRLen = 4, IRPrint = 0x01
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Hardware-Breakpoints: 6
+Software-Breakpoints: 2048
+Watchpoints:          4
+JTAG speed: 2666 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+* JLink Info: TotalIRLen = 4, IRPrint = 0x01
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+**JLink Warning: CPU did not halt after bootloader.
+Application running ...
+Build target 'LPC1768 Flash'
+compiling Blinky.c...
+Blinky.c(38): warning:  #223-D: function "GLCD_DisplayTTTLattice" declared implicitly
+compiling GLCD_LPC1700.c...
+compiling GLCD_TTT.c...
+GLCD_TTT.c(1): error:  #13: expected a file name
+Target not created
+Build target 'LPC1768 Flash'
+compiling GLCD_TTT.c...
+GLCD_TTT.h(7): warning:  #1-D: last line of file ends without a newline
+GLCD_TTT.c(58): warning:  #223-D: function "GLCD_DisplayLine" declared implicitly
+linking...
+Program Size: Code=4804 RO-data=5612 RW-data=20 ZI-data=548  
+FromELF: creating hex file...
+".\Flash\Blinky.axf" - 0 Error(s), 2 Warning(s).
+Build target 'LPC1768 Flash'
+compiling GLCD_TTT.c...
+GLCD_TTT.h(7): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=4804 RO-data=5612 RW-data=20 ZI-data=548  
+FromELF: creating hex file...
+".\Flash\Blinky.axf" - 0 Error(s), 1 Warning(s).
+Build target 'LPC1768 Flash'
+compiling GLCD_TTT.c...
+linking...
+Program Size: Code=4804 RO-data=5612 RW-data=20 ZI-data=548  
+FromELF: creating hex file...
+".\Flash\Blinky.axf" - 0 Error(s), 0 Warning(s).
+Build target 'LPC1768 Flash'
+compiling GLCD_TTT.c...
+GLCD_TTT.c(61): warning:  #223-D: function "TTT_init" declared implicitly
+GLCD_TTT.c(80): error:  #20: identifier "horizontalDisp" is undefined
+GLCD_TTT.c(80): error:  #20: identifier "CHAR_W" is undefined
+GLCD_TTT.c(81): warning:  #940-D: missing return statement at end of non-void function "computePos"
+GLCD_TTT.c(79): warning:  #177-D: variable "y" was declared but never referenced
+GLCD_TTT.c(83): error:  #159: declaration is incompatible with previous "TTT_init" (declared at line 61)
+GLCD_TTT.c(106): warning:  #1-D: last line of file ends without a newline
+Target not created
+Build target 'LPC1768 Flash'
+compiling GLCD_TTT.c...
+Font_24x16.h(21): error:  #20: identifier "uint16_t" is undefined
+GLCD_TTT.c(87): error:  #20: identifier "horizontalDisp" is undefined
+GLCD_TTT.c(88): warning:  #940-D: missing return statement at end of non-void function "computePos"
+GLCD_TTT.c(86): warning:  #177-D: variable "y" was declared but never referenced
+GLCD_TTT.c(113): warning:  #1-D: last line of file ends without a newline
+Target not created
+Build target 'LPC1768 Flash'
+compiling GLCD_LPC1700.c...
+compiling GLCD_TTT.c...
+Font_24x16.h(22): error:  #20: identifier "uint16_t" is undefined
+GLCD_TTT.c(87): error:  #20: identifier "horizontalDisp" is undefined
+GLCD_TTT.c(88): warning:  #940-D: missing return statement at end of non-void function "computePos"
+GLCD_TTT.c(86): warning:  #177-D: variable "y" was declared but never referenced
+GLCD_TTT.c(113): warning:  #1-D: last line of file ends without a newline
+Target not created
+Build target 'LPC1768 Flash'
+compiling GLCD_LPC1700.c...
+compiling GLCD_TTT.c...
+Font_24x16.h(22): error:  #20: identifier "uint16_t" is undefined
+GLCD_TTT.c(93): error:  #20: identifier "horizontalDisp" is undefined
+GLCD_TTT.c(94): warning:  #940-D: missing return statement at end of non-void function "computePos"
+GLCD_TTT.c(92): warning:  #177-D: variable "y" was declared but never referenced
+GLCD_TTT.c(119): warning:  #1-D: last line of file ends without a newline
+Target not created
+Build target 'LPC1768 Flash'
+compiling GLCD_TTT.c...
+Font_24x16.h(22): error:  #20: identifier "uint16_t" is undefined
+GLCD_TTT.c(93): error:  #20: identifier "horizontalDisp" is undefined
+GLCD_TTT.c(94): error:  #119: cast to type "point" is not allowed
+GLCD_TTT.c(94): error:  #20: identifier "NULL" is undefined
+GLCD_TTT.c(92): warning:  #177-D: variable "y" was declared but never referenced
+GLCD_TTT.c(120): warning:  #1-D: last line of file ends without a newline
+Target not created
+Build target 'LPC1768 Flash'
+compiling GLCD_TTT.c...
+Font_24x16.h(22): error:  #20: identifier "uint16_t" is undefined
+GLCD_TTT.c(93): error:  #20: identifier "horizontalDisp" is undefined
+GLCD_TTT.c(121): warning:  #1-D: last line of file ends without a newline
+Target not created
+Build target 'LPC1768 Flash'
+compiling Blinky.c...
+compiling GLCD_TTT.c...
+Font_24x16.h(22): error:  #20: identifier "uint16_t" is undefined
+GLCD_TTT.c(93): error:  #20: identifier "horizontalDisp" is undefined
+Target not created
+Build target 'LPC1768 Flash'
+compiling Blinky.c...
+compiling GLCD_TTT.c...
+Font_24x16.h(22): error:  #20: identifier "uint16_t" is undefined
+GLCD_TTT.c(92): error:  #20: identifier "horizontalDisp" is undefined
+Target not created
+Build target 'LPC1768 Flash'
+compiling Blinky.c...
+compiling GLCD_LPC1700.c...
+compiling GLCD_TTT.c...
+GLCD_TTT.c(92): error:  #20: identifier "horizontalDisp" is undefined
+Target not created
+Build target 'LPC1768 Flash'
+compiling GLCD_TTT.c...
+linking...
+.\Flash\Blinky.axf: Error: L6200E: Symbol Font_24x16 multiply defined (by glcd_lpc1700.o and blinky.o).
+.\Flash\Blinky.axf: Error: L6200E: Symbol Font_24x16 multiply defined (by glcd_ttt.o and blinky.o).
+Target not created
+Build target 'LPC1768 Flash'
+compiling Blinky.c...
+compiling GLCD_LPC1700.c...
+compiling GLCD_TTT.c...
+linking...
+.\Flash\Blinky.axf: Error: L6200E: Symbol Font_24x16 multiply defined (by glcd_lpc1700.o and blinky.o).
+.\Flash\Blinky.axf: Error: L6200E: Symbol Font_24x16 multiply defined (by glcd_ttt.o and blinky.o).
+Target not created
+Clean started: Project: 'Blinky'
+   deleting intermediate output files for target 'LPC1768 Flash'
+Build target 'LPC1768 Flash'
+assembling startup_LPC17xx.s...
+compiling system_LPC17xx.c...
+compiling core_cm3.c...
+compiling Blinky.c...
+compiling IRQ.c...
+compiling GLCD_LPC1700.c...
+compiling GLCD_TTT.c...
+linking...
+.\Flash\Blinky.axf: Error: L6200E: Symbol Font_24x16 multiply defined (by glcd_lpc1700.o and blinky.o).
+.\Flash\Blinky.axf: Error: L6200E: Symbol Font_24x16 multiply defined (by glcd_ttt.o and blinky.o).
+Target not created
+Build target 'LPC1768 Flash'
+compiling Blinky.c...
+compiling GLCD_LPC1700.c...
+compiling GLCD_TTT.c...
+linking...
+.\Flash\Blinky.axf: Error: L6200E: Symbol Font_24x16 multiply defined (by glcd_lpc1700.o and blinky.o).
+.\Flash\Blinky.axf: Error: L6200E: Symbol Font_24x16 multiply defined (by glcd_ttt.o and blinky.o).
+Target not created
+Build target 'LPC1768 Flash'
+compiling Blinky.c...
+compiling GLCD_TTT.c...
+GLCD_TTT.c(92): error:  #20: identifier "CHAR_W" is undefined
+Target not created
+Build target 'LPC1768 Flash'
+compiling Blinky.c...
+compiling GLCD_LPC1700.c...
+GLCD_LPC1700.c(633): error:  #20: identifier "CHAR_W" is undefined
+GLCD_LPC1700.c(638): error:  #20: identifier "CHAR_H" is undefined
+GLCD_LPC1700.c(648): error:  #20: identifier "CHAR_H" is undefined
+GLCD_LPC1700.c(658): error:  #20: identifier "CHAR_H" is undefined
+GLCD_LPC1700.c(683): error:  #20: identifier "Font_24x16" is undefined
+GLCD_LPC1700.c(683): error:  #20: identifier "CHAR_H" is undefined
+GLCD_LPC1700.c(696): error:  #20: identifier "CHAR_H" is undefined
+GLCD_LPC1700.c(713): error:  #20: identifier "CHAR_W" is undefined
+GLCD_LPC1700.c(749): error:  #20: identifier "CHAR_H" is undefined
+GLCD_LPC1700.c(756): error:  #20: identifier "CHAR_H" is undefined
+compiling GLCD_TTT.c...
+Target not created
+Build target 'LPC1768 Flash'
+compiling Blinky.c...
+compiling GLCD_LPC1700.c...
+compiling GLCD_TTT.c...
+GLCD_TTT.c(74): warning:  #223-D: function "GLCD_DisplayLine" declared implicitly
+GLCD_TTT.c(92): error:  #20: identifier "CHAR_W" is undefined
+Target not created
+Build target 'LPC1768 Flash'
+compiling Blinky.c...
+compiling GLCD_TTT.c...
+GLCD_TTT.c(92): error:  #20: identifier "CHAR_W" is undefined
+Target not created
+Build target 'LPC1768 Flash'
+compiling Blinky.c...
+compiling GLCD_LPC1700.c...
+compiling GLCD_TTT.c...
+Font_24x16.h(22): error:  #20: identifier "uint16_t" is undefined
+Target not created
+Build target 'LPC1768 Flash'
+compiling Blinky.c...
+compiling GLCD_LPC1700.c...
+compiling GLCD_TTT.c...
+Font_24x16.h(22): error:  #20: identifier "uint16_t" is undefined
+Target not created
+Build target 'LPC1768 Flash'
+assembling startup_LPC17xx.s...
+compiling system_LPC17xx.c...
+compiling core_cm3.c...
+compiling Blinky.c...
+compiling IRQ.c...
+compiling GLCD_LPC1700.c...
+compiling GLCD_TTT.c...
+linking...
+.\Flash\Blinky.axf: Error: L6200E: Symbol Font_24x16 multiply defined (by glcd_ttt.o and glcd_lpc1700.o).
+Target not created
+Build target 'LPC1768 Flash'
+compiling GLCD_LPC1700.c...
+compiling GLCD_TTT.c...
+linking...
+.\Flash\Blinky.axf: Error: L6200E: Symbol Font_24x16 multiply defined (by glcd_ttt.o and glcd_lpc1700.o).
+Target not created
+Build target 'LPC1768 Flash'
+compiling GLCD_LPC1700.c...
+GLCD_LPC1700.c(633): error:  #20: identifier "CHAR_W" is undefined
+GLCD_LPC1700.c(638): error:  #20: identifier "CHAR_H" is undefined
+GLCD_LPC1700.c(648): error:  #20: identifier "CHAR_H" is undefined
+GLCD_LPC1700.c(658): error:  #20: identifier "CHAR_H" is undefined
+GLCD_LPC1700.c(683): error:  #20: identifier "Font_24x16" is undefined
+GLCD_LPC1700.c(683): error:  #20: identifier "CHAR_H" is undefined
+GLCD_LPC1700.c(696): error:  #20: identifier "CHAR_H" is undefined
+GLCD_LPC1700.c(713): error:  #20: identifier "CHAR_W" is undefined
+GLCD_LPC1700.c(749): error:  #20: identifier "CHAR_H" is undefined
+GLCD_LPC1700.c(756): error:  #20: identifier "CHAR_H" is undefined
+Target not created
+Build target 'LPC1768 Flash'
+compiling GLCD_LPC1700.c...
+compiling GLCD_TTT.c...
+linking...
+Program Size: Code=4960 RO-data=5612 RW-data=20 ZI-data=620  
+FromELF: creating hex file...
+".\Flash\Blinky.axf" - 0 Error(s), 0 Warning(s).
+Build target 'LPC1768 Flash'
+assembling startup_LPC17xx.s...
+compiling system_LPC17xx.c...
+compiling core_cm3.c...
+compiling Blinky.c...
+compiling IRQ.c...
+compiling GLCD_LPC1700.c...
+compiling GLCD_TTT.c...
+linking...
+Program Size: Code=4960 RO-data=5612 RW-data=20 ZI-data=620  
+FromELF: creating hex file...
+".\Flash\Blinky.axf" - 0 Error(s), 0 Warning(s).
+Build target 'LPC1768 Flash'
+compiling GLCD_TTT.c...
+linking...
+Program Size: Code=4972 RO-data=5612 RW-data=20 ZI-data=620  
+FromELF: creating hex file...
+".\Flash\Blinky.axf" - 0 Error(s), 0 Warning(s).
+Build target 'LPC1768 Flash'
+compiling GLCD_TTT.c...
+linking...
+Program Size: Code=4972 RO-data=5612 RW-data=20 ZI-data=620  
+FromELF: creating hex file...
+".\Flash\Blinky.axf" - 0 Error(s), 0 Warning(s).
+Build target 'LPC1768 Flash'
+compiling GLCD_TTT.c...
+GLCD_TTT.c(95): error:  #136: struct "<unnamed>" has no field "pos1"
+GLCD_TTT.c(96): error:  #136: struct "<unnamed>" has no field "pos2"
+GLCD_TTT.c(97): error:  #136: struct "<unnamed>" has no field "pos3"
+GLCD_TTT.c(99): error:  #136: struct "<unnamed>" has no field "pos1"
+GLCD_TTT.c(100): error:  #136: struct "<unnamed>" has no field "pos1"
+GLCD_TTT.c(101): error:  #136: struct "<unnamed>" has no field "pos1"
+GLCD_TTT.c(103): error:  #136: struct "<unnamed>" has no field "pos1"
+GLCD_TTT.c(104): error:  #136: struct "<unnamed>" has no field "pos1"
+GLCD_TTT.c(105): error:  #136: struct "<unnamed>" has no field "pos1"
+Target not created
+Build target 'LPC1768 Flash'
+compiling GLCD_TTT.c...
+GLCD_TTT.c(26): error:  #20: identifier "cell" is undefined
+GLCD_TTT.c(31): error:  #20: identifier "positions" is undefined
+Target not created
+Build target 'LPC1768 Flash'
+compiling GLCD_TTT.c...
+GLCD_TTT.c(31): error:  #20: identifier "positions" is undefined
+Target not created
+Build target 'LPC1768 Flash'
+compiling GLCD_TTT.c...
+GLCD_TTT.c(96): error:  #20: identifier "coordinates" is undefined
+Target not created
+Build target 'LPC1768 Flash'
+compiling GLCD_TTT.c...
+GLCD_TTT.c(14): error:  #65: expected a ";"
+GLCD_TTT.c(96): error:  #136: struct "<unnamed>" has no field "cells"
+GLCD_TTT.c(97): error:  #136: struct "<unnamed>" has no field "cells"
+GLCD_TTT.c(98): error:  #20: identifier "coordinates" is undefined
+Target not created
+Build target 'LPC1768 Flash'
+compiling GLCD_TTT.c...
+GLCD_TTT.c(8): error:  #65: expected a ";"
+GLCD_TTT.c(14): error:  #65: expected a ";"
+GLCD_TTT.c(96): error:  #136: struct "<unnamed>" has no field "cells"
+GLCD_TTT.c(97): error:  #136: struct "<unnamed>" has no field "cells"
+GLCD_TTT.c(98): error:  #20: identifier "coordinates" is undefined
+Target not created
+Build target 'LPC1768 Flash'
+compiling GLCD_TTT.c...
+GLCD_TTT.c(14): error:  #65: expected a ";"
+GLCD_TTT.c(96): error:  #136: struct "<unnamed>" has no field "cells"
+GLCD_TTT.c(97): error:  #136: struct "<unnamed>" has no field "cells"
+GLCD_TTT.c(98): error:  #20: identifier "coordinates" is undefined
+Target not created
+Build target 'LPC1768 Flash'
+assembling startup_LPC17xx.s...
+compiling system_LPC17xx.c...
+compiling core_cm3.c...
+compiling Blinky.c...
+compiling IRQ.c...
+compiling GLCD_LPC1700.c...
+compiling GLCD_TTT.c...
+GLCD_TTT.c(96): error:  #136: struct "<unnamed>" has no field "cell"
+GLCD_TTT.c(97): error:  #136: struct "<unnamed>" has no field "cell"
+GLCD_TTT.c(99): error:  #136: struct "<unnamed>" has no field "cell"
+GLCD_TTT.c(100): error:  #20: identifier "coordinates" is undefined
+Target not created
+Build target 'LPC1768 Flash'
+compiling GLCD_TTT.c...
+GLCD_TTT.c(96): error:  #136: struct "<unnamed>" has no field "point"
+GLCD_TTT.c(99): error:  #136: struct "<unnamed>" has no field "cell"
+GLCD_TTT.c(100): error:  #20: identifier "coordinates" is undefined
+Target not created
+Build target 'LPC1768 Flash'
+compiling GLCD_TTT.c...
+GLCD_TTT.c(99): error:  #136: struct "<unnamed>" has no field "cell"
+GLCD_TTT.c(100): error:  #20: identifier "coordinates" is undefined
+Target not created
+Build target 'LPC1768 Flash'
+compiling GLCD_TTT.c...
+linking...
+Program Size: Code=5012 RO-data=5612 RW-data=20 ZI-data=660  
+FromELF: creating hex file...
+".\Flash\Blinky.axf" - 0 Error(s), 0 Warning(s).
+Build target 'LPC1768 Flash'
+assembling startup_LPC17xx.s...
+compiling system_LPC17xx.c...
+compiling core_cm3.c...
+compiling Blinky.c...
+compiling IRQ.c...
+compiling GLCD_LPC1700.c...
+compiling GLCD_TTT.c...
+linking...
+Program Size: Code=5012 RO-data=5612 RW-data=20 ZI-data=660  
+FromELF: creating hex file...
+".\Flash\Blinky.axf" - 0 Error(s), 0 Warning(s).
+Load "C:\\Users\\aless\\Documents\\GitHub\\LandTiger\\LCD_Blinky\\Flash\\Blinky.AXF" 
+Set JLink Project File to "C:\Users\aless\Documents\GitHub\LandTiger\LCD_Blinky\JLinkSettings.ini"
  
 JLink info:
 ------------
@@ -658,12 +1075,75 @@ compiling core_cm3.c...
 compiling Blinky.c...
 compiling IRQ.c...
 compiling GLCD_LPC1700.c...
+compiling GLCD_TTT.c...
 linking...
-Program Size: Code=4524 RO-data=5612 RW-data=20 ZI-data=516  
+Program Size: Code=4866 RO-data=5614 RW-data=20 ZI-data=660  
 FromELF: creating hex file...
 ".\Flash\Blinky.axf" - 0 Error(s), 0 Warning(s).
-Load "C:\\Users\\aless\\Desktop\\LCD_Blinky\\Flash\\Blinky.AXF" 
-Set JLink Project File to "C:\Users\aless\Desktop\LCD_Blinky\JLinkSettings.ini"
+Load "C:\\Users\\aless\\Documents\\GitHub\\LandTiger\\LCD_Blinky\\Flash\\Blinky.AXF" 
+Set JLink Project File to "C:\Users\aless\Documents\GitHub\LandTiger\LCD_Blinky\JLinkSettings.ini"
+ 
+JLink info:
+------------
+DLL: V4.20c, compiled Sep 24 2010 19:46:42
+Firmware: J-Link ARM-OB STM32 compiled Aug 22 2012 19:52:04
+Hardware: V7.00
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFull 
+ 
+* JLink Info: TotalIRLen = 4, IRPrint = 0x01
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: LPC1768
+VTarget = 3.300V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+* JLink Info: TotalIRLen = 4, IRPrint = 0x01
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Hardware-Breakpoints: 6
+Software-Breakpoints: 2048
+Watchpoints:          4
+JTAG speed: 2666 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+* JLink Info: TotalIRLen = 4, IRPrint = 0x01
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+**JLink Warning: CPU did not halt after bootloader.
+Application running ...
+Build target 'LPC1768 Flash'
+compiling Blinky.c...
+compiling GLCD_TTT.c...
+linking...
+Program Size: Code=4914 RO-data=5614 RW-data=20 ZI-data=660  
+FromELF: creating hex file...
+".\Flash\Blinky.axf" - 0 Error(s), 0 Warning(s).
+Build target 'LPC1768 Flash'
+assembling startup_LPC17xx.s...
+compiling system_LPC17xx.c...
+compiling core_cm3.c...
+compiling Blinky.c...
+compiling IRQ.c...
+compiling GLCD_LPC1700.c...
+compiling GLCD_TTT.c...
+linking...
+Program Size: Code=4928 RO-data=5612 RW-data=20 ZI-data=660  
+FromELF: creating hex file...
+".\Flash\Blinky.axf" - 0 Error(s), 0 Warning(s).
+Load "C:\\Users\\aless\\Documents\\GitHub\\LandTiger\\LCD_Blinky\\Flash\\Blinky.AXF" 
+Set JLink Project File to "C:\Users\aless\Documents\GitHub\LandTiger\LCD_Blinky\JLinkSettings.ini"
  
 JLink info:
 ------------
@@ -712,12 +1192,132 @@ compiling core_cm3.c...
 compiling Blinky.c...
 compiling IRQ.c...
 compiling GLCD_LPC1700.c...
+compiling GLCD_TTT.c...
 linking...
-Program Size: Code=4538 RO-data=5614 RW-data=20 ZI-data=516  
+Program Size: Code=5022 RO-data=5614 RW-data=20 ZI-data=660  
 FromELF: creating hex file...
 ".\Flash\Blinky.axf" - 0 Error(s), 0 Warning(s).
-Load "C:\\Users\\aless\\Desktop\\LCD_Blinky\\Flash\\Blinky.AXF" 
-Set JLink Project File to "C:\Users\aless\Desktop\LCD_Blinky\JLinkSettings.ini"
+Load "C:\\Users\\aless\\Documents\\GitHub\\LandTiger\\LCD_Blinky\\Flash\\Blinky.AXF" 
+Set JLink Project File to "C:\Users\aless\Documents\GitHub\LandTiger\LCD_Blinky\JLinkSettings.ini"
+ 
+JLink info:
+------------
+DLL: V4.20c, compiled Sep 24 2010 19:46:42
+Firmware: J-Link ARM-OB STM32 compiled Aug 22 2012 19:52:04
+Hardware: V7.00
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFull 
+ 
+* JLink Info: TotalIRLen = 4, IRPrint = 0x01
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: LPC1768
+VTarget = 3.300V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+* JLink Info: TotalIRLen = 4, IRPrint = 0x01
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Hardware-Breakpoints: 6
+Software-Breakpoints: 2048
+Watchpoints:          4
+JTAG speed: 2666 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+* JLink Info: TotalIRLen = 4, IRPrint = 0x01
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+**JLink Warning: CPU did not halt after bootloader.
+Application running ...
+Build target 'LPC1768 Flash'
+compiling GLCD_TTT.c...
+GLCD_TTT.c(45): error:  #18: expected a ")"
+GLCD_TTT.c(138): error:  #55: too many arguments in macro invocation
+GLCD_TTT.c(138): warning:  #174-D: expression has no effect
+GLCD_TTT.c(138): error:  #18: expected a ")"
+GLCD_TTT.c(138): warning:  #174-D: expression has no effect
+GLCD_TTT.c(138): error:  #65: expected a ";"
+Target not created
+Build target 'LPC1768 Flash'
+compiling GLCD_TTT.c...
+linking...
+Program Size: Code=5030 RO-data=5614 RW-data=20 ZI-data=660  
+FromELF: creating hex file...
+".\Flash\Blinky.axf" - 0 Error(s), 0 Warning(s).
+Build target 'LPC1768 Flash'
+assembling startup_LPC17xx.s...
+compiling system_LPC17xx.c...
+compiling core_cm3.c...
+compiling Blinky.c...
+compiling IRQ.c...
+compiling GLCD_LPC1700.c...
+compiling GLCD_TTT.c...
+linking...
+Program Size: Code=5030 RO-data=5614 RW-data=20 ZI-data=660  
+FromELF: creating hex file...
+".\Flash\Blinky.axf" - 0 Error(s), 0 Warning(s).
+Load "C:\\Users\\aless\\Documents\\GitHub\\LandTiger\\LCD_Blinky\\Flash\\Blinky.AXF" 
+Set JLink Project File to "C:\Users\aless\Documents\GitHub\LandTiger\LCD_Blinky\JLinkSettings.ini"
+ 
+JLink info:
+------------
+DLL: V4.20c, compiled Sep 24 2010 19:46:42
+Firmware: J-Link ARM-OB STM32 compiled Aug 22 2012 19:52:04
+Hardware: V7.00
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFull 
+ 
+* JLink Info: TotalIRLen = 4, IRPrint = 0x01
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: LPC1768
+VTarget = 3.300V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+* JLink Info: TotalIRLen = 4, IRPrint = 0x01
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Hardware-Breakpoints: 6
+Software-Breakpoints: 2048
+Watchpoints:          4
+JTAG speed: 2666 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+* JLink Info: TotalIRLen = 4, IRPrint = 0x01
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+**JLink Warning: CPU did not halt after bootloader.
+Application running ...
+Build target 'LPC1768 Flash'
+compiling GLCD_TTT.c...
+linking...
+Program Size: Code=5030 RO-data=5614 RW-data=20 ZI-data=660  
+FromELF: creating hex file...
+".\Flash\Blinky.axf" - 0 Error(s), 0 Warning(s).
+Load "C:\\Users\\aless\\Documents\\GitHub\\LandTiger\\LCD_Blinky\\Flash\\Blinky.AXF" 
+Set JLink Project File to "C:\Users\aless\Documents\GitHub\LandTiger\LCD_Blinky\JLinkSettings.ini"
  
 JLink info:
 ------------
@@ -766,12 +1366,13 @@ compiling core_cm3.c...
 compiling Blinky.c...
 compiling IRQ.c...
 compiling GLCD_LPC1700.c...
+compiling GLCD_TTT.c...
 linking...
-Program Size: Code=4538 RO-data=5614 RW-data=20 ZI-data=516  
+Program Size: Code=5074 RO-data=5614 RW-data=20 ZI-data=660  
 FromELF: creating hex file...
 ".\Flash\Blinky.axf" - 0 Error(s), 0 Warning(s).
-Load "C:\\Users\\aless\\Desktop\\LCD_Blinky\\Flash\\Blinky.AXF" 
-Set JLink Project File to "C:\Users\aless\Desktop\LCD_Blinky\JLinkSettings.ini"
+Load "C:\\Users\\aless\\Documents\\GitHub\\LandTiger\\LCD_Blinky\\Flash\\Blinky.AXF" 
+Set JLink Project File to "C:\Users\aless\Documents\GitHub\LandTiger\LCD_Blinky\JLinkSettings.ini"
  
 JLink info:
 ------------
@@ -814,13 +1415,13 @@ Verify OK.
 **JLink Warning: CPU did not halt after bootloader.
 Application running ...
 Build target 'LPC1768 Flash'
-compiling Blinky.c...
+compiling GLCD_TTT.c...
 linking...
-Program Size: Code=4538 RO-data=5614 RW-data=20 ZI-data=516  
+Program Size: Code=5074 RO-data=5614 RW-data=20 ZI-data=660  
 FromELF: creating hex file...
 ".\Flash\Blinky.axf" - 0 Error(s), 0 Warning(s).
-Load "C:\\Users\\aless\\Desktop\\LCD_Blinky\\Flash\\Blinky.AXF" 
-Set JLink Project File to "C:\Users\aless\Desktop\LCD_Blinky\JLinkSettings.ini"
+Load "C:\\Users\\aless\\Documents\\GitHub\\LandTiger\\LCD_Blinky\\Flash\\Blinky.AXF" 
+Set JLink Project File to "C:\Users\aless\Documents\GitHub\LandTiger\LCD_Blinky\JLinkSettings.ini"
  
 JLink info:
 ------------
@@ -863,70 +1464,13 @@ Verify OK.
 **JLink Warning: CPU did not halt after bootloader.
 Application running ...
 Build target 'LPC1768 Flash'
-compiling GLCD_LPC1700.c...
+compiling GLCD_TTT.c...
 linking...
-Program Size: Code=4538 RO-data=5614 RW-data=20 ZI-data=516  
+Program Size: Code=5030 RO-data=5614 RW-data=20 ZI-data=660  
 FromELF: creating hex file...
 ".\Flash\Blinky.axf" - 0 Error(s), 0 Warning(s).
-Load "C:\\Users\\aless\\Desktop\\LCD_Blinky\\Flash\\Blinky.AXF" 
-Set JLink Project File to "C:\Users\aless\Desktop\LCD_Blinky\JLinkSettings.ini"
- 
-JLink info:
-------------
-DLL: V4.20c, compiled Sep 24 2010 19:46:42
-Firmware: J-Link ARM-OB STM32 compiled Aug 22 2012 19:52:04
-Hardware: V7.00
-Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFull 
- 
-* JLink Info: TotalIRLen = 4, IRPrint = 0x01
-* JLink Info: Found Cortex-M3 r2p0, Little endian.
-* JLink Info: TPIU fitted.
-* JLink Info: ETM fitted.
-* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
-ROMTableAddr = 0xE00FF003
- 
-Target info:
-------------
-Device: LPC1768
-VTarget = 3.300V
-State of Pins: 
-TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
-* JLink Info: TotalIRLen = 4, IRPrint = 0x01
-* JLink Info: Found Cortex-M3 r2p0, Little endian.
-* JLink Info: TPIU fitted.
-* JLink Info: ETM fitted.
-* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
-Hardware-Breakpoints: 6
-Software-Breakpoints: 2048
-Watchpoints:          4
-JTAG speed: 2666 kHz
- 
-Erase Done.
-Programming Done.
-Verify OK.
-* JLink Info: TotalIRLen = 4, IRPrint = 0x01
-* JLink Info: Found Cortex-M3 r2p0, Little endian.
-* JLink Info: TPIU fitted.
-* JLink Info: ETM fitted.
-* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
-**JLink Warning: CPU did not halt after bootloader.
-Application running ...
-Build target 'LPC1768 Flash'
-compiling Blinky.c...
-compiling GLCD_LPC1700.c...
-linking...
-Program Size: Code=4538 RO-data=5614 RW-data=20 ZI-data=516  
-FromELF: creating hex file...
-".\Flash\Blinky.axf" - 0 Error(s), 0 Warning(s).
-Build target 'LPC1768 Flash'
-compiling Blinky.c...
-compiling GLCD_LPC1700.c...
-linking...
-Program Size: Code=4538 RO-data=5614 RW-data=20 ZI-data=516  
-FromELF: creating hex file...
-".\Flash\Blinky.axf" - 0 Error(s), 0 Warning(s).
-Load "C:\\Users\\aless\\Desktop\\LCD_Blinky\\Flash\\Blinky.AXF" 
-Set JLink Project File to "C:\Users\aless\Desktop\LCD_Blinky\JLinkSettings.ini"
+Load "C:\\Users\\aless\\Documents\\GitHub\\LandTiger\\LCD_Blinky\\Flash\\Blinky.AXF" 
+Set JLink Project File to "C:\Users\aless\Documents\GitHub\LandTiger\LCD_Blinky\JLinkSettings.ini"
  
 JLink info:
 ------------
@@ -975,12 +1519,147 @@ compiling core_cm3.c...
 compiling Blinky.c...
 compiling IRQ.c...
 compiling GLCD_LPC1700.c...
+compiling GLCD_TTT.c...
+GLCD_TTT.c(142): error:  #136: struct "<unnamed>" has no field "value"
+GLCD_TTT.c(144): warning:  #223-D: function "TTT_CheckVictory" declared implicitly
+GLCD_TTT.c(147): error:  #159: declaration is incompatible with previous "TTT_CheckVictory" (declared at line 144)
+GLCD_TTT.c(168): warning:  #940-D: missing return statement at end of non-void function "TTT_CheckVictory"
+Target not created
+Build target 'LPC1768 Flash'
+compiling GLCD_TTT.c...
+GLCD_TTT.c(169): warning:  #940-D: missing return statement at end of non-void function "TTT_CheckVictory"
 linking...
-Program Size: Code=4538 RO-data=5614 RW-data=20 ZI-data=516  
+Program Size: Code=5286 RO-data=5614 RW-data=20 ZI-data=660  
+FromELF: creating hex file...
+".\Flash\Blinky.axf" - 0 Error(s), 1 Warning(s).
+Build target 'LPC1768 Flash'
+compiling GLCD_TTT.c...
+linking...
+Program Size: Code=5286 RO-data=5614 RW-data=20 ZI-data=660  
 FromELF: creating hex file...
 ".\Flash\Blinky.axf" - 0 Error(s), 0 Warning(s).
-Load "C:\\Users\\aless\\Desktop\\LCD_Blinky\\Flash\\Blinky.AXF" 
-Set JLink Project File to "C:\Users\aless\Desktop\LCD_Blinky\JLinkSettings.ini"
+Load "C:\\Users\\aless\\Documents\\GitHub\\LandTiger\\LCD_Blinky\\Flash\\Blinky.AXF" 
+Set JLink Project File to "C:\Users\aless\Documents\GitHub\LandTiger\LCD_Blinky\JLinkSettings.ini"
+ 
+JLink info:
+------------
+DLL: V4.20c, compiled Sep 24 2010 19:46:42
+Firmware: J-Link ARM-OB STM32 compiled Aug 22 2012 19:52:04
+Hardware: V7.00
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFull 
+ 
+* JLink Info: TotalIRLen = 4, IRPrint = 0x01
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: LPC1768
+VTarget = 3.300V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+* JLink Info: TotalIRLen = 4, IRPrint = 0x01
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Hardware-Breakpoints: 6
+Software-Breakpoints: 2048
+Watchpoints:          4
+JTAG speed: 2666 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+* JLink Info: TotalIRLen = 4, IRPrint = 0x01
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+**JLink Warning: CPU did not halt after bootloader.
+Application running ...
+Build target 'LPC1768 Flash'
+compiling GLCD_TTT.c...
+GLCD_TTT.c(154): warning:  #223-D: function "wait_delay" declared implicitly
+GLCD_TTT.c(160): warning:  #223-D: function "wait_delay" declared implicitly
+GLCD_TTT.c(166): warning:  #223-D: function "wait_delay" declared implicitly
+GLCD_TTT.c(172): warning:  #223-D: function "wait_delay" declared implicitly
+linking...
+Program Size: Code=5318 RO-data=5614 RW-data=20 ZI-data=660  
+FromELF: creating hex file...
+".\Flash\Blinky.axf" - 0 Error(s), 4 Warning(s).
+Build target 'LPC1768 Flash'
+compiling GLCD_TTT.c...
+linking...
+.\Flash\Blinky.axf: Error: L6200E: Symbol wait_delay multiply defined (by glcd_ttt.o and glcd_lpc1700.o).
+Target not created
+Build target 'LPC1768 Flash'
+compiling GLCD_TTT.c...
+GLCD_TTT.c(157): warning:  #223-D: function "wait_delay" declared implicitly
+linking...
+Program Size: Code=5330 RO-data=5614 RW-data=20 ZI-data=660  
+FromELF: creating hex file...
+".\Flash\Blinky.axf" - 0 Error(s), 1 Warning(s).
+Build target 'LPC1768 Flash'
+compiling GLCD_TTT.c...
+linking...
+Program Size: Code=5330 RO-data=5614 RW-data=20 ZI-data=660  
+FromELF: creating hex file...
+".\Flash\Blinky.axf" - 0 Error(s), 0 Warning(s).
+Load "C:\\Users\\aless\\Documents\\GitHub\\LandTiger\\LCD_Blinky\\Flash\\Blinky.AXF" 
+Set JLink Project File to "C:\Users\aless\Documents\GitHub\LandTiger\LCD_Blinky\JLinkSettings.ini"
+ 
+JLink info:
+------------
+DLL: V4.20c, compiled Sep 24 2010 19:46:42
+Firmware: J-Link ARM-OB STM32 compiled Aug 22 2012 19:52:04
+Hardware: V7.00
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFull 
+ 
+* JLink Info: TotalIRLen = 4, IRPrint = 0x01
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: LPC1768
+VTarget = 3.300V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+* JLink Info: TotalIRLen = 4, IRPrint = 0x01
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Hardware-Breakpoints: 6
+Software-Breakpoints: 2048
+Watchpoints:          4
+JTAG speed: 2666 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+* JLink Info: TotalIRLen = 4, IRPrint = 0x01
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+**JLink Warning: CPU did not halt after bootloader.
+Application running ...
+Build target 'LPC1768 Flash'
+compiling GLCD_TTT.c...
+linking...
+Program Size: Code=5330 RO-data=5614 RW-data=20 ZI-data=660  
+FromELF: creating hex file...
+".\Flash\Blinky.axf" - 0 Error(s), 0 Warning(s).
+Load "C:\\Users\\aless\\Documents\\GitHub\\LandTiger\\LCD_Blinky\\Flash\\Blinky.AXF" 
+Set JLink Project File to "C:\Users\aless\Documents\GitHub\LandTiger\LCD_Blinky\JLinkSettings.ini"
  
 JLink info:
 ------------
@@ -1029,8 +1708,9 @@ compiling core_cm3.c...
 compiling Blinky.c...
 compiling IRQ.c...
 compiling GLCD_LPC1700.c...
+compiling GLCD_TTT.c...
 linking...
-Program Size: Code=4640 RO-data=5612 RW-data=20 ZI-data=516  
+Program Size: Code=5298 RO-data=5614 RW-data=20 ZI-data=660  
 FromELF: creating hex file...
 ".\Flash\Blinky.axf" - 0 Error(s), 0 Warning(s).
 Build target 'LPC1768 Flash'
@@ -1040,12 +1720,221 @@ compiling core_cm3.c...
 compiling Blinky.c...
 compiling IRQ.c...
 compiling GLCD_LPC1700.c...
+compiling GLCD_TTT.c...
 linking...
-Program Size: Code=4610 RO-data=5614 RW-data=20 ZI-data=516  
+Program Size: Code=5298 RO-data=5614 RW-data=20 ZI-data=660  
 FromELF: creating hex file...
 ".\Flash\Blinky.axf" - 0 Error(s), 0 Warning(s).
-Load "C:\\Users\\aless\\Desktop\\LCD_Blinky\\Flash\\Blinky.AXF" 
-Set JLink Project File to "C:\Users\aless\Desktop\LCD_Blinky\JLinkSettings.ini"
+Load "C:\\Users\\aless\\Documents\\GitHub\\LandTiger\\LCD_Blinky\\Flash\\Blinky.AXF" 
+Set JLink Project File to "C:\Users\aless\Documents\GitHub\LandTiger\LCD_Blinky\JLinkSettings.ini"
+ 
+JLink info:
+------------
+DLL: V4.20c, compiled Sep 24 2010 19:46:42
+Firmware: J-Link ARM-OB STM32 compiled Aug 22 2012 19:52:04
+Hardware: V7.00
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFull 
+ 
+* JLink Info: TotalIRLen = 4, IRPrint = 0x01
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: LPC1768
+VTarget = 3.300V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+* JLink Info: TotalIRLen = 4, IRPrint = 0x01
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Hardware-Breakpoints: 6
+Software-Breakpoints: 2048
+Watchpoints:          4
+JTAG speed: 2666 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+* JLink Info: TotalIRLen = 4, IRPrint = 0x01
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+**JLink Warning: CPU did not halt after bootloader.
+Application running ...
+Build target 'LPC1768 Flash'
+compiling GLCD_TTT.c...
+linking...
+Program Size: Code=5286 RO-data=5614 RW-data=20 ZI-data=660  
+FromELF: creating hex file...
+".\Flash\Blinky.axf" - 0 Error(s), 0 Warning(s).
+Load "C:\\Users\\aless\\Documents\\GitHub\\LandTiger\\LCD_Blinky\\Flash\\Blinky.AXF" 
+Set JLink Project File to "C:\Users\aless\Documents\GitHub\LandTiger\LCD_Blinky\JLinkSettings.ini"
+ 
+JLink info:
+------------
+DLL: V4.20c, compiled Sep 24 2010 19:46:42
+Firmware: J-Link ARM-OB STM32 compiled Aug 22 2012 19:52:04
+Hardware: V7.00
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFull 
+ 
+* JLink Info: TotalIRLen = 4, IRPrint = 0x01
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: LPC1768
+VTarget = 3.300V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+* JLink Info: TotalIRLen = 4, IRPrint = 0x01
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Hardware-Breakpoints: 6
+Software-Breakpoints: 2048
+Watchpoints:          4
+JTAG speed: 2666 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+* JLink Info: TotalIRLen = 4, IRPrint = 0x01
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+**JLink Warning: CPU did not halt after bootloader.
+Application running ...
+Build target 'LPC1768 Flash'
+compiling GLCD_TTT.c...
+linking...
+Program Size: Code=5306 RO-data=5614 RW-data=20 ZI-data=660  
+FromELF: creating hex file...
+".\Flash\Blinky.axf" - 0 Error(s), 0 Warning(s).
+Load "C:\\Users\\aless\\Documents\\GitHub\\LandTiger\\LCD_Blinky\\Flash\\Blinky.AXF" 
+Set JLink Project File to "C:\Users\aless\Documents\GitHub\LandTiger\LCD_Blinky\JLinkSettings.ini"
+ 
+JLink info:
+------------
+DLL: V4.20c, compiled Sep 24 2010 19:46:42
+Firmware: J-Link ARM-OB STM32 compiled Aug 22 2012 19:52:04
+Hardware: V7.00
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFull 
+ 
+* JLink Info: TotalIRLen = 4, IRPrint = 0x01
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: LPC1768
+VTarget = 3.300V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+* JLink Info: TotalIRLen = 4, IRPrint = 0x01
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Hardware-Breakpoints: 6
+Software-Breakpoints: 2048
+Watchpoints:          4
+JTAG speed: 2666 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+* JLink Info: TotalIRLen = 4, IRPrint = 0x01
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+**JLink Warning: CPU did not halt after bootloader.
+Application running ...
+Build target 'LPC1768 Flash'
+compiling GLCD_TTT.c...
+linking...
+Program Size: Code=5362 RO-data=5614 RW-data=20 ZI-data=660  
+FromELF: creating hex file...
+".\Flash\Blinky.axf" - 0 Error(s), 0 Warning(s).
+Build target 'LPC1768 Flash'
+assembling startup_LPC17xx.s...
+compiling system_LPC17xx.c...
+compiling core_cm3.c...
+compiling Blinky.c...
+compiling IRQ.c...
+compiling GLCD_LPC1700.c...
+compiling GLCD_TTT.c...
+linking...
+Program Size: Code=5362 RO-data=5614 RW-data=20 ZI-data=660  
+FromELF: creating hex file...
+".\Flash\Blinky.axf" - 0 Error(s), 0 Warning(s).
+Load "C:\\Users\\aless\\Documents\\GitHub\\LandTiger\\LCD_Blinky\\Flash\\Blinky.AXF" 
+Set JLink Project File to "C:\Users\aless\Documents\GitHub\LandTiger\LCD_Blinky\JLinkSettings.ini"
+ 
+JLink info:
+------------
+DLL: V4.20c, compiled Sep 24 2010 19:46:42
+Firmware: J-Link ARM-OB STM32 compiled Aug 22 2012 19:52:04
+Hardware: V7.00
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFull 
+ 
+* JLink Info: TotalIRLen = 4, IRPrint = 0x01
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: LPC1768
+VTarget = 3.300V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+* JLink Info: TotalIRLen = 4, IRPrint = 0x01
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Hardware-Breakpoints: 6
+Software-Breakpoints: 2048
+Watchpoints:          4
+JTAG speed: 2666 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+* JLink Info: TotalIRLen = 4, IRPrint = 0x01
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+**JLink Warning: CPU did not halt after bootloader.
+Application running ...
+Build target 'LPC1768 Flash'
+compiling GLCD_TTT.c...
+linking...
+Program Size: Code=5362 RO-data=5614 RW-data=20 ZI-data=660  
+FromELF: creating hex file...
+".\Flash\Blinky.axf" - 0 Error(s), 0 Warning(s).
+Load "C:\\Users\\aless\\Documents\\GitHub\\LandTiger\\LCD_Blinky\\Flash\\Blinky.AXF" 
+Set JLink Project File to "C:\Users\aless\Documents\GitHub\LandTiger\LCD_Blinky\JLinkSettings.ini"
  
 JLink info:
 ------------
@@ -1090,11 +1979,11 @@ Application running ...
 Build target 'LPC1768 Flash'
 compiling Blinky.c...
 linking...
-Program Size: Code=4610 RO-data=5614 RW-data=20 ZI-data=516  
+Program Size: Code=5290 RO-data=5614 RW-data=20 ZI-data=660  
 FromELF: creating hex file...
 ".\Flash\Blinky.axf" - 0 Error(s), 0 Warning(s).
-Load "C:\\Users\\aless\\Desktop\\LCD_Blinky\\Flash\\Blinky.AXF" 
-Set JLink Project File to "C:\Users\aless\Desktop\LCD_Blinky\JLinkSettings.ini"
+Load "C:\\Users\\aless\\Documents\\GitHub\\LandTiger\\LCD_Blinky\\Flash\\Blinky.AXF" 
+Set JLink Project File to "C:\Users\aless\Documents\GitHub\LandTiger\LCD_Blinky\JLinkSettings.ini"
  
 JLink info:
 ------------
@@ -1139,11 +2028,269 @@ Application running ...
 Build target 'LPC1768 Flash'
 compiling Blinky.c...
 linking...
-Program Size: Code=4610 RO-data=5614 RW-data=20 ZI-data=516  
+Program Size: Code=5304 RO-data=5612 RW-data=20 ZI-data=660  
 FromELF: creating hex file...
 ".\Flash\Blinky.axf" - 0 Error(s), 0 Warning(s).
-Load "C:\\Users\\aless\\Desktop\\LCD_Blinky\\Flash\\Blinky.AXF" 
-Set JLink Project File to "C:\Users\aless\Desktop\LCD_Blinky\JLinkSettings.ini"
+Load "C:\\Users\\aless\\Documents\\GitHub\\LandTiger\\LCD_Blinky\\Flash\\Blinky.AXF" 
+Set JLink Project File to "C:\Users\aless\Documents\GitHub\LandTiger\LCD_Blinky\JLinkSettings.ini"
+ 
+JLink info:
+------------
+DLL: V4.20c, compiled Sep 24 2010 19:46:42
+Firmware: J-Link ARM-OB STM32 compiled Aug 22 2012 19:52:04
+Hardware: V7.00
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFull 
+ 
+* JLink Info: TotalIRLen = 4, IRPrint = 0x01
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: LPC1768
+VTarget = 3.300V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+* JLink Info: TotalIRLen = 4, IRPrint = 0x01
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Hardware-Breakpoints: 6
+Software-Breakpoints: 2048
+Watchpoints:          4
+JTAG speed: 2666 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+* JLink Info: TotalIRLen = 4, IRPrint = 0x01
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+**JLink Warning: CPU did not halt after bootloader.
+Application running ...
+Build target 'LPC1768 Flash'
+assembling startup_LPC17xx.s...
+compiling system_LPC17xx.c...
+compiling core_cm3.c...
+compiling Blinky.c...
+compiling IRQ.c...
+compiling GLCD_LPC1700.c...
+compiling GLCD_TTT.c...
+linking...
+Program Size: Code=5324 RO-data=5612 RW-data=20 ZI-data=660  
+FromELF: creating hex file...
+".\Flash\Blinky.axf" - 0 Error(s), 0 Warning(s).
+Load "C:\\Users\\aless\\Documents\\GitHub\\LandTiger\\LCD_Blinky\\Flash\\Blinky.AXF" 
+Set JLink Project File to "C:\Users\aless\Documents\GitHub\LandTiger\LCD_Blinky\JLinkSettings.ini"
+ 
+JLink info:
+------------
+DLL: V4.20c, compiled Sep 24 2010 19:46:42
+Firmware: J-Link ARM-OB STM32 compiled Aug 22 2012 19:52:04
+Hardware: V7.00
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFull 
+ 
+* JLink Info: TotalIRLen = 4, IRPrint = 0x01
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: LPC1768
+VTarget = 3.300V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+* JLink Info: TotalIRLen = 4, IRPrint = 0x01
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Hardware-Breakpoints: 6
+Software-Breakpoints: 2048
+Watchpoints:          4
+JTAG speed: 2666 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+* JLink Info: TotalIRLen = 4, IRPrint = 0x01
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+**JLink Warning: CPU did not halt after bootloader.
+Application running ...
+Build target 'LPC1768 Flash'
+compiling Blinky.c...
+compiling GLCD_TTT.c...
+linking...
+Program Size: Code=5304 RO-data=5612 RW-data=20 ZI-data=660  
+FromELF: creating hex file...
+".\Flash\Blinky.axf" - 0 Error(s), 0 Warning(s).
+Load "C:\\Users\\aless\\Documents\\GitHub\\LandTiger\\LCD_Blinky\\Flash\\Blinky.AXF" 
+Set JLink Project File to "C:\Users\aless\Documents\GitHub\LandTiger\LCD_Blinky\JLinkSettings.ini"
+ 
+JLink info:
+------------
+DLL: V4.20c, compiled Sep 24 2010 19:46:42
+Firmware: J-Link ARM-OB STM32 compiled Aug 22 2012 19:52:04
+Hardware: V7.00
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFull 
+ 
+* JLink Info: TotalIRLen = 4, IRPrint = 0x01
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: LPC1768
+VTarget = 3.300V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+* JLink Info: TotalIRLen = 4, IRPrint = 0x01
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Hardware-Breakpoints: 6
+Software-Breakpoints: 2048
+Watchpoints:          4
+JTAG speed: 2666 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+* JLink Info: TotalIRLen = 4, IRPrint = 0x01
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+**JLink Warning: CPU did not halt after bootloader.
+Application running ...
+Build target 'LPC1768 Flash'
+compiling GLCD_TTT.c...
+linking...
+Program Size: Code=5304 RO-data=5612 RW-data=20 ZI-data=660  
+FromELF: creating hex file...
+".\Flash\Blinky.axf" - 0 Error(s), 0 Warning(s).
+Load "C:\\Users\\aless\\Documents\\GitHub\\LandTiger\\LCD_Blinky\\Flash\\Blinky.AXF" 
+Set JLink Project File to "C:\Users\aless\Documents\GitHub\LandTiger\LCD_Blinky\JLinkSettings.ini"
+ 
+JLink info:
+------------
+DLL: V4.20c, compiled Sep 24 2010 19:46:42
+Firmware: J-Link ARM-OB STM32 compiled Aug 22 2012 19:52:04
+Hardware: V7.00
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFull 
+ 
+* JLink Info: TotalIRLen = 4, IRPrint = 0x01
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: LPC1768
+VTarget = 3.300V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+* JLink Info: TotalIRLen = 4, IRPrint = 0x01
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Hardware-Breakpoints: 6
+Software-Breakpoints: 2048
+Watchpoints:          4
+JTAG speed: 2666 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+* JLink Info: TotalIRLen = 4, IRPrint = 0x01
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+**JLink Warning: CPU did not halt after bootloader.
+Application running ...
+Build target 'LPC1768 Flash'
+compiling GLCD_TTT.c...
+linking...
+Program Size: Code=5304 RO-data=5612 RW-data=20 ZI-data=660  
+FromELF: creating hex file...
+".\Flash\Blinky.axf" - 0 Error(s), 0 Warning(s).
+Load "C:\\Users\\aless\\Documents\\GitHub\\LandTiger\\LCD_Blinky\\Flash\\Blinky.AXF" 
+Set JLink Project File to "C:\Users\aless\Documents\GitHub\LandTiger\LCD_Blinky\JLinkSettings.ini"
+ 
+JLink info:
+------------
+DLL: V4.20c, compiled Sep 24 2010 19:46:42
+Firmware: J-Link ARM-OB STM32 compiled Aug 22 2012 19:52:04
+Hardware: V7.00
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFull 
+ 
+* JLink Info: TotalIRLen = 4, IRPrint = 0x01
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: LPC1768
+VTarget = 3.300V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+* JLink Info: TotalIRLen = 4, IRPrint = 0x01
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Hardware-Breakpoints: 6
+Software-Breakpoints: 2048
+Watchpoints:          4
+JTAG speed: 2666 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+* JLink Info: TotalIRLen = 4, IRPrint = 0x01
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+**JLink Warning: CPU did not halt after bootloader.
+Application running ...
+Build target 'LPC1768 Flash'
+assembling startup_LPC17xx.s...
+compiling system_LPC17xx.c...
+compiling core_cm3.c...
+compiling Blinky.c...
+compiling IRQ.c...
+compiling GLCD_LPC1700.c...
+compiling GLCD_TTT.c...
+linking...
+Program Size: Code=5362 RO-data=5614 RW-data=20 ZI-data=660  
+FromELF: creating hex file...
+".\Flash\Blinky.axf" - 0 Error(s), 0 Warning(s).
+Load "C:\\Users\\aless\\Documents\\GitHub\\LandTiger\\LCD_Blinky\\Flash\\Blinky.AXF" 
+Set JLink Project File to "C:\Users\aless\Documents\GitHub\LandTiger\LCD_Blinky\JLinkSettings.ini"
  
 JLink info:
 ------------
@@ -1188,11 +2335,634 @@ Application running ...
 Build target 'LPC1768 Flash'
 compiling Blinky.c...
 linking...
-Program Size: Code=4610 RO-data=5614 RW-data=20 ZI-data=516  
+Program Size: Code=5362 RO-data=5614 RW-data=20 ZI-data=660  
 FromELF: creating hex file...
 ".\Flash\Blinky.axf" - 0 Error(s), 0 Warning(s).
-Load "C:\\Users\\aless\\Desktop\\LCD_Blinky\\Flash\\Blinky.AXF" 
-Set JLink Project File to "C:\Users\aless\Desktop\LCD_Blinky\JLinkSettings.ini"
+Load "C:\\Users\\aless\\Documents\\GitHub\\LandTiger\\LCD_Blinky\\Flash\\Blinky.AXF" 
+Set JLink Project File to "C:\Users\aless\Documents\GitHub\LandTiger\LCD_Blinky\JLinkSettings.ini"
+ 
+JLink info:
+------------
+DLL: V4.20c, compiled Sep 24 2010 19:46:42
+Firmware: J-Link ARM-OB STM32 compiled Aug 22 2012 19:52:04
+Hardware: V7.00
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFull 
+ 
+* JLink Info: TotalIRLen = 4, IRPrint = 0x01
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: LPC1768
+VTarget = 3.300V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+* JLink Info: TotalIRLen = 4, IRPrint = 0x01
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Hardware-Breakpoints: 6
+Software-Breakpoints: 2048
+Watchpoints:          4
+JTAG speed: 2666 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+* JLink Info: TotalIRLen = 4, IRPrint = 0x01
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+**JLink Warning: CPU did not halt after bootloader.
+Application running ...
+Build target 'LPC1768 Flash'
+compiling Blinky.c...
+compiling GLCD_TTT.c...
+linking...
+Program Size: Code=5354 RO-data=5614 RW-data=20 ZI-data=660  
+FromELF: creating hex file...
+".\Flash\Blinky.axf" - 0 Error(s), 0 Warning(s).
+Load "C:\\Users\\aless\\Documents\\GitHub\\LandTiger\\LCD_Blinky\\Flash\\Blinky.AXF" 
+Set JLink Project File to "C:\Users\aless\Documents\GitHub\LandTiger\LCD_Blinky\JLinkSettings.ini"
+ 
+JLink info:
+------------
+DLL: V4.20c, compiled Sep 24 2010 19:46:42
+Firmware: J-Link ARM-OB STM32 compiled Aug 22 2012 19:52:04
+Hardware: V7.00
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFull 
+ 
+* JLink Info: TotalIRLen = 4, IRPrint = 0x01
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: LPC1768
+VTarget = 3.300V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+* JLink Info: TotalIRLen = 4, IRPrint = 0x01
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Hardware-Breakpoints: 6
+Software-Breakpoints: 2048
+Watchpoints:          4
+JTAG speed: 2666 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+* JLink Info: TotalIRLen = 4, IRPrint = 0x01
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+**JLink Warning: CPU did not halt after bootloader.
+Application running ...
+Build target 'LPC1768 Flash'
+assembling startup_LPC17xx.s...
+compiling system_LPC17xx.c...
+compiling core_cm3.c...
+compiling Blinky.c...
+compiling IRQ.c...
+compiling GLCD_LPC1700.c...
+compiling GLCD_TTT.c...
+GLCD_TTT.c(157): error:  #134: expected a field name
+GLCD_TTT.c(157): error:  #154: expression must have struct or union type
+GLCD_TTT.c(179): error:  #65: expected a ";"
+Target not created
+Build target 'LPC1768 Flash'
+assembling startup_LPC17xx.s...
+compiling system_LPC17xx.c...
+compiling core_cm3.c...
+compiling Blinky.c...
+compiling IRQ.c...
+compiling GLCD_LPC1700.c...
+compiling GLCD_TTT.c...
+GLCD_TTT.c(179): error:  #65: expected a ";"
+Target not created
+Build target 'LPC1768 Flash'
+assembling startup_LPC17xx.s...
+compiling system_LPC17xx.c...
+compiling core_cm3.c...
+compiling Blinky.c...
+compiling IRQ.c...
+compiling GLCD_LPC1700.c...
+compiling GLCD_TTT.c...
+linking...
+Program Size: Code=5422 RO-data=5614 RW-data=20 ZI-data=660  
+FromELF: creating hex file...
+".\Flash\Blinky.axf" - 0 Error(s), 0 Warning(s).
+Load "C:\\Users\\aless\\Documents\\GitHub\\LandTiger\\LCD_Blinky\\Flash\\Blinky.AXF" 
+Set JLink Project File to "C:\Users\aless\Documents\GitHub\LandTiger\LCD_Blinky\JLinkSettings.ini"
+ 
+JLink info:
+------------
+DLL: V4.20c, compiled Sep 24 2010 19:46:42
+Firmware: J-Link ARM-OB STM32 compiled Aug 22 2012 19:52:04
+Hardware: V7.00
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFull 
+ 
+* JLink Info: TotalIRLen = 4, IRPrint = 0x01
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: LPC1768
+VTarget = 3.300V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+* JLink Info: TotalIRLen = 4, IRPrint = 0x01
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Hardware-Breakpoints: 6
+Software-Breakpoints: 2048
+Watchpoints:          4
+JTAG speed: 2666 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+* JLink Info: TotalIRLen = 4, IRPrint = 0x01
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+**JLink Warning: CPU did not halt after bootloader.
+Application running ...
+Build target 'LPC1768 Flash'
+compiling GLCD_TTT.c...
+linking...
+Program Size: Code=5426 RO-data=5614 RW-data=20 ZI-data=660  
+FromELF: creating hex file...
+".\Flash\Blinky.axf" - 0 Error(s), 0 Warning(s).
+Load "C:\\Users\\aless\\Documents\\GitHub\\LandTiger\\LCD_Blinky\\Flash\\Blinky.AXF" 
+Set JLink Project File to "C:\Users\aless\Documents\GitHub\LandTiger\LCD_Blinky\JLinkSettings.ini"
+ 
+JLink info:
+------------
+DLL: V4.20c, compiled Sep 24 2010 19:46:42
+Firmware: J-Link ARM-OB STM32 compiled Aug 22 2012 19:52:04
+Hardware: V7.00
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFull 
+ 
+* JLink Info: TotalIRLen = 4, IRPrint = 0x01
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: LPC1768
+VTarget = 3.300V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+* JLink Info: TotalIRLen = 4, IRPrint = 0x01
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Hardware-Breakpoints: 6
+Software-Breakpoints: 2048
+Watchpoints:          4
+JTAG speed: 2666 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+* JLink Info: TotalIRLen = 4, IRPrint = 0x01
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+**JLink Warning: CPU did not halt after bootloader.
+Application running ...
+Build target 'LPC1768 Flash'
+assembling startup_LPC17xx.s...
+compiling system_LPC17xx.c...
+compiling core_cm3.c...
+compiling Blinky.c...
+compiling IRQ.c...
+compiling GLCD_LPC1700.c...
+compiling GLCD_TTT.c...
+linking...
+Program Size: Code=5426 RO-data=5614 RW-data=20 ZI-data=660  
+FromELF: creating hex file...
+".\Flash\Blinky.axf" - 0 Error(s), 0 Warning(s).
+Build target 'LPC1768 Flash'
+assembling startup_LPC17xx.s...
+compiling system_LPC17xx.c...
+compiling core_cm3.c...
+compiling Blinky.c...
+compiling IRQ.c...
+compiling GLCD_LPC1700.c...
+compiling GLCD_TTT.c...
+linking...
+Program Size: Code=5418 RO-data=5614 RW-data=20 ZI-data=660  
+FromELF: creating hex file...
+".\Flash\Blinky.axf" - 0 Error(s), 0 Warning(s).
+Load "C:\\Users\\aless\\Documents\\GitHub\\LandTiger\\LCD_Blinky\\Flash\\Blinky.AXF" 
+Set JLink Project File to "C:\Users\aless\Documents\GitHub\LandTiger\LCD_Blinky\JLinkSettings.ini"
+ 
+JLink info:
+------------
+DLL: V4.20c, compiled Sep 24 2010 19:46:42
+Firmware: J-Link ARM-OB STM32 compiled Aug 22 2012 19:52:04
+Hardware: V7.00
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFull 
+ 
+* JLink Info: TotalIRLen = 4, IRPrint = 0x01
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: LPC1768
+VTarget = 3.300V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+* JLink Info: TotalIRLen = 4, IRPrint = 0x01
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Hardware-Breakpoints: 6
+Software-Breakpoints: 2048
+Watchpoints:          4
+JTAG speed: 2666 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+* JLink Info: TotalIRLen = 4, IRPrint = 0x01
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+**JLink Warning: CPU did not halt after bootloader.
+Application running ...
+Build target 'LPC1768 Flash'
+assembling startup_LPC17xx.s...
+compiling system_LPC17xx.c...
+compiling core_cm3.c...
+compiling Blinky.c...
+compiling IRQ.c...
+compiling GLCD_LPC1700.c...
+compiling GLCD_TTT.c...
+linking...
+Program Size: Code=5422 RO-data=5614 RW-data=20 ZI-data=660  
+FromELF: creating hex file...
+".\Flash\Blinky.axf" - 0 Error(s), 0 Warning(s).
+Load "C:\\Users\\aless\\Documents\\GitHub\\LandTiger\\LCD_Blinky\\Flash\\Blinky.AXF" 
+Set JLink Project File to "C:\Users\aless\Documents\GitHub\LandTiger\LCD_Blinky\JLinkSettings.ini"
+ 
+JLink info:
+------------
+DLL: V4.20c, compiled Sep 24 2010 19:46:42
+Firmware: J-Link ARM-OB STM32 compiled Aug 22 2012 19:52:04
+Hardware: V7.00
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFull 
+ 
+* JLink Info: TotalIRLen = 4, IRPrint = 0x01
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: LPC1768
+VTarget = 3.300V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+* JLink Info: TotalIRLen = 4, IRPrint = 0x01
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Hardware-Breakpoints: 6
+Software-Breakpoints: 2048
+Watchpoints:          4
+JTAG speed: 2666 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+* JLink Info: TotalIRLen = 4, IRPrint = 0x01
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+**JLink Warning: CPU did not halt after bootloader.
+Application running ...
+Build target 'LPC1768 Flash'
+compiling GLCD_TTT.c...
+linking...
+Program Size: Code=5422 RO-data=5614 RW-data=20 ZI-data=660  
+FromELF: creating hex file...
+".\Flash\Blinky.axf" - 0 Error(s), 0 Warning(s).
+Load "C:\\Users\\aless\\Documents\\GitHub\\LandTiger\\LCD_Blinky\\Flash\\Blinky.AXF" 
+Set JLink Project File to "C:\Users\aless\Documents\GitHub\LandTiger\LCD_Blinky\JLinkSettings.ini"
+ 
+JLink info:
+------------
+DLL: V4.20c, compiled Sep 24 2010 19:46:42
+Firmware: J-Link ARM-OB STM32 compiled Aug 22 2012 19:52:04
+Hardware: V7.00
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFull 
+ 
+* JLink Info: TotalIRLen = 4, IRPrint = 0x01
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: LPC1768
+VTarget = 3.300V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+* JLink Info: TotalIRLen = 4, IRPrint = 0x01
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Hardware-Breakpoints: 6
+Software-Breakpoints: 2048
+Watchpoints:          4
+JTAG speed: 2666 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+* JLink Info: TotalIRLen = 4, IRPrint = 0x01
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+**JLink Warning: CPU did not halt after bootloader.
+Application running ...
+Build target 'LPC1768 Flash'
+assembling startup_LPC17xx.s...
+compiling system_LPC17xx.c...
+compiling core_cm3.c...
+compiling Blinky.c...
+compiling IRQ.c...
+compiling GLCD_LPC1700.c...
+compiling GLCD_TTT.c...
+linking...
+Program Size: Code=5422 RO-data=5614 RW-data=20 ZI-data=660  
+FromELF: creating hex file...
+".\Flash\Blinky.axf" - 0 Error(s), 0 Warning(s).
+Load "C:\\Users\\aless\\Documents\\GitHub\\LandTiger\\LCD_Blinky\\Flash\\Blinky.AXF" 
+Set JLink Project File to "C:\Users\aless\Documents\GitHub\LandTiger\LCD_Blinky\JLinkSettings.ini"
+ 
+JLink info:
+------------
+DLL: V4.20c, compiled Sep 24 2010 19:46:42
+Firmware: J-Link ARM-OB STM32 compiled Aug 22 2012 19:52:04
+Hardware: V7.00
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFull 
+ 
+* JLink Info: TotalIRLen = 4, IRPrint = 0x01
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: LPC1768
+VTarget = 3.300V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+* JLink Info: TotalIRLen = 4, IRPrint = 0x01
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Hardware-Breakpoints: 6
+Software-Breakpoints: 2048
+Watchpoints:          4
+JTAG speed: 2666 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+* JLink Info: TotalIRLen = 4, IRPrint = 0x01
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+**JLink Warning: CPU did not halt after bootloader.
+Application running ...
+Build target 'LPC1768 Flash'
+compiling GLCD_TTT.c...
+linking...
+Program Size: Code=5418 RO-data=5614 RW-data=20 ZI-data=660  
+FromELF: creating hex file...
+".\Flash\Blinky.axf" - 0 Error(s), 0 Warning(s).
+Load "C:\\Users\\aless\\Documents\\GitHub\\LandTiger\\LCD_Blinky\\Flash\\Blinky.AXF" 
+Set JLink Project File to "C:\Users\aless\Documents\GitHub\LandTiger\LCD_Blinky\JLinkSettings.ini"
+ 
+JLink info:
+------------
+DLL: V4.20c, compiled Sep 24 2010 19:46:42
+Firmware: J-Link ARM-OB STM32 compiled Aug 22 2012 19:52:04
+Hardware: V7.00
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFull 
+ 
+* JLink Info: TotalIRLen = 4, IRPrint = 0x01
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: LPC1768
+VTarget = 3.300V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+* JLink Info: TotalIRLen = 4, IRPrint = 0x01
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Hardware-Breakpoints: 6
+Software-Breakpoints: 2048
+Watchpoints:          4
+JTAG speed: 2666 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+* JLink Info: TotalIRLen = 4, IRPrint = 0x01
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+**JLink Warning: CPU did not halt after bootloader.
+Application running ...
+Build target 'LPC1768 Flash'
+compiling GLCD_TTT.c...
+linking...
+Program Size: Code=5418 RO-data=5614 RW-data=20 ZI-data=660  
+FromELF: creating hex file...
+".\Flash\Blinky.axf" - 0 Error(s), 0 Warning(s).
+Build target 'LPC1768 Flash'
+assembling startup_LPC17xx.s...
+compiling system_LPC17xx.c...
+compiling core_cm3.c...
+compiling Blinky.c...
+compiling IRQ.c...
+compiling GLCD_LPC1700.c...
+compiling GLCD_TTT.c...
+linking...
+Program Size: Code=5418 RO-data=5614 RW-data=20 ZI-data=660  
+FromELF: creating hex file...
+".\Flash\Blinky.axf" - 0 Error(s), 0 Warning(s).
+Build target 'LPC1768 Flash'
+compiling GLCD_TTT.c...
+linking...
+Program Size: Code=5418 RO-data=5614 RW-data=20 ZI-data=660  
+FromELF: creating hex file...
+".\Flash\Blinky.axf" - 0 Error(s), 0 Warning(s).
+Load "C:\\Users\\aless\\Documents\\GitHub\\LandTiger\\LCD_Blinky\\Flash\\Blinky.AXF" 
+Set JLink Project File to "C:\Users\aless\Documents\GitHub\LandTiger\LCD_Blinky\JLinkSettings.ini"
+ 
+JLink info:
+------------
+DLL: V4.20c, compiled Sep 24 2010 19:46:42
+Firmware: J-Link ARM-OB STM32 compiled Aug 22 2012 19:52:04
+Hardware: V7.00
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFull 
+ 
+* JLink Info: TotalIRLen = 4, IRPrint = 0x01
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: LPC1768
+VTarget = 3.300V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+* JLink Info: TotalIRLen = 4, IRPrint = 0x01
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Hardware-Breakpoints: 6
+Software-Breakpoints: 2048
+Watchpoints:          4
+JTAG speed: 2666 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+* JLink Info: TotalIRLen = 4, IRPrint = 0x01
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+**JLink Warning: CPU did not halt after bootloader.
+Application running ...
+Build target 'LPC1768 Flash'
+compiling Blinky.c...
+compiling GLCD_TTT.c...
+linking...
+Program Size: Code=5442 RO-data=5614 RW-data=20 ZI-data=660  
+FromELF: creating hex file...
+".\Flash\Blinky.axf" - 0 Error(s), 0 Warning(s).
+Load "C:\\Users\\aless\\Documents\\GitHub\\LandTiger\\LCD_Blinky\\Flash\\Blinky.AXF" 
+Set JLink Project File to "C:\Users\aless\Documents\GitHub\LandTiger\LCD_Blinky\JLinkSettings.ini"
+ 
+JLink info:
+------------
+DLL: V4.20c, compiled Sep 24 2010 19:46:42
+Firmware: J-Link ARM-OB STM32 compiled Aug 22 2012 19:52:04
+Hardware: V7.00
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFull 
+ 
+* JLink Info: TotalIRLen = 4, IRPrint = 0x01
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: LPC1768
+VTarget = 3.300V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+* JLink Info: TotalIRLen = 4, IRPrint = 0x01
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Hardware-Breakpoints: 6
+Software-Breakpoints: 2048
+Watchpoints:          4
+JTAG speed: 2666 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+* JLink Info: TotalIRLen = 4, IRPrint = 0x01
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+**JLink Warning: CPU did not halt after bootloader.
+Application running ...
+Build target 'LPC1768 Flash'
+compiling Blinky.c...
+linking...
+Program Size: Code=5442 RO-data=5614 RW-data=20 ZI-data=660  
+FromELF: creating hex file...
+".\Flash\Blinky.axf" - 0 Error(s), 0 Warning(s).
+Build target 'LPC1768 Flash'
+compiling GLCD_TTT.c...
+linking...
+Program Size: Code=5442 RO-data=5614 RW-data=20 ZI-data=660  
+FromELF: creating hex file...
+".\Flash\Blinky.axf" - 0 Error(s), 0 Warning(s).
+Load "C:\\Users\\aless\\Documents\\GitHub\\LandTiger\\LCD_Blinky\\Flash\\Blinky.AXF" 
+Set JLink Project File to "C:\Users\aless\Documents\GitHub\LandTiger\LCD_Blinky\JLinkSettings.ini"
  
 JLink info:
 ------------

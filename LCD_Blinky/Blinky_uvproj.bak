@@ -115,7 +115,7 @@
             <Oh166RecLen>16</Oh166RecLen>
           </OPTHX>
           <Simulator>
-            <UseSimulator>1</UseSimulator>
+            <UseSimulator>0</UseSimulator>
             <LoadApplicationAtStartup>1</LoadApplicationAtStartup>
             <RunToMain>1</RunToMain>
             <RestoreBreakpoints>1</RestoreBreakpoints>
@@ -126,7 +126,7 @@
             <LimitSpeedToRealTime>1</LimitSpeedToRealTime>
           </Simulator>
           <Target>
-            <UseTarget>0</UseTarget>
+            <UseTarget>1</UseTarget>
             <LoadApplicationAtStartup>1</LoadApplicationAtStartup>
             <RunToMain>1</RunToMain>
             <RestoreBreakpoints>1</RestoreBreakpoints>
@@ -136,7 +136,7 @@
             <RestoreToolbox>1</RestoreToolbox>
           </Target>
           <RunDebugAfterBuild>0</RunDebugAfterBuild>
-          <TargetSelection>4</TargetSelection>
+          <TargetSelection>1</TargetSelection>
           <SimDlls>
             <CpuDll></CpuDll>
             <CpuDllArguments></CpuDllArguments>
@@ -150,7 +150,7 @@
             <PeripheralDll></PeripheralDll>
             <PeripheralDllArguments></PeripheralDllArguments>
             <InitializationFile></InitializationFile>
-            <Driver>Segger\JL2CM3.dll</Driver>
+            <Driver>BIN\UL2CM3.DLL</Driver>
           </TargetDlls>
         </DebugOption>
         <Utilities>
@@ -430,36 +430,6 @@
               <FileName>GLCD_LPC1700.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\GLCD_LPC1700.c</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
-          <GroupName>Pictures</GroupName>
-          <Files>
-            <File>
-              <FileName>Bg_16bpp_t.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\Bg_16bpp_t.c</FilePath>
-            </File>
-            <File>
-              <FileName>Bg_16bpp_l.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\Bg_16bpp_l.c</FilePath>
-            </File>
-            <File>
-              <FileName>Bg_16bpp_r.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\Bg_16bpp_r.c</FilePath>
-            </File>
-            <File>
-              <FileName>Bg_16bpp_b.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\Bg_16bpp_b.c</FilePath>
-            </File>
-            <File>
-              <FileName>ARM_Ani_16bpp.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\ARM_Ani_16bpp.c</FilePath>
             </File>
           </Files>
         </Group>

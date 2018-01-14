@@ -8,3 +8,4 @@
 .\Flash\blinky.o: C:\Program Files\Keil\ARM\RV31\INC\string.h
 .\Flash\blinky.o: GLCD.h
 .\Flash\blinky.o: C:\Program Files\Keil\ARM\RV31\INC\stdlib.h
+.\Flash\blinky.o: GLCD_TTT.h

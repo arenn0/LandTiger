@@ -15,6 +15,7 @@
 #ifndef __FONT_24x16_H
 #define __FONT_24x16_H
 
+
 #define CHAR_H      24                  /* Character Height (in pixels)       */
 #define CHAR_W      16                  /* Character Width (in pixels)        */
 

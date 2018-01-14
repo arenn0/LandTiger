@@ -431,6 +431,16 @@
               <FileType>1</FileType>
               <FilePath>.\GLCD_LPC1700.c</FilePath>
             </File>
+            <File>
+              <FileName>GLCD_TTT.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\GLCD_TTT.c</FilePath>
+            </File>
+            <File>
+              <FileName>GLCD_TTT.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\GLCD_TTT.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
