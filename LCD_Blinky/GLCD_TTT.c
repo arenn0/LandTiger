@@ -154,7 +154,7 @@ void TTT_CheckVictory(unsigned int ln,unsigned int col,unsigned int move){
 	if(TTT_CheckMove(ln,0,Convert(move))&&TTT_CheckMove(ln,1,Convert(move))&&TTT_CheckMove(ln,2,Convert(move))){
 		// to do GLCD display line
 		GLCD_DisplayString(0,0,"Horizontal!");
-		GLCD_DisplayLine(lattice0.pos[ln][0].p.x-CHAR_W/2   ,lattice0.pos[0][col].p.y+CHAR_H/2, lattice0.pos[ln][2].p.x+ CHAR_W/2 +CHAR_W , lattice0.pos[0][col].p.y+CHAR_H/2,Yellow,5);
+		GLCD_DisplayLine(lattice0.pos[ln][0].p.x-CHAR_W/2   ,lattice0.pos[ln][col].p.y+CHAR_H/2, lattice0.pos[ln][2].p.x+ CHAR_W/2 +CHAR_W , lattice0.pos[ln][col].p.y+CHAR_H/2,Yellow,5);
 		//_wait_delay(100000000);
 	}
 	// Vertical Check
@@ -175,7 +175,7 @@ void TTT_CheckVictory(unsigned int ln,unsigned int col,unsigned int move){
 	if(TTT_CheckMove(2,0,Convert(move))&&TTT_CheckMove(1,1,Convert(move))&&TTT_CheckMove(0,2,Convert(move))){
 		//to do antidiagonal check
 		GLCD_DisplayVerticalString(0,0,"Antidiagonal!");
-		GLCD_DisplayAntidiagonalLine(245,35,165,Yellow, 5);
+		GLCD_DisplayAntidiagonalLine(238,35,165,Yellow, 5);
 		//_wait_delay(100000000);
 	}
 }

@@ -190,8 +190,8 @@ Image Symbol Table
     computePos                               0x00001245   Thumb Code    38  glcd_ttt.o(.text)
     TTT_init                                 0x0000126b   Thumb Code   162  glcd_ttt.o(.text)
     GLCD_DisplayTTTLattice                   0x0000130d   Thumb Code   242  glcd_ttt.o(.text)
-    TTT_CheckVictory                         0x000013ff   Thumb Code   328  glcd_ttt.o(.text)
-    TTT_DisplayMove                          0x00001547   Thumb Code    76  glcd_ttt.o(.text)
+    TTT_CheckVictory                         0x000013ff   Thumb Code   330  glcd_ttt.o(.text)
+    TTT_DisplayMove                          0x00001549   Thumb Code    76  glcd_ttt.o(.text)
     __scatterload                            0x000015cd   Thumb Code    28  init.o(.text)
     __scatterload_rt2                        0x000015cd   Thumb Code     0  init.o(.text)
     __scatterload_copy                       0x000015f1   Thumb Code    14  handlers.o(i.__scatterload_copy)
@@ -266,13 +266,13 @@ Image component sizes
 
        156          0          0          0          0        443   blinky.o
       3852         54       5376          6          0      11346   glcd_lpc1700.o
-       916         58          0          0        144       3262   glcd_ttt.o
+       916         56          0          0        144       3262   glcd_ttt.o
         56          4          0          8          0        682   irq.o
         32          8        204          0        512        908   startup_lpc17xx.o
        344         32          0          4          0       4923   system_lpc17xx.o
 
     ----------------------------------------------------------------------
-      5356        156       5614         20        660      21564   Object Totals
+      5356        154       5614         20        660      21564   Object Totals
          0          0         32          0          0          0   (incl. Generated)
          0          0          2          2          4          0   (incl. Padding)
 
@@ -307,9 +307,9 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-      5442        172       5614         20        660      21320   Grand Totals
-      5442        172       5614         20        660      21320   ELF Image Totals
-      5442        172       5614         20          0          0   ROM Totals
+      5442        170       5614         20        660      21320   Grand Totals
+      5442        170       5614         20        660      21320   ELF Image Totals
+      5442        170       5614         20          0          0   ROM Totals
 
 ==============================================================================
 
