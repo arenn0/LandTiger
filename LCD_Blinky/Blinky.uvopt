@@ -253,8 +253,8 @@
       <Focus>0</Focus>
       <ColumnNumber>274375792</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>5231468</TopLine>
-      <CurrentLine>32445588</CurrentLine>
+      <TopLine>157</TopLine>
+      <CurrentLine>157</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\startup_LPC17xx.s</PathWithFileName>
       <FilenameWithoutPath>startup_LPC17xx.s</FilenameWithoutPath>
@@ -274,8 +274,8 @@
       <Focus>0</Focus>
       <ColumnNumber>274381032</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>5231468</TopLine>
-      <CurrentLine>32445588</CurrentLine>
+      <TopLine>489</TopLine>
+      <CurrentLine>489</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\system_LPC17xx.c</PathWithFileName>
       <FilenameWithoutPath>system_LPC17xx.c</FilenameWithoutPath>
@@ -295,8 +295,8 @@
       <Focus>0</Focus>
       <ColumnNumber>274386000</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>5231468</TopLine>
-      <CurrentLine>32445588</CurrentLine>
+      <TopLine>830</TopLine>
+      <CurrentLine>830</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\core_cm3.c</PathWithFileName>
       <FilenameWithoutPath>core_cm3.c</FilenameWithoutPath>
@@ -314,10 +314,10 @@
       <FileType>1</FileType>
       <tvExp>1</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>274390944</ColumnNumber>
+      <ColumnNumber>4</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>5231468</TopLine>
-      <CurrentLine>32445588</CurrentLine>
+      <TopLine>25</TopLine>
+      <CurrentLine>56</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\Blinky.c</PathWithFileName>
       <FilenameWithoutPath>Blinky.c</FilenameWithoutPath>
@@ -349,8 +349,8 @@
       <Focus>0</Focus>
       <ColumnNumber>274390944</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>5231468</TopLine>
-      <CurrentLine>32445588</CurrentLine>
+      <TopLine>1</TopLine>
+      <CurrentLine>44</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\IRQ.c</PathWithFileName>
       <FilenameWithoutPath>IRQ.c</FilenameWithoutPath>
@@ -363,8 +363,8 @@
       <Focus>0</Focus>
       <ColumnNumber>274390944</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>5231468</TopLine>
-      <CurrentLine>32445588</CurrentLine>
+      <TopLine>973</TopLine>
+      <CurrentLine>973</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\GLCD_LPC1700.c</PathWithFileName>
       <FilenameWithoutPath>GLCD_LPC1700.c</FilenameWithoutPath>
@@ -375,10 +375,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>274390944</ColumnNumber>
+      <ColumnNumber>15</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>5231468</TopLine>
-      <CurrentLine>32445588</CurrentLine>
+      <TopLine>142</TopLine>
+      <CurrentLine>163</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\GLCD_TTT.c</PathWithFileName>
       <FilenameWithoutPath>GLCD_TTT.c</FilenameWithoutPath>
@@ -419,5 +419,90 @@
       <FilenameWithoutPath>Abstract.txt</FilenameWithoutPath>
     </File>
   </Group>
+
+  <AlienFiles>
+    <PathWithFilename>C:\Users\aless\Documents\GitHub\LandTiger\LCD_Blinky\LPC17xx.h</PathWithFilename>
+    <TopLine>422</TopLine>
+    <CurrentLine>449</CurrentLine>
+    <Constant>0</Constant>
+    <WindowPosition>
+      <length>0</length>
+      <flags>0</flags>
+      <showCmd>0</showCmd>
+      <MinPosition>
+        <xPos>0</xPos>
+        <yPos>0</yPos>
+      </MinPosition>
+      <MaxPosition>
+        <xPos>0</xPos>
+        <yPos>0</yPos>
+      </MaxPosition>
+      <NormalPosition>
+        <Top>0</Top>
+        <Left>0</Left>
+        <Right>0</Right>
+        <Bottom>0</Bottom>
+      </NormalPosition>
+    </WindowPosition>
+  </AlienFiles>
+
+  <MDIGroups>
+    <Orientation>1</Orientation>
+    <ActiveMDIGroup>0</ActiveMDIGroup>
+    <MDIGroup>
+      <Size>100</Size>
+      <ActiveTab>3</ActiveTab>
+      <Documents>
+        <Doc>
+          <Name>.\startup_LPC17xx.s</Name>
+          <ColumnNumber>274375792</ColumnNumber>
+          <TopLine>157</TopLine>
+          <CurrentLine>157</CurrentLine>
+        </Doc>
+        <Doc>
+          <Name>.\system_LPC17xx.c</Name>
+          <ColumnNumber>274381032</ColumnNumber>
+          <TopLine>489</TopLine>
+          <CurrentLine>489</CurrentLine>
+        </Doc>
+        <Doc>
+          <Name>.\core_cm3.c</Name>
+          <ColumnNumber>274386000</ColumnNumber>
+          <TopLine>830</TopLine>
+          <CurrentLine>830</CurrentLine>
+        </Doc>
+        <Doc>
+          <Name>.\Blinky.c</Name>
+          <ColumnNumber>4</ColumnNumber>
+          <TopLine>25</TopLine>
+          <CurrentLine>56</CurrentLine>
+        </Doc>
+        <Doc>
+          <Name>.\IRQ.c</Name>
+          <ColumnNumber>274390944</ColumnNumber>
+          <TopLine>1</TopLine>
+          <CurrentLine>44</CurrentLine>
+        </Doc>
+        <Doc>
+          <Name>.\GLCD_LPC1700.c</Name>
+          <ColumnNumber>274390944</ColumnNumber>
+          <TopLine>973</TopLine>
+          <CurrentLine>973</CurrentLine>
+        </Doc>
+        <Doc>
+          <Name>.\GLCD_TTT.c</Name>
+          <ColumnNumber>15</ColumnNumber>
+          <TopLine>142</TopLine>
+          <CurrentLine>163</CurrentLine>
+        </Doc>
+        <Doc>
+          <Name>LPC17xx.h</Name>
+          <ColumnNumber>17</ColumnNumber>
+          <TopLine>422</TopLine>
+          <CurrentLine>449</CurrentLine>
+        </Doc>
+      </Documents>
+    </MDIGroup>
+  </MDIGroups>
 
 </ProjectOpt>

@@ -1,7 +1,7 @@
-.\Flash\system_lpc17xx.o: system_LPC17xx.c
-.\Flash\system_lpc17xx.o: C:\Program Files\Keil\ARM\RV31\INC\stdint.h
-.\Flash\system_lpc17xx.o: LPC17xx.h
-.\Flash\system_lpc17xx.o: C:\Program Files\Keil\ARM\RV31\INC\core_cm3.h
-.\Flash\system_lpc17xx.o: C:\Program Files\Keil\ARM\RV31\INC\core_cmInstr.h
-.\Flash\system_lpc17xx.o: C:\Program Files\Keil\ARM\RV31\INC\core_cmFunc.h
-.\Flash\system_lpc17xx.o: system_LPC17xx.h
+.\flash\system_lpc17xx.o: system_LPC17xx.c
+.\flash\system_lpc17xx.o: C:\Keil_v5\ARM\ARMCC\bin\..\include\stdint.h
+.\flash\system_lpc17xx.o: LPC17xx.h
+.\flash\system_lpc17xx.o: C:\Keil_v5\ARM\CMSIS\Include\core_cm3.h
+.\flash\system_lpc17xx.o: C:\Keil_v5\ARM\CMSIS\Include\core_cmInstr.h
+.\flash\system_lpc17xx.o: C:\Keil_v5\ARM\CMSIS\Include\core_cmFunc.h
+.\flash\system_lpc17xx.o: system_LPC17xx.h

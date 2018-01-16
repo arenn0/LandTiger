@@ -1,13 +1,17 @@
-.\Flash\blinky.o: Blinky.c
-.\Flash\blinky.o: LPC17xx.H
-.\Flash\blinky.o: C:\Program Files\Keil\ARM\RV31\INC\core_cm3.h
-.\Flash\blinky.o: C:\Program Files\Keil\ARM\RV31\INC\stdint.h
-.\Flash\blinky.o: C:\Program Files\Keil\ARM\RV31\INC\core_cmInstr.h
-.\Flash\blinky.o: C:\Program Files\Keil\ARM\RV31\INC\core_cmFunc.h
-.\Flash\blinky.o: system_LPC17xx.h
-.\Flash\blinky.o: C:\Program Files\Keil\ARM\RV31\INC\string.h
-.\Flash\blinky.o: GLCD.h
-.\Flash\blinky.o: C:\Program Files\Keil\ARM\RV31\INC\stdlib.h
-.\Flash\blinky.o: GLCD_TTT.h
-.\Flash\blinky.o: TouchPanel.h
-.\Flash\blinky.o: C:\Program Files\Keil\ARM\RV31\INC\stdio.h
+.\flash\blinky.o: Blinky.c
+.\flash\blinky.o: LPC17xx.H
+.\flash\blinky.o: C:\Keil_v5\ARM\CMSIS\Include\core_cm3.h
+.\flash\blinky.o: C:\Keil_v5\ARM\ARMCC\bin\..\include\stdint.h
+.\flash\blinky.o: C:\Keil_v5\ARM\CMSIS\Include\core_cmInstr.h
+.\flash\blinky.o: C:\Keil_v5\ARM\CMSIS\Include\core_cmFunc.h
+.\flash\blinky.o: system_LPC17xx.h
+.\flash\blinky.o: C:\Keil_v5\ARM\ARMCC\bin\..\include\string.h
+.\flash\blinky.o: GLCD.h
+.\flash\blinky.o: C:\Keil_v5\ARM\ARMCC\bin\..\include\stdlib.h
+.\flash\blinky.o: GLCD_TTT.h
+.\flash\blinky.o: TouchPanel.h
+.\flash\blinky.o: C:\Keil_v5\ARM\ARMCC\bin\..\include\stdio.h
+.\flash\blinky.o: ./serial/serial.h
+.\flash\blinky.o: ./timer/timer.h
+.\flash\blinky.o: ./led/led.h
+.\flash\blinky.o: ./button_EXINT/button.h

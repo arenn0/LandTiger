@@ -1,8 +1,9 @@
-.\Flash\touchpanel.o: TouchPanel.c
-.\Flash\touchpanel.o: TouchPanel.h
-.\Flash\touchpanel.o: LPC17xx.h
-.\Flash\touchpanel.o: C:\Program Files\Keil\ARM\RV31\INC\core_cm3.h
-.\Flash\touchpanel.o: C:\Program Files\Keil\ARM\RV31\INC\stdint.h
-.\Flash\touchpanel.o: C:\Program Files\Keil\ARM\RV31\INC\core_cmInstr.h
-.\Flash\touchpanel.o: C:\Program Files\Keil\ARM\RV31\INC\core_cmFunc.h
-.\Flash\touchpanel.o: system_LPC17xx.h
+.\flash\touchpanel.o: TouchPanel.c
+.\flash\touchpanel.o: TouchPanel.h
+.\flash\touchpanel.o: LPC17xx.h
+.\flash\touchpanel.o: C:\Keil_v5\ARM\CMSIS\Include\core_cm3.h
+.\flash\touchpanel.o: C:\Keil_v5\ARM\ARMCC\bin\..\include\stdint.h
+.\flash\touchpanel.o: C:\Keil_v5\ARM\CMSIS\Include\core_cmInstr.h
+.\flash\touchpanel.o: C:\Keil_v5\ARM\CMSIS\Include\core_cmFunc.h
+.\flash\touchpanel.o: system_LPC17xx.h
+.\flash\touchpanel.o: GLCD.h

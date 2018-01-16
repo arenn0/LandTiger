@@ -80,8 +80,7 @@ static unsigned short driverCode;
 *   Parameter:    cnt:    number of while cycles to delay                      *
 *   Return:                                                                    *
 *******************************************************************************/
-
-static void delay (int cnt) {
+void delay (int cnt) {
 
   cnt <<= DELAY_2N;
   while (cnt--);

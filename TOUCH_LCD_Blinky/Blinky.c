@@ -15,11 +15,14 @@
 #include "GLCD_TTT.h"
 #include "TouchPanel.h"
 #include <stdio.h>
-
+#include "./serial/serial.h"
+#include "./timer/timer.h"
+#include "./led/led.h"
+#include "./button_EXINT/button.h"
 
 #define DBG 1
 #define LED_NUM     8                   /* Number of user LEDs                */
-const  unsigned long led_mask[] = { 1<<0, 1<<1, 1UL<<2, 1<<3, 1<<4, 1<<5, 1<<6, 1<<7 };
+const  unsigned long led_mask1[] = { 1<<0, 1<<1, 1UL<<2, 1<<3, 1<<4, 1<<5, 1<<6, 1<<7 };
 
 extern unsigned char ClockLEDOn;
 extern unsigned char ClockLEDOff;
@@ -31,9 +34,9 @@ extern unsigned char Bg_16bpp_b[];
 extern unsigned char ARM_Ani_16bpp[];
 
 int main (void) {                       /* Main Program                       */
-  Coordinate * coord;
+  // Coordinate * coord;
   char * stringa=malloc(20*sizeof(char));
-  int i;
+
   SystemInit();
   GLCD_Init   ();
   GLCD_Clear  (Navy);
@@ -41,7 +44,7 @@ int main (void) {                       /* Main Program                       */
   
 #if DBG
   //GLCD_DisplayString(50,0,"Hello, World!");
-  GLCD_DisplayTTTLattice(60,18,200,200,Red,3);
+  //GLCD_DisplayTTTLattice(60,18,200,200,Red,3);
   //GLCD_DisplayString(85,45,"X");
   //GLCD_DisplayString(85,45+60,"X");
   //GLCD_DisplayString(85,45+125,"X");
@@ -62,14 +65,29 @@ int main (void) {                       /* Main Program                       */
   TTT_DisplayMove(1,2,Red,0);
   TTT_DisplayMove(2,1,Red,1);
   TTT_DisplayMove(2,2,Red,0);
+	*/
+	LED_init();
+  BUTTON_init();
+	SER_init(0);
+	init_timer(0,4000);
+	enable_timer(0);
 
-  */
+  LPC_PINCON->PINSEL4    |= (1 << 26);
+
   TP_Init();
-  for(i=0;i<60000000;i++)	;
-  coord = Read_Ads7846();
 
-  sprintf(stringa, "%d %d", coord->x, coord->y);
-  GLCD_DisplayString(0,0,(unsigned char *)stringa);
+  LPC_SC->EXTMODE += 0x8;
+	NVIC_EnableIRQ(EINT3_IRQn);
+	
+	
+	
+	while(1){
+	}
+	
+  
+
+  //sprintf(stringa, "%d %d", coord->x, coord->y);
+  //GLCD_DisplayString(0,0,(unsigned char *)stringa);
 
 
 

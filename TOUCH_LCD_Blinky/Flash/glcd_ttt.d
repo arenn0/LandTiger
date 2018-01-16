@@ -1,4 +1,4 @@
-.\Flash\glcd_ttt.o: GLCD_TTT.c
-.\Flash\glcd_ttt.o: GLCD_TTT.h
-.\Flash\glcd_ttt.o: GLCD.h
-.\Flash\glcd_ttt.o: C:\Program Files\Keil\ARM\RV31\INC\stdint.h
+.\flash\glcd_ttt.o: GLCD_TTT.c
+.\flash\glcd_ttt.o: GLCD_TTT.h
+.\flash\glcd_ttt.o: GLCD.h
+.\flash\glcd_ttt.o: C:\Keil_v5\ARM\ARMCC\bin\..\include\stdint.h

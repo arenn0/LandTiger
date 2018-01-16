@@ -58,4 +58,5 @@ extern void GLCD_DisplayLine    (unsigned int x0, unsigned int y0, unsigned int 
 extern void GLCD_DisplayDiagonalLine		(unsigned int x, unsigned int y, unsigned int height, unsigned int color, unsigned int thickness);
 extern void GLCD_DisplayAntidiagonalLine(unsigned int x, unsigned int y, unsigned int height, unsigned int color, unsigned int thickness);
 extern void GLCD_DisplayVerticalString (unsigned int x, unsigned int y, unsigned char *s); 
+void delay (int cnt);
 #endif /* _GLCD_H */

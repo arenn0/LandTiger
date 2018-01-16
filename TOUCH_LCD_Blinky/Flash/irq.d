@@ -1,1 +1,1 @@
-.\Flash\irq.o: IRQ.c
+.\flash\irq.o: IRQ.c

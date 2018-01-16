@@ -9,15 +9,24 @@
 ### List of Objects: adding '".\flash\glcd_lpc1700.o"'
 ### List of Objects: adding '".\flash\glcd_ttt.o"'
 ### List of Objects: adding '".\flash\touchpanel.o"'
+### List of Objects: adding '".\flash\irq_button.o"'
+### List of Objects: adding '".\flash\lib_button.o"'
+### List of Objects: adding '".\flash\funct_led.o"'
+### List of Objects: adding '".\flash\lib_led.o"'
+### List of Objects: adding '".\flash\irq_serial.o"'
+### List of Objects: adding '".\flash\lib_serial.o"'
+### List of Objects: adding '".\flash\funct_timer.o"'
+### List of Objects: adding '".\flash\irq_timer.o"'
+### List of Objects: adding '".\flash\lib_timer.o"'
 ### ADS-LD Command completed:
---cpu Cortex-M3 ".\flash\startup_lpc17xx.o" ".\flash\system_lpc17xx.o" ".\flash\core_cm3.o" ".\flash\blinky.o" ".\flash\irq.o" ".\flash\glcd_lpc1700.o" ".\flash\glcd_ttt.o" ".\flash\touchpanel.o" --library_type=microlib --strict --scatter ".\Flash\Blinky.sct" 
+--cpu Cortex-M3 ".\flash\startup_lpc17xx.o" ".\flash\system_lpc17xx.o" ".\flash\core_cm3.o" ".\flash\blinky.o" ".\flash\irq.o" ".\flash\glcd_lpc1700.o" ".\flash\glcd_ttt.o" ".\flash\touchpanel.o" ".\flash\irq_button.o" ".\flash\lib_button.o" ".\flash\funct_led.o" ".\flash\lib_led.o" ".\flash\irq_serial.o" ".\flash\lib_serial.o" ".\flash\funct_timer.o" ".\flash\irq_timer.o" ".\flash\lib_timer.o" --library_type=microlib --strict --scatter ".\Flash\Blinky.sct" 
 --autoat --summary_stderr --info summarysizes --map --xref --callgraph --symbols 
 --info sizes --info totals --info unused --info veneers 
  --list ".\Flash\Blinky.map" -o ".\Flash\Blinky.axf"### Preparing Environment (PrepEnvAds)
 ### ADS-LD Output File: '.\Flash\Blinky.axf'
 ### ADS-LD Command File: '.\Flash\Blinky.lnp'
 ### Checking for dirty Components...
-### Creating CmdFile '.\Flash\Blinky.lnp', Handle=0x00000818
+### Creating CmdFile '.\Flash\Blinky.lnp', Handle=0x000007B8
 ### Writing '.lnp' file
 ### ADS-LD Command file '.\Flash\Blinky.lnp' is ready.
 ### ADS-LD: About to start ADS-LD Thread.

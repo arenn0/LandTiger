@@ -16,7 +16,7 @@
 ### ADS-LD Output File: '.\Flash\Blinky.axf'
 ### ADS-LD Command File: '.\Flash\Blinky.lnp'
 ### Checking for dirty Components...
-### Creating CmdFile '.\Flash\Blinky.lnp', Handle=0x000036E8
+### Creating CmdFile '.\Flash\Blinky.lnp', Handle=0x000003A4
 ### Writing '.lnp' file
 ### ADS-LD Command file '.\Flash\Blinky.lnp' is ready.
 ### ADS-LD: About to start ADS-LD Thread.

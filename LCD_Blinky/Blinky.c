@@ -53,10 +53,10 @@ int main (void) {                       /* Main Program                       */
   TTT_DisplayMove(1,1,Red,1);	//
   TTT_DisplayMove(0,1,Red,1);	//
   TTT_DisplayMove(0,2,Red,1);	 //
-  TTT_DisplayMove(1,2,Red,1);
+  /*TTT_DisplayMove(1,2,Red,1);
   TTT_DisplayMove(2,1,Red,1);
   TTT_DisplayMove(2,2,Red,1);
-  
+  */
 
 
 
