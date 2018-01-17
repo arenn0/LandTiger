@@ -552,6 +552,21 @@
             </File>
           </Files>
         </Group>
+        <Group>
+          <GroupName>SPI</GroupName>
+          <Files>
+            <File>
+              <FileName>lpc17xx_spi.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\lpc17xx_spi.c</FilePath>
+            </File>
+            <File>
+              <FileName>lpc17xx_spi.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\lpc17xx_spi.h</FilePath>
+            </File>
+          </Files>
+        </Group>
       </Groups>
     </Target>
   </Targets>

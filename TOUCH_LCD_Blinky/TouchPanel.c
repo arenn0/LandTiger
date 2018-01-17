@@ -82,7 +82,7 @@ static void ADS7843_SPI_Init(void)
 	LPC_SSP1->CR0  = 0x0007;                    /* 8Bit, CPOL=0, CPHA=0         */
 	LPC_SSP1->CR1  = 0x0002;                    /* SSP1 enable, master          */
 
-	LPC17xx_SPI_SetSpeed ( SPI_SPEED_2MHz );
+	LPC17xx_SPI_SetSpeed ( SPI_SPEED_400kHz );
 
 	/* wait for busy gone */
 	while( LPC_SSP1->SR & ( 1 << SSPSR_BSY ) );
@@ -253,9 +253,9 @@ void TP_GetAdXY(int *x,int *y)
 Coordinate *Read_Ads7846(void)
 {
   static Coordinate  screen;
-  //int m0,m1,m2;
+  int m0,m1,m2;
   int TP_X[1],TP_Y[1];
-  //inttemp[3];
+  int temp[3];
   uint8_t count=0;
   int buffer[2][9]={{0},{0}};  /* 坐标X和Y进行多次采样 */
   do					       /* 循环采样9次 */
@@ -264,27 +264,26 @@ Coordinate *Read_Ads7846(void)
 	buffer[0][count]=TP_X[0];  
 	buffer[1][count]=TP_Y[0];
 	count++; 
-			wait_delay(2000000);
+			//wait_delay(2000000);
   }
-  while(!TP_INT_IN && count<9);  /* TP_INT_IN为触摸屏中断引脚,当用户点击触摸屏时TP_INT_IN会被置低 */
-  /*  
-  	if(count==9)    成功采样9次,进行滤波  
+  while(!TP_INT_IN && count<9);  /* TP_INT_IN为触摸屏中断引脚,当用户点击触摸屏时TP_INT_IN会被置低 */  
+  if(count==9)    
   	{  
-     为减少运算量,分别分3组取平均值 
+
     temp[0]=(buffer[0][0]+buffer[0][1]+buffer[0][2])/3;
 	temp[1]=(buffer[0][3]+buffer[0][4]+buffer[0][5])/3;
 	temp[2]=(buffer[0][6]+buffer[0][7]+buffer[0][8])/3;
-	 计算3组数据的差值 
+	 
 	m0=temp[0]-temp[1];
 	m1=temp[1]-temp[2];
 	m2=temp[2]-temp[0];
-	 对上述差值取绝对值 
+	// 对上述差值取绝对值 
 	m0=m0>0?m0:(-m0);
     m1=m1>0?m1:(-m1);
 	m2=m2>0?m2:(-m2);
-	 判断绝对差值是否都超过差值门限，如果这3个绝对差值都超过门限值，则判定这次采样点为野点,抛弃采样点，差值门限取为2 
+	// 判断绝对差值是否都超过差值门限，如果这3个绝对差值都超过门限值，则判定这次采样点为野点,抛弃采样点，差值门限取为2 
 	if( m0>THRESHOLD  &&  m1>THRESHOLD  &&  m2>THRESHOLD ) return 0;
-	 计算它们的平均值，同时赋值给screen 
+	// 计算它们的平均值，同时赋值给screen 
 	if(m0<m1)
 	{
 	  if(m2<m0) 
@@ -297,7 +296,7 @@ Coordinate *Read_Ads7846(void)
 	else 
 	  screen.x=(temp[1]+temp[2])/2;
 
-	 同上 计算Y的平均值 
+	// 同上 计算Y的平均值 
     temp[0]=(buffer[1][0]+buffer[1][1]+buffer[1][2])/3;
 	temp[1]=(buffer[1][3]+buffer[1][4]+buffer[1][5])/3;
 	temp[2]=(buffer[1][6]+buffer[1][7]+buffer[1][8])/3;
@@ -322,12 +321,12 @@ Coordinate *Read_Ads7846(void)
 	   screen.y=(temp[1]+temp[2])/2;
 
 	return &screen;
-  }  	*/
+  }  	
   /* first try */
-  screen.x=buffer[0][0];
-  screen.y=buffer[1][0];
+  //screen.x=buffer[0][0];
+  //screen.y=buffer[1][0];
   /*end first try */
-  return &screen;
+  return 0;
   //return 0; 
 }
 	 

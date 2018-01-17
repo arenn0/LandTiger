@@ -27,7 +27,6 @@ Section Cross References
     glcd_ttt.o(.text) refers to glcd_lpc1700.o(.text) for GLCD_DisplayLine
     glcd_ttt.o(.text) refers to glcd_ttt.o(.bss) for .bss
     touchpanel.o(.text) refers to memseta.o(.text) for __aeabi_memclr4
-    touchpanel.o(.text) refers to glcd_lpc1700.o(.text) for wait_delay
     touchpanel.o(.text) refers to dflti.o(.text) for __aeabi_i2d
     touchpanel.o(.text) refers to cdcmple.o(.text) for __aeabi_cdcmpeq
     touchpanel.o(.text) refers to dfltui.o(.text) for __aeabi_ui2d
@@ -38,11 +37,11 @@ Section Cross References
     touchpanel.o(.text) refers to touchpanel.o(.data) for .data
     irq_button.o(.text) refers to strcpy.o(.text) for strcpy
     irq_button.o(.text) refers to lib_serial.o(.text) for SER_putFirstChar
-    irq_button.o(.text) refers to malloc.o(i.malloc) for malloc
     irq_button.o(.text) refers to touchpanel.o(.text) for Read_Ads7846
+    irq_button.o(.text) refers to glcd_lpc1700.o(.text) for GLCD_Clear
     irq_button.o(.text) refers to printf1.o(i.__0sprintf$1) for __2sprintf
-    irq_button.o(.text) refers to glcd_lpc1700.o(.text) for GLCD_DisplayString
     irq_button.o(.text) refers to irq_serial.o(.bss) for buffer_out
+    irq_button.o(.text) refers to irq_button.o(.bss) for .bss
     funct_led.o(.text) refers to funct_led.o(.constdata) for .constdata
     funct_led.o(.text) refers to lib_led.o(.data) for led_value
     lib_led.o(.text) refers to lib_led.o(.data) for .data
@@ -413,38 +412,38 @@ Image Symbol Table
     RESET                                    0x00000000   Section      204  startup_lpc17xx.o(RESET)
     ../clib/microlib/division.c              0x00000000   Number         0  uldiv.o ABSOLUTE
     ../clib/microlib/division.c              0x00000000   Number         0  uidiv.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10a.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11a.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9b.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10b.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry2.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11a.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8b.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8a.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11b.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10b.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7a.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry5.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11b.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry.o ABSOLUTE
-    ../clib/microlib/longlong.c              0x00000000   Number         0  llshl.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry2.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9b.o ABSOLUTE
     ../clib/microlib/longlong.c              0x00000000   Number         0  llushr.o ABSOLUTE
+    ../clib/microlib/longlong.c              0x00000000   Number         0  llshl.o ABSOLUTE
     ../clib/microlib/longlong.c              0x00000000   Number         0  llsshr.o ABSOLUTE
     ../clib/microlib/malloc/malloc.c         0x00000000   Number         0  malloc.o ABSOLUTE
-    ../clib/microlib/malloc/malloc.c         0x00000000   Number         0  mallocra.o ABSOLUTE
     ../clib/microlib/malloc/malloc.c         0x00000000   Number         0  mallocr.o ABSOLUTE
     ../clib/microlib/malloc/malloc.c         0x00000000   Number         0  malloca.o ABSOLUTE
+    ../clib/microlib/malloc/malloc.c         0x00000000   Number         0  mallocra.o ABSOLUTE
     ../clib/microlib/malloc/mvars.c          0x00000000   Number         0  mvars.o ABSOLUTE
     ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf7.o ABSOLUTE
-    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf8.o ABSOLUTE
-    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printfa.o ABSOLUTE
-    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf3.o ABSOLUTE
-    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printfb.o ABSOLUTE
-    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf0.o ABSOLUTE
-    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf1.o ABSOLUTE
-    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf4.o ABSOLUTE
     ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf5.o ABSOLUTE
-    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf6.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf4.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf3.o ABSOLUTE
     ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf2.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf1.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf0.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printfb.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf6.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printfa.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf8.o ABSOLUTE
     ../clib/microlib/printf/stubs.s          0x00000000   Number         0  stubs.o ABSOLUTE
     ../clib/microlib/stdio/fputc.c           0x00000000   Number         0  fputc.o ABSOLUTE
     ../clib/microlib/stdio/semi.s            0x00000000   Number         0  semi.o ABSOLUTE
@@ -453,13 +452,13 @@ Image Symbol Table
     ../clib/microlib/string/memcpy.c         0x00000000   Number         0  memcpya.o ABSOLUTE
     ../clib/microlib/string/memset.c         0x00000000   Number         0  memseta.o ABSOLUTE
     ../clib/microlib/string/strcpy.c         0x00000000   Number         0  strcpy.o ABSOLUTE
-    ../clib/microlib/stubs.s                 0x00000000   Number         0  iusefp.o ABSOLUTE
     ../clib/microlib/stubs.s                 0x00000000   Number         0  iusesemip.o ABSOLUTE
+    ../clib/microlib/stubs.s                 0x00000000   Number         0  iusefp.o ABSOLUTE
     ../fplib/microlib/fpadd.c                0x00000000   Number         0  dadd.o ABSOLUTE
     ../fplib/microlib/fpdiv.c                0x00000000   Number         0  ddiv.o ABSOLUTE
     ../fplib/microlib/fpepilogue.c           0x00000000   Number         0  depilogue.o ABSOLUTE
-    ../fplib/microlib/fpfix.c                0x00000000   Number         0  dfixui.o ABSOLUTE
     ../fplib/microlib/fpfix.c                0x00000000   Number         0  dfixul.o ABSOLUTE
+    ../fplib/microlib/fpfix.c                0x00000000   Number         0  dfixui.o ABSOLUTE
     ../fplib/microlib/fpflt.c                0x00000000   Number         0  dfltui.o ABSOLUTE
     ../fplib/microlib/fpflt.c                0x00000000   Number         0  dflti.o ABSOLUTE
     ../fplib/microlib/fpmul.c                0x00000000   Number         0  dmul.o ABSOLUTE
@@ -486,6 +485,7 @@ Image Symbol Table
     led\\lib_led.c                           0x00000000   Number         0  lib_led.o ABSOLUTE
     led\funct_led.c                          0x00000000   Number         0  funct_led.o ABSOLUTE
     led\lib_led.c                            0x00000000   Number         0  lib_led.o ABSOLUTE
+    lpc17xx_spi.c                            0x00000000   Number         0  lpc17xx_spi.o ABSOLUTE
     serial\IRQ_serial.c                      0x00000000   Number         0  irq_serial.o ABSOLUTE
     serial\\IRQ_serial.c                     0x00000000   Number         0  irq_serial.o ABSOLUTE
     serial\\lib_Serial.c                     0x00000000   Number         0  lib_serial.o ABSOLUTE
@@ -526,45 +526,45 @@ Image Symbol Table
     rd_reg                                   0x00001185   Thumb Code    76  glcd_lpc1700.o(.text)
     .text                                    0x000011d8   Section        0  touchpanel.o(.text)
     WR_CMD                                   0x000011ff   Thumb Code    28  touchpanel.o(.text)
-    ADS7843_SPI_Init                         0x000014b5   Thumb Code    86  touchpanel.o(.text)
-    DelayUS                                  0x0000150b   Thumb Code    26  touchpanel.o(.text)
-    RD_AD                                    0x00001525   Thumb Code    36  touchpanel.o(.text)
-    .text                                    0x00001560   Section        0  irq_button.o(.text)
-    .text                                    0x00001660   Section        0  lib_button.o(.text)
-    NVIC_EnableIRQ                           0x000016b3   Thumb Code    24  lib_button.o(.text)
-    .text                                    0x000016d8   Section        0  funct_led.o(.text)
-    .text                                    0x00001738   Section        0  lib_led.o(.text)
-    .text                                    0x00001774   Section        0  irq_serial.o(.text)
-    .text                                    0x000017cc   Section        0  lib_serial.o(.text)
-    NVIC_EnableIRQ                           0x00001837   Thumb Code    24  lib_serial.o(.text)
-    .text                                    0x0000185c   Section        0  irq_timer.o(.text)
-    .text                                    0x00001894   Section        0  lib_timer.o(.text)
-    NVIC_EnableIRQ                           0x00001905   Thumb Code    24  lib_timer.o(.text)
-    .text                                    0x00001928   Section        0  memseta.o(.text)
-    .text                                    0x0000194c   Section        0  strcpy.o(.text)
-    .text                                    0x0000195e   Section        0  dadd.o(.text)
-    .text                                    0x00001aac   Section        0  dmul.o(.text)
-    .text                                    0x00001b90   Section        0  ddiv.o(.text)
-    .text                                    0x00001c6e   Section        0  dflti.o(.text)
-    .text                                    0x00001c90   Section        0  dfltui.o(.text)
-    .text                                    0x00001caa   Section        0  dfixui.o(.text)
-    .text                                    0x00001cdc   Section       40  cdcmple.o(.text)
-    .text                                    0x00001d04   Section        0  uidiv.o(.text)
-    .text                                    0x00001d30   Section        0  llshl.o(.text)
-    .text                                    0x00001d4e   Section        0  llushr.o(.text)
-    .text                                    0x00001d6e   Section        0  llsshr.o(.text)
-    .text                                    0x00001d92   Section        0  depilogue.o(.text)
-    .text                                    0x00001e50   Section       36  init.o(.text)
-    i.__0sprintf$1                           0x00001e74   Section        0  printf1.o(i.__0sprintf$1)
-    i.__scatterload_copy                     0x00001e9c   Section       14  handlers.o(i.__scatterload_copy)
-    i.__scatterload_zeroinit                 0x00001eaa   Section       14  handlers.o(i.__scatterload_zeroinit)
-    i._printf_core                           0x00001eb8   Section        0  printf1.o(i._printf_core)
-    _printf_core                             0x00001eb9   Thumb Code   334  printf1.o(i._printf_core)
-    i._sputc                                 0x0000200c   Section        0  printf1.o(i._sputc)
-    _sputc                                   0x0000200d   Thumb Code    10  printf1.o(i._sputc)
-    i.malloc                                 0x00002018   Section        0  malloc.o(i.malloc)
-    .constdata                               0x00002084   Section     5376  glcd_lpc1700.o(.constdata)
-    .constdata                               0x00003584   Section       32  funct_led.o(.constdata)
+    ADS7843_SPI_Init                         0x0000158f   Thumb Code   106  touchpanel.o(.text)
+    DelayUS                                  0x000015f9   Thumb Code    26  touchpanel.o(.text)
+    RD_AD                                    0x00001613   Thumb Code    36  touchpanel.o(.text)
+    .text                                    0x00001638   Section        0  irq_button.o(.text)
+    .text                                    0x0000173c   Section        0  lib_button.o(.text)
+    NVIC_EnableIRQ                           0x0000178f   Thumb Code    24  lib_button.o(.text)
+    .text                                    0x000017b4   Section        0  funct_led.o(.text)
+    .text                                    0x00001814   Section        0  lib_led.o(.text)
+    .text                                    0x00001850   Section        0  irq_serial.o(.text)
+    .text                                    0x000018a8   Section        0  lib_serial.o(.text)
+    NVIC_EnableIRQ                           0x00001913   Thumb Code    24  lib_serial.o(.text)
+    .text                                    0x00001938   Section        0  irq_timer.o(.text)
+    .text                                    0x00001970   Section        0  lib_timer.o(.text)
+    NVIC_EnableIRQ                           0x000019e1   Thumb Code    24  lib_timer.o(.text)
+    .text                                    0x00001a04   Section        0  memseta.o(.text)
+    .text                                    0x00001a28   Section        0  strcpy.o(.text)
+    .text                                    0x00001a3a   Section        0  dadd.o(.text)
+    .text                                    0x00001b88   Section        0  dmul.o(.text)
+    .text                                    0x00001c6c   Section        0  ddiv.o(.text)
+    .text                                    0x00001d4a   Section        0  dflti.o(.text)
+    .text                                    0x00001d6c   Section        0  dfltui.o(.text)
+    .text                                    0x00001d86   Section        0  dfixui.o(.text)
+    .text                                    0x00001db8   Section       40  cdcmple.o(.text)
+    .text                                    0x00001de0   Section        0  uidiv.o(.text)
+    .text                                    0x00001e0c   Section        0  llshl.o(.text)
+    .text                                    0x00001e2a   Section        0  llushr.o(.text)
+    .text                                    0x00001e4a   Section        0  llsshr.o(.text)
+    .text                                    0x00001e6e   Section        0  depilogue.o(.text)
+    .text                                    0x00001f2c   Section       36  init.o(.text)
+    i.__0sprintf$1                           0x00001f50   Section        0  printf1.o(i.__0sprintf$1)
+    i.__scatterload_copy                     0x00001f78   Section       14  handlers.o(i.__scatterload_copy)
+    i.__scatterload_zeroinit                 0x00001f86   Section       14  handlers.o(i.__scatterload_zeroinit)
+    i._printf_core                           0x00001f94   Section        0  printf1.o(i._printf_core)
+    _printf_core                             0x00001f95   Thumb Code   334  printf1.o(i._printf_core)
+    i._sputc                                 0x000020e8   Section        0  printf1.o(i._sputc)
+    _sputc                                   0x000020e9   Thumb Code    10  printf1.o(i._sputc)
+    i.malloc                                 0x000020f4   Section        0  malloc.o(i.malloc)
+    .constdata                               0x00002160   Section     5376  glcd_lpc1700.o(.constdata)
+    .constdata                               0x00003660   Section       32  funct_led.o(.constdata)
     .data                                    0x10000000   Section        4  system_lpc17xx.o(.data)
     .data                                    0x10000004   Section        8  irq.o(.data)
     .data                                    0x1000000c   Section        6  glcd_lpc1700.o(.data)
@@ -580,9 +580,10 @@ Image Symbol Table
     flag                                     0x1000001c   Data           4  irq_timer.o(.data)
     .data                                    0x10000020   Section        4  mvars.o(.data)
     .data                                    0x10000024   Section        4  mvars.o(.data)
-    .bss                                     0x10000028   Section      100  irq_serial.o(.bss)
-    HEAP                                     0x10000090   Section        0  startup_lpc17xx.o(HEAP)
-    STACK                                    0x10000090   Section      512  startup_lpc17xx.o(STACK)
+    .bss                                     0x10000028   Section      100  irq_button.o(.bss)
+    .bss                                     0x1000008c   Section      100  irq_serial.o(.bss)
+    HEAP                                     0x100000f0   Section        0  startup_lpc17xx.o(HEAP)
+    STACK                                    0x100000f0   Section      512  startup_lpc17xx.o(STACK)
 
     Global Symbols
 
@@ -713,68 +714,68 @@ Image Symbol Table
     Read_X                                   0x0000121b   Thumb Code    34  touchpanel.o(.text)
     Read_Y                                   0x0000123d   Thumb Code    34  touchpanel.o(.text)
     TP_GetAdXY                               0x0000125f   Thumb Code    28  touchpanel.o(.text)
-    Read_Ads7846                             0x0000127b   Thumb Code    78  touchpanel.o(.text)
-    setCalibrationMatrix                     0x000012c9   Thumb Code   326  touchpanel.o(.text)
-    getDisplayPoint                          0x0000140f   Thumb Code   166  touchpanel.o(.text)
-    EINT0_IRQHandler                         0x00001561   Thumb Code    32  irq_button.o(.text)
-    EINT1_IRQHandler                         0x00001581   Thumb Code    32  irq_button.o(.text)
-    EINT2_IRQHandler                         0x000015a1   Thumb Code    32  irq_button.o(.text)
-    EINT3_IRQHandler                         0x000015c1   Thumb Code    66  irq_button.o(.text)
-    BUTTON_init                              0x00001661   Thumb Code    82  lib_button.o(.text)
-    LED_On                                   0x000016d9   Thumb Code    22  funct_led.o(.text)
-    LED_Off                                  0x000016ef   Thumb Code    22  funct_led.o(.text)
-    LED_Out                                  0x00001705   Thumb Code    40  funct_led.o(.text)
-    LED_init                                 0x00001739   Thumb Code    34  lib_led.o(.text)
-    LED_deinit                               0x0000175b   Thumb Code    12  lib_led.o(.text)
-    UART0_IRQHandler                         0x00001775   Thumb Code    76  irq_serial.o(.text)
-    SER_init                                 0x000017cd   Thumb Code    94  lib_serial.o(.text)
-    SER_putFirstChar                         0x0000182b   Thumb Code    12  lib_serial.o(.text)
-    TIMER0_IRQHandler                        0x0000185d   Thumb Code    36  irq_timer.o(.text)
-    TIMER1_IRQHandler                        0x00001881   Thumb Code     8  irq_timer.o(.text)
-    enable_timer                             0x00001895   Thumb Code    16  lib_timer.o(.text)
-    disable_timer                            0x000018a5   Thumb Code    16  lib_timer.o(.text)
-    reset_timer                              0x000018b5   Thumb Code    20  lib_timer.o(.text)
-    init_timer                               0x000018c9   Thumb Code    60  lib_timer.o(.text)
-    __aeabi_memset                           0x00001929   Thumb Code    14  memseta.o(.text)
-    __aeabi_memset4                          0x00001929   Thumb Code     0  memseta.o(.text)
-    __aeabi_memset8                          0x00001929   Thumb Code     0  memseta.o(.text)
-    __aeabi_memclr                           0x00001937   Thumb Code     4  memseta.o(.text)
-    __aeabi_memclr4                          0x00001937   Thumb Code     0  memseta.o(.text)
-    __aeabi_memclr8                          0x00001937   Thumb Code     0  memseta.o(.text)
-    _memset$wrapper                          0x0000193b   Thumb Code    18  memseta.o(.text)
-    strcpy                                   0x0000194d   Thumb Code    18  strcpy.o(.text)
-    __aeabi_dadd                             0x0000195f   Thumb Code   322  dadd.o(.text)
-    __aeabi_dsub                             0x00001aa1   Thumb Code     6  dadd.o(.text)
-    __aeabi_drsub                            0x00001aa7   Thumb Code     6  dadd.o(.text)
-    __aeabi_dmul                             0x00001aad   Thumb Code   228  dmul.o(.text)
-    __aeabi_ddiv                             0x00001b91   Thumb Code   222  ddiv.o(.text)
-    __aeabi_i2d                              0x00001c6f   Thumb Code    34  dflti.o(.text)
-    __aeabi_ui2d                             0x00001c91   Thumb Code    26  dfltui.o(.text)
-    __aeabi_d2uiz                            0x00001cab   Thumb Code    50  dfixui.o(.text)
-    __aeabi_cdcmpeq                          0x00001cdd   Thumb Code     0  cdcmple.o(.text)
-    __aeabi_cdcmple                          0x00001cdd   Thumb Code    38  cdcmple.o(.text)
-    __aeabi_uidiv                            0x00001d05   Thumb Code     0  uidiv.o(.text)
-    __aeabi_uidivmod                         0x00001d05   Thumb Code    44  uidiv.o(.text)
-    __aeabi_llsl                             0x00001d31   Thumb Code    30  llshl.o(.text)
-    _ll_shift_l                              0x00001d31   Thumb Code     0  llshl.o(.text)
-    __aeabi_llsr                             0x00001d4f   Thumb Code    32  llushr.o(.text)
-    _ll_ushift_r                             0x00001d4f   Thumb Code     0  llushr.o(.text)
-    __aeabi_lasr                             0x00001d6f   Thumb Code    36  llsshr.o(.text)
-    _ll_sshift_r                             0x00001d6f   Thumb Code     0  llsshr.o(.text)
-    _double_round                            0x00001d93   Thumb Code    26  depilogue.o(.text)
-    _double_epilogue                         0x00001dad   Thumb Code   164  depilogue.o(.text)
-    __scatterload                            0x00001e51   Thumb Code    28  init.o(.text)
-    __scatterload_rt2                        0x00001e51   Thumb Code     0  init.o(.text)
-    __0sprintf$1                             0x00001e75   Thumb Code    34  printf1.o(i.__0sprintf$1)
-    __1sprintf$1                             0x00001e75   Thumb Code     0  printf1.o(i.__0sprintf$1)
-    __2sprintf                               0x00001e75   Thumb Code     0  printf1.o(i.__0sprintf$1)
-    __scatterload_copy                       0x00001e9d   Thumb Code    14  handlers.o(i.__scatterload_copy)
-    __scatterload_zeroinit                   0x00001eab   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
-    malloc                                   0x00002019   Thumb Code    92  malloc.o(i.malloc)
-    Font_24x16                               0x00002084   Data        5376  glcd_lpc1700.o(.constdata)
-    led_mask                                 0x00003584   Data          32  funct_led.o(.constdata)
-    Region$$Table$$Base                      0x000035a4   Number         0  anon$$obj.o(Region$$Table)
-    Region$$Table$$Limit                     0x000035c4   Number         0  anon$$obj.o(Region$$Table)
+    Read_Ads7846                             0x0000127b   Thumb Code   296  touchpanel.o(.text)
+    setCalibrationMatrix                     0x000013a3   Thumb Code   326  touchpanel.o(.text)
+    getDisplayPoint                          0x000014e9   Thumb Code   166  touchpanel.o(.text)
+    EINT0_IRQHandler                         0x00001639   Thumb Code    32  irq_button.o(.text)
+    EINT1_IRQHandler                         0x00001659   Thumb Code    32  irq_button.o(.text)
+    EINT2_IRQHandler                         0x00001679   Thumb Code    32  irq_button.o(.text)
+    EINT3_IRQHandler                         0x00001699   Thumb Code    66  irq_button.o(.text)
+    BUTTON_init                              0x0000173d   Thumb Code    82  lib_button.o(.text)
+    LED_On                                   0x000017b5   Thumb Code    22  funct_led.o(.text)
+    LED_Off                                  0x000017cb   Thumb Code    22  funct_led.o(.text)
+    LED_Out                                  0x000017e1   Thumb Code    40  funct_led.o(.text)
+    LED_init                                 0x00001815   Thumb Code    34  lib_led.o(.text)
+    LED_deinit                               0x00001837   Thumb Code    12  lib_led.o(.text)
+    UART0_IRQHandler                         0x00001851   Thumb Code    76  irq_serial.o(.text)
+    SER_init                                 0x000018a9   Thumb Code    94  lib_serial.o(.text)
+    SER_putFirstChar                         0x00001907   Thumb Code    12  lib_serial.o(.text)
+    TIMER0_IRQHandler                        0x00001939   Thumb Code    36  irq_timer.o(.text)
+    TIMER1_IRQHandler                        0x0000195d   Thumb Code     8  irq_timer.o(.text)
+    enable_timer                             0x00001971   Thumb Code    16  lib_timer.o(.text)
+    disable_timer                            0x00001981   Thumb Code    16  lib_timer.o(.text)
+    reset_timer                              0x00001991   Thumb Code    20  lib_timer.o(.text)
+    init_timer                               0x000019a5   Thumb Code    60  lib_timer.o(.text)
+    __aeabi_memset                           0x00001a05   Thumb Code    14  memseta.o(.text)
+    __aeabi_memset4                          0x00001a05   Thumb Code     0  memseta.o(.text)
+    __aeabi_memset8                          0x00001a05   Thumb Code     0  memseta.o(.text)
+    __aeabi_memclr                           0x00001a13   Thumb Code     4  memseta.o(.text)
+    __aeabi_memclr4                          0x00001a13   Thumb Code     0  memseta.o(.text)
+    __aeabi_memclr8                          0x00001a13   Thumb Code     0  memseta.o(.text)
+    _memset$wrapper                          0x00001a17   Thumb Code    18  memseta.o(.text)
+    strcpy                                   0x00001a29   Thumb Code    18  strcpy.o(.text)
+    __aeabi_dadd                             0x00001a3b   Thumb Code   322  dadd.o(.text)
+    __aeabi_dsub                             0x00001b7d   Thumb Code     6  dadd.o(.text)
+    __aeabi_drsub                            0x00001b83   Thumb Code     6  dadd.o(.text)
+    __aeabi_dmul                             0x00001b89   Thumb Code   228  dmul.o(.text)
+    __aeabi_ddiv                             0x00001c6d   Thumb Code   222  ddiv.o(.text)
+    __aeabi_i2d                              0x00001d4b   Thumb Code    34  dflti.o(.text)
+    __aeabi_ui2d                             0x00001d6d   Thumb Code    26  dfltui.o(.text)
+    __aeabi_d2uiz                            0x00001d87   Thumb Code    50  dfixui.o(.text)
+    __aeabi_cdcmpeq                          0x00001db9   Thumb Code     0  cdcmple.o(.text)
+    __aeabi_cdcmple                          0x00001db9   Thumb Code    38  cdcmple.o(.text)
+    __aeabi_uidiv                            0x00001de1   Thumb Code     0  uidiv.o(.text)
+    __aeabi_uidivmod                         0x00001de1   Thumb Code    44  uidiv.o(.text)
+    __aeabi_llsl                             0x00001e0d   Thumb Code    30  llshl.o(.text)
+    _ll_shift_l                              0x00001e0d   Thumb Code     0  llshl.o(.text)
+    __aeabi_llsr                             0x00001e2b   Thumb Code    32  llushr.o(.text)
+    _ll_ushift_r                             0x00001e2b   Thumb Code     0  llushr.o(.text)
+    __aeabi_lasr                             0x00001e4b   Thumb Code    36  llsshr.o(.text)
+    _ll_sshift_r                             0x00001e4b   Thumb Code     0  llsshr.o(.text)
+    _double_round                            0x00001e6f   Thumb Code    26  depilogue.o(.text)
+    _double_epilogue                         0x00001e89   Thumb Code   164  depilogue.o(.text)
+    __scatterload                            0x00001f2d   Thumb Code    28  init.o(.text)
+    __scatterload_rt2                        0x00001f2d   Thumb Code     0  init.o(.text)
+    __0sprintf$1                             0x00001f51   Thumb Code    34  printf1.o(i.__0sprintf$1)
+    __1sprintf$1                             0x00001f51   Thumb Code     0  printf1.o(i.__0sprintf$1)
+    __2sprintf                               0x00001f51   Thumb Code     0  printf1.o(i.__0sprintf$1)
+    __scatterload_copy                       0x00001f79   Thumb Code    14  handlers.o(i.__scatterload_copy)
+    __scatterload_zeroinit                   0x00001f87   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
+    malloc                                   0x000020f5   Thumb Code    92  malloc.o(i.malloc)
+    Font_24x16                               0x00002160   Data        5376  glcd_lpc1700.o(.constdata)
+    led_mask                                 0x00003660   Data          32  funct_led.o(.constdata)
+    Region$$Table$$Base                      0x00003680   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x000036a0   Number         0  anon$$obj.o(Region$$Table)
     SystemFrequency                          0x10000000   Data           4  system_lpc17xx.o(.data)
     ClockLEDOn                               0x10000004   Data           1  irq.o(.data)
     ClockLEDOff                              0x10000005   Data           1  irq.o(.data)
@@ -783,10 +784,11 @@ Image Symbol Table
     led_value                                0x10000016   Data           1  lib_led.o(.data)
     __microlib_freelist                      0x10000020   Data           4  mvars.o(.data)
     __microlib_freelist_initialised          0x10000024   Data           4  mvars.o(.data)
-    buffer_out                               0x10000028   Data         100  irq_serial.o(.bss)
-    __heap_base                              0x10000090   Data           0  startup_lpc17xx.o(HEAP)
-    __heap_limit                             0x10000090   Data           0  startup_lpc17xx.o(HEAP)
-    __initial_sp                             0x10000290   Data           0  startup_lpc17xx.o(STACK)
+    stringa                                  0x10000028   Data         100  irq_button.o(.bss)
+    buffer_out                               0x1000008c   Data         100  irq_serial.o(.bss)
+    __heap_base                              0x100000f0   Data           0  startup_lpc17xx.o(HEAP)
+    __heap_limit                             0x100000f0   Data           0  startup_lpc17xx.o(HEAP)
+    __initial_sp                             0x100002f0   Data           0  startup_lpc17xx.o(STACK)
 
 
 
@@ -796,69 +798,70 @@ Memory Map of the image
 
   Image Entry point : 0x000000cd
 
-  Load Region LR_IROM1 (Base: 0x00000000, Size: 0x000035ec, Max: 0x00040000, ABSOLUTE)
+  Load Region LR_IROM1 (Base: 0x00000000, Size: 0x000036c8, Max: 0x00040000, ABSOLUTE)
 
-    Execution Region ER_IROM1 (Base: 0x00000000, Size: 0x000035c4, Max: 0x00040000, ABSOLUTE)
+    Execution Region ER_IROM1 (Base: 0x00000000, Size: 0x000036a0, Max: 0x00040000, ABSOLUTE)
 
     Base Addr    Size         Type   Attr      Idx    E Section Name        Object
 
     0x00000000   0x000000cc   Data   RO            3    RESET               startup_lpc17xx.o
-    0x000000cc   0x00000000   Code   RO          485  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
-    0x000000cc   0x00000004   Code   RO          795    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
-    0x000000d0   0x00000004   Code   RO          798    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
-    0x000000d4   0x00000000   Code   RO          800    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
-    0x000000d4   0x00000000   Code   RO          802    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
-    0x000000d4   0x00000008   Code   RO          803    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
-    0x000000dc   0x00000000   Code   RO          805    .ARM.Collect$$$$0000000D  mc_w.l(entry10a.o)
-    0x000000dc   0x00000000   Code   RO          807    .ARM.Collect$$$$0000000F  mc_w.l(entry11a.o)
-    0x000000dc   0x00000004   Code   RO          796    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
+    0x000000cc   0x00000000   Code   RO          491  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
+    0x000000cc   0x00000004   Code   RO          801    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
+    0x000000d0   0x00000004   Code   RO          804    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
+    0x000000d4   0x00000000   Code   RO          806    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
+    0x000000d4   0x00000000   Code   RO          808    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
+    0x000000d4   0x00000008   Code   RO          809    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
+    0x000000dc   0x00000000   Code   RO          811    .ARM.Collect$$$$0000000D  mc_w.l(entry10a.o)
+    0x000000dc   0x00000000   Code   RO          813    .ARM.Collect$$$$0000000F  mc_w.l(entry11a.o)
+    0x000000dc   0x00000004   Code   RO          802    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
     0x000000e0   0x00000004   Code   RO          138    .emb_text           glcd_lpc1700.o
     0x000000e4   0x0000001c   Code   RO            5    .text               startup_lpc17xx.o
     0x00000100   0x00000158   Code   RO           15    .text               system_lpc17xx.o
     0x00000258   0x00000064   Code   RO           69    .text               blinky.o
     0x000002bc   0x00000038   Code   RO          124    .text               irq.o
-    0x000002f4   0x00000000   Code   RO          828    .text               mc_w.l(iusefp.o)
-    0x000002f4   0x00000002   Code   RO          842    i.__scatterload_null  mc_w.l(handlers.o)
+    0x000002f4   0x00000000   Code   RO          834    .text               mc_w.l(iusefp.o)
+    0x000002f4   0x00000002   Code   RO          848    i.__scatterload_null  mc_w.l(handlers.o)
     0x000002f6   0x00000006   PAD
     0x000002fc   0x00000004   Code   RO            4    .ARM.__at_0x02FC    startup_lpc17xx.o
     0x00000300   0x00000ed8   Code   RO          139    .text               glcd_lpc1700.o
-    0x000011d8   0x00000388   Code   RO          191    .text               touchpanel.o
-    0x00001560   0x00000100   Code   RO          222    .text               irq_button.o
-    0x00001660   0x00000078   Code   RO          264    .text               lib_button.o
-    0x000016d8   0x00000060   Code   RO          288    .text               funct_led.o
-    0x00001738   0x0000003c   Code   RO          323    .text               lib_led.o
-    0x00001774   0x00000058   Code   RO          346    .text               irq_serial.o
-    0x000017cc   0x00000090   Code   RO          384    .text               lib_serial.o
-    0x0000185c   0x00000038   Code   RO          442    .text               irq_timer.o
-    0x00001894   0x00000094   Code   RO          463    .text               lib_timer.o
-    0x00001928   0x00000024   Code   RO          488    .text               mc_w.l(memseta.o)
-    0x0000194c   0x00000012   Code   RO          490    .text               mc_w.l(strcpy.o)
-    0x0000195e   0x0000014e   Code   RO          781    .text               mf_w.l(dadd.o)
-    0x00001aac   0x000000e4   Code   RO          783    .text               mf_w.l(dmul.o)
-    0x00001b90   0x000000de   Code   RO          785    .text               mf_w.l(ddiv.o)
-    0x00001c6e   0x00000022   Code   RO          787    .text               mf_w.l(dflti.o)
-    0x00001c90   0x0000001a   Code   RO          789    .text               mf_w.l(dfltui.o)
-    0x00001caa   0x00000032   Code   RO          791    .text               mf_w.l(dfixui.o)
-    0x00001cdc   0x00000028   Code   RO          793    .text               mf_w.l(cdcmple.o)
-    0x00001d04   0x0000002c   Code   RO          812    .text               mc_w.l(uidiv.o)
-    0x00001d30   0x0000001e   Code   RO          816    .text               mc_w.l(llshl.o)
-    0x00001d4e   0x00000020   Code   RO          818    .text               mc_w.l(llushr.o)
-    0x00001d6e   0x00000024   Code   RO          820    .text               mc_w.l(llsshr.o)
-    0x00001d92   0x000000be   Code   RO          829    .text               mf_w.l(depilogue.o)
-    0x00001e50   0x00000024   Code   RO          835    .text               mc_w.l(init.o)
-    0x00001e74   0x00000028   Code   RO          539    i.__0sprintf$1      mc_w.l(printf1.o)
-    0x00001e9c   0x0000000e   Code   RO          841    i.__scatterload_copy  mc_w.l(handlers.o)
-    0x00001eaa   0x0000000e   Code   RO          843    i.__scatterload_zeroinit  mc_w.l(handlers.o)
-    0x00001eb8   0x00000154   Code   RO          544    i._printf_core      mc_w.l(printf1.o)
-    0x0000200c   0x0000000a   Code   RO          546    i._sputc            mc_w.l(printf1.o)
-    0x00002016   0x00000002   PAD
-    0x00002018   0x0000006c   Code   RO          754    i.malloc            mc_w.l(malloc.o)
-    0x00002084   0x00001500   Data   RO          140    .constdata          glcd_lpc1700.o
-    0x00003584   0x00000020   Data   RO          289    .constdata          funct_led.o
-    0x000035a4   0x00000020   Data   RO          839    Region$$Table       anon$$obj.o
+    0x000011d8   0x0000045e   Code   RO          191    .text               touchpanel.o
+    0x00001636   0x00000002   PAD
+    0x00001638   0x00000104   Code   RO          222    .text               irq_button.o
+    0x0000173c   0x00000078   Code   RO          267    .text               lib_button.o
+    0x000017b4   0x00000060   Code   RO          291    .text               funct_led.o
+    0x00001814   0x0000003c   Code   RO          326    .text               lib_led.o
+    0x00001850   0x00000058   Code   RO          349    .text               irq_serial.o
+    0x000018a8   0x00000090   Code   RO          387    .text               lib_serial.o
+    0x00001938   0x00000038   Code   RO          445    .text               irq_timer.o
+    0x00001970   0x00000094   Code   RO          466    .text               lib_timer.o
+    0x00001a04   0x00000024   Code   RO          494    .text               mc_w.l(memseta.o)
+    0x00001a28   0x00000012   Code   RO          496    .text               mc_w.l(strcpy.o)
+    0x00001a3a   0x0000014e   Code   RO          787    .text               mf_w.l(dadd.o)
+    0x00001b88   0x000000e4   Code   RO          789    .text               mf_w.l(dmul.o)
+    0x00001c6c   0x000000de   Code   RO          791    .text               mf_w.l(ddiv.o)
+    0x00001d4a   0x00000022   Code   RO          793    .text               mf_w.l(dflti.o)
+    0x00001d6c   0x0000001a   Code   RO          795    .text               mf_w.l(dfltui.o)
+    0x00001d86   0x00000032   Code   RO          797    .text               mf_w.l(dfixui.o)
+    0x00001db8   0x00000028   Code   RO          799    .text               mf_w.l(cdcmple.o)
+    0x00001de0   0x0000002c   Code   RO          818    .text               mc_w.l(uidiv.o)
+    0x00001e0c   0x0000001e   Code   RO          822    .text               mc_w.l(llshl.o)
+    0x00001e2a   0x00000020   Code   RO          824    .text               mc_w.l(llushr.o)
+    0x00001e4a   0x00000024   Code   RO          826    .text               mc_w.l(llsshr.o)
+    0x00001e6e   0x000000be   Code   RO          835    .text               mf_w.l(depilogue.o)
+    0x00001f2c   0x00000024   Code   RO          841    .text               mc_w.l(init.o)
+    0x00001f50   0x00000028   Code   RO          545    i.__0sprintf$1      mc_w.l(printf1.o)
+    0x00001f78   0x0000000e   Code   RO          847    i.__scatterload_copy  mc_w.l(handlers.o)
+    0x00001f86   0x0000000e   Code   RO          849    i.__scatterload_zeroinit  mc_w.l(handlers.o)
+    0x00001f94   0x00000154   Code   RO          550    i._printf_core      mc_w.l(printf1.o)
+    0x000020e8   0x0000000a   Code   RO          552    i._sputc            mc_w.l(printf1.o)
+    0x000020f2   0x00000002   PAD
+    0x000020f4   0x0000006c   Code   RO          760    i.malloc            mc_w.l(malloc.o)
+    0x00002160   0x00001500   Data   RO          140    .constdata          glcd_lpc1700.o
+    0x00003660   0x00000020   Data   RO          292    .constdata          funct_led.o
+    0x00003680   0x00000020   Data   RO          845    Region$$Table       anon$$obj.o
 
 
-    Execution Region RW_IRAM1 (Base: 0x10000000, Size: 0x00000290, Max: 0x00008000, ABSOLUTE)
+    Execution Region RW_IRAM1 (Base: 0x10000000, Size: 0x000002f0, Max: 0x00008000, ABSOLUTE)
 
     Base Addr    Size         Type   Attr      Idx    E Section Name        Object
 
@@ -866,16 +869,16 @@ Memory Map of the image
     0x10000004   0x00000008   Data   RW          125    .data               irq.o
     0x1000000c   0x00000006   Data   RW          141    .data               glcd_lpc1700.o
     0x10000012   0x00000004   Data   RW          195    .data               touchpanel.o
-    0x10000016   0x00000001   Data   RW          324    .data               lib_led.o
+    0x10000016   0x00000001   Data   RW          327    .data               lib_led.o
     0x10000017   0x00000001   PAD
-    0x10000018   0x00000004   Data   RW          348    .data               irq_serial.o
-    0x1000001c   0x00000004   Data   RW          443    .data               irq_timer.o
-    0x10000020   0x00000004   Data   RW          826    .data               mc_w.l(mvars.o)
-    0x10000024   0x00000004   Data   RW          827    .data               mc_w.l(mvars.o)
-    0x10000028   0x00000064   Zero   RW          347    .bss                irq_serial.o
-    0x1000008c   0x00000004   PAD
-    0x10000090   0x00000000   Zero   RW            2    HEAP                startup_lpc17xx.o
-    0x10000090   0x00000200   Zero   RW            1    STACK               startup_lpc17xx.o
+    0x10000018   0x00000004   Data   RW          351    .data               irq_serial.o
+    0x1000001c   0x00000004   Data   RW          446    .data               irq_timer.o
+    0x10000020   0x00000004   Data   RW          832    .data               mc_w.l(mvars.o)
+    0x10000024   0x00000004   Data   RW          833    .data               mc_w.l(mvars.o)
+    0x10000028   0x00000064   Zero   RW          223    .bss                irq_button.o
+    0x1000008c   0x00000064   Zero   RW          350    .bss                irq_serial.o
+    0x100000f0   0x00000000   Zero   RW            2    HEAP                startup_lpc17xx.o
+    0x100000f0   0x00000200   Zero   RW            1    STACK               startup_lpc17xx.o
 
 
 ==============================================================================
@@ -885,26 +888,26 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
 
-       100          8          0          0          0      41158   blinky.o
-        96         12         32          0          0       1204   funct_led.o
-         0          0          0          0          0      17036   funct_timer.o
-      3804         54       5376          6          0       9380   glcd_lpc1700.o
-        56          4          0          8          0        658   irq.o
-       256         94          0          0          0      19199   irq_button.o
-        88         12          0          4        100      17988   irq_serial.o
-        56         12          0          4          0        534   irq_timer.o
-       120         14          0          0          0      24217   lib_button.o
-        60         14          0          1          0        626   lib_led.o
-       144         14          0          0          0      24719   lib_serial.o
-       148         12          0          0          0      24771   lib_timer.o
-        32          8        204          0        512        880   startup_lpc17xx.o
-       344         34          0          4          0       4931   system_lpc17xx.o
-       904         24          0          4          0       3628   touchpanel.o
+       100          8          0          0          0      41198   blinky.o
+        96         12         32          0          0       1264   funct_led.o
+         0          0          0          0          0      17056   funct_timer.o
+      3804         54       5376          6          0       9496   glcd_lpc1700.o
+        56          4          0          8          0        698   irq.o
+       260         98          0          0        100      19457   irq_button.o
+        88         12          0          4        100      18068   irq_serial.o
+        56         12          0          4          0        554   irq_timer.o
+       120         14          0          0          0      24237   lib_button.o
+        60         14          0          1          0        666   lib_led.o
+       144         14          0          0          0      24755   lib_serial.o
+       148         12          0          0          0      24787   lib_timer.o
+        32          8        204          0        512        920   startup_lpc17xx.o
+       344         34          0          4          0       4967   system_lpc17xx.o
+      1118         20          0          4          0       4048   touchpanel.o
 
     ----------------------------------------------------------------------
-      6208        316       5644         32        616     190929   Object Totals
+      6428        316       5644         32        712     192171   Object Totals
          0          0         32          0          0          0   (incl. Generated)
-         0          0          0          1          4          0   (incl. Padding)
+         2          0          0          1          0          0   (incl. Padding)
 
     ----------------------------------------------------------------------
 
@@ -960,15 +963,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-      8120        362       5644         40        616     190837   Grand Totals
-      8120        362       5644         40        616     190837   ELF Image Totals
-      8120        362       5644         40          0          0   ROM Totals
+      8340        362       5644         40        712     192079   Grand Totals
+      8340        362       5644         40        712     192079   ELF Image Totals
+      8340        362       5644         40          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)                13764 (  13.44kB)
-    Total RW  Size (RW Data + ZI Data)               656 (   0.64kB)
-    Total ROM Size (Code + RO Data + RW Data)      13804 (  13.48kB)
+    Total RO  Size (Code + RO Data)                13984 (  13.66kB)
+    Total RW  Size (RW Data + ZI Data)               752 (   0.73kB)
+    Total ROM Size (Code + RO Data + RW Data)      14024 (  13.70kB)
 
 ==============================================================================
 

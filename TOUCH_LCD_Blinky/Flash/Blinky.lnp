@@ -16,6 +16,7 @@
 ".\flash\funct_timer.o"
 ".\flash\irq_timer.o"
 ".\flash\lib_timer.o"
+".\flash\lpc17xx_spi.o"
 --library_type=microlib --strict --scatter ".\Flash\Blinky.sct"
 --summary_stderr --info summarysizes --map --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers

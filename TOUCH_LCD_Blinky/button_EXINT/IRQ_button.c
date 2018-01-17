@@ -8,6 +8,7 @@
 #include <stdio.h>
 
 extern char buffer_out[100];
+char stringa[100];
 
 void EINT0_IRQHandler (void)	  
 {
@@ -36,13 +37,14 @@ void EINT2_IRQHandler (void)
 
 void EINT3_IRQHandler (void){
 		Coordinate * coord;
-		char * stringa=malloc(20*sizeof(char));
+		
 	
 	
 		strcpy(buffer_out, "\n\rTOUCH SCREEN pressed \n");
 		SER_putFirstChar(0,buffer_out[0]);
-	
+	  
 		coord = Read_Ads7846();
+	  GLCD_Clear(Navy);
 	  sprintf(stringa, "%d %d", coord->x, coord->y);
 		GLCD_DisplayString(0,0,(unsigned char *)stringa);
 	
