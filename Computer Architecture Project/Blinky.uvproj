@@ -441,11 +441,6 @@
               <FilePath>.\Blinky.c</FilePath>
             </File>
             <File>
-              <FileName>IRQ.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\IRQ.c</FilePath>
-            </File>
-            <File>
               <FileName>GLCD_LPC1700.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\GLCD_LPC1700.c</FilePath>
@@ -469,16 +464,6 @@
               <FileName>TouchPanel.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\TouchPanel.h</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
-          <GroupName>Documentation</GroupName>
-          <Files>
-            <File>
-              <FileName>Abstract.txt</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\Abstract.txt</FilePath>
             </File>
           </Files>
         </Group>

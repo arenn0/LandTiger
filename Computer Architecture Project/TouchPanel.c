@@ -1,43 +1,12 @@
-/****************************************Copyright (c)****************************************************
-**                                      
-**                                 http://www.powermcu.com
-**
-**--------------File Info---------------------------------------------------------------------------------
-** File name:               TouchPanel.c
-** Descriptions:            The TouchPanel application function
-**
-**--------------------------------------------------------------------------------------------------------
-** Created by:              AVRman
-** Created date:            2010-11-7
-** Version:                 v1.0
-** Descriptions:            The original version
-**
-**--------------------------------------------------------------------------------------------------------
-** Modified by:             
-** Modified date:           
-** Version:                 
-** Descriptions:            
-**
-*********************************************************************************************************/
-
 #include "TouchPanel.h"
 #include "GLCD.h"
 #include "GLCD_TTT.h"
 
 
-#define CONVX 10.69411765
-#define CONVY 14.91596639
-
-/* Private variables ---------------------------------------------------------*/
-Matrix matrix ;
-Coordinate  display ;
-
+#define CONVX 10.69411765 // Rescaling factor to map the read value
+#define CONVY 14.91596639 // Rescaling factor to map the read value
 
 Coordinate DisplayMargins[4] =   { {3750,250}, { 250, 250}, {3750,3800}, {250,3800}} ;
-
-/* Private define ------------------------------------------------------------*/
-#define THRESHOLD 2   /* 差值门限 */
-
 
 /*******************************************************************************
 * Function Name  : LPC17xx_SPI_SetSpeed
@@ -58,7 +27,7 @@ void LPC17xx_SPI_SetSpeed (uint8_t speed)
 
 /*******************************************************************************
 * Function Name  : ADS7843_SPI_Init
-* Description    : ADS7843 SPI 初始化
+* Description    : ADS7843 SPI initialization
 * Input          : None
 * Output         : None
 * Return         : None
@@ -96,7 +65,7 @@ static void ADS7843_SPI_Init(void)
 
 /*******************************************************************************
 * Function Name  : TP_Init
-* Description    : ADS7843端口初始化
+* Description    : ADS7843 TP initialization
 * Input          : None
 * Output         : None
 * Return         : None
@@ -109,16 +78,23 @@ static void ADS7843_SPI_Init(void)
 
 void TP_Init(void) 
 { 
+	LPC_PINCON->PINSEL4    |= (1 << 26); // P2.13 as EINT3
+	
   LPC_GPIO0->FIODIR |=  (1<<6);   /* P0.6 CS is output */
   LPC_GPIO2->FIODIR |=  (0<<13);  /* P2.13 TP_INT is input (touch screen) */
   TP_CS(1); 
   ADS7843_SPI_Init(); 
+	
+  LPC_SC->EXTMODE += 0x8;			// Set EINT3 in the external interrupt mode registeer
+	
+	NVIC_EnableIRQ(EINT3_IRQn); // Enable EINT3 in the Nested Vector Interrupt Controller
+
 } 
 
 /*******************************************************************************
 * Function Name  : DelayUS
-* Description    : 延时1us
-* Input          : - cnt: 延时值
+* Description    : Delay
+* Input          : 
 * Output         : None
 * Return         : None
 * Attention		 : None
@@ -128,8 +104,8 @@ static void DelayUS(uint16_t cnt)
   uint16_t i;
   for(i = 0;i<cnt;i++)
   {
-     uint16_t us = 100; /* 设置值为12，大约延1微秒 */    
-     while (us--)     /* 延1微秒	*/
+     uint16_t us = 100; 
+     while (us--)     
      {
        ;   
      }
@@ -139,8 +115,8 @@ static void DelayUS(uint16_t cnt)
 
 /*******************************************************************************
 * Function Name  : WR_CMD
-* Description    : 向 ADS7843写数据
-* Input          : - cmd: 传输的数据
+* Description    : ADS7843D write command
+* Input          : - cmd: command
 * Output         : None
 * Return         : None
 * Attention		 : None
@@ -162,10 +138,10 @@ static uint8_t WR_CMD (uint8_t cmd)
 
 /*******************************************************************************
 * Function Name  : RD_AD
-* Description    : 读取ADC值
+* Description    : Read from SPI 
 * Input          : None
 * Output         : None
-* Return         : ADS7843返回二字节数据
+* Return         : ADS7843 value
 * Attention		 : None
 *******************************************************************************/
 static int RD_AD(void)  
@@ -185,10 +161,10 @@ static int RD_AD(void)
 
 /*******************************************************************************
 * Function Name  : Read_X
-* Description    : 读取ADS7843通道X+的ADC值 
+* Description    : Read x coordinate 
 * Input          : None
 * Output         : None
-* Return         : ADS7843返回通道X+的ADC值
+* Return         : ADS7843 x
 * Attention		 : None
 *******************************************************************************/
 int Read_X(void)  
@@ -205,10 +181,10 @@ int Read_X(void)
 
 /*******************************************************************************
 * Function Name  : Read_Y
-* Description    : 读取ADS7843通道Y+的ADC值
+* Description    : Read y coordinate
 * Input          : None
 * Output         : None
-* Return         : ADS7843返回通道Y+的ADC值
+* Return         : ADS7843 y
 * Attention		 : None
 *******************************************************************************/
 int Read_Y(void)  
@@ -226,10 +202,10 @@ int Read_Y(void)
 
 /*******************************************************************************
 * Function Name  : TP_GetAdXY
-* Description    : 读取ADS7843 通道X+ 通道Y+的ADC值
+* Description    : Higher Level function that reads x and y
 * Input          : None
 * Output         : None
-* Return         : ADS7843返回 通道X+ 通道Y+的ADC值 
+* Return         : 
 * Attention		 : None
 *******************************************************************************/
 void TP_GetAdXY(int *x,int *y)  
@@ -238,17 +214,16 @@ void TP_GetAdXY(int *x,int *y)
   adx=Read_X(); 
   DelayUS(1); 
   ady=Read_Y(); 
-	//DelayUS(5);
   *x=adx; 
   *y=ady; 
 } 
 
 /*******************************************************************************
 * Function Name  : Read_Ads7846
-* Description    : 得到滤波之后的X Y
+* Description    : Clean and Average of the read values
 * Input          : None
 * Output         : None
-* Return         : Coordinate结构体地址
+* Return         : Coordinate
 * Attention		 : None
 *******************************************************************************/
 Coordinate *Read_Ads7846(void)
@@ -295,6 +270,14 @@ Coordinate *Read_Ads7846(void)
 
 }
 
+/*******************************************************************************
+* Function Name  : Map_Pixel
+* Description    : Map and rescale values into 320x240 values
+* Input          : None
+* Output         : None
+* Return         :
+* Attention		 : None
+*******************************************************************************/
 void Map_Pixel(Coordinate *touch){
 	
 	touch->x = 320 - (touch->x - DisplayMargins[1].x )/CONVX;

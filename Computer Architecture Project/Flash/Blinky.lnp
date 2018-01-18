@@ -3,7 +3,6 @@
 ".\flash\system_lpc17xx.o"
 ".\flash\core_cm3.o"
 ".\flash\blinky.o"
-".\flash\irq.o"
 ".\flash\glcd_lpc1700.o"
 ".\flash\glcd_ttt.o"
 ".\flash\touchpanel.o"

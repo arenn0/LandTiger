@@ -1,15 +1,3 @@
-/******************************************************************************/
-/* GLCD_SPI_LPC1700.c: LPC1700 low level Graphic LCD (320x240 pixels) driven  */
-/*                     with SPI functions                                     */
-/******************************************************************************/
-/* This file is part of the uVision/ARM development tools.                    */
-/* Copyright (c) 2005-2009 Keil Software. All rights reserved.                */
-/* This software may only be used under the terms of a valid, current,        */
-/* end user licence from KEIL for a compatible version of KEIL software       */
-/* development tools. Nothing else gives you the right to use this software.  */
-/******************************************************************************/
-
-
 #include "lpc17xx.h"
 #include "GLCD.h"
 #include "Font_24x16.h"
@@ -466,23 +454,23 @@ void GLCD_Init (void) {
   wr_reg(0x07, 0x0173);                 /* 262K color and display ON          */ 
   if(driverCode == 0x8989)		 //3.2" TFT LCD Module,DriverIC is SSD1289
   {
-  	    wr_reg(0x0000,0x0001);    delay(5);  //�򿪾���
-    	wr_reg(0x0003,0xA8A4);    delay(5);   //0xA8A4
+  	    wr_reg(0x0000,0x0001);    delay(5);  
+    	wr_reg(0x0003,0xA8A4);    delay(5);   
     	wr_reg(0x000C,0x0000);    delay(5);   
     	wr_reg(0x000D,0x080C);    delay(5);   
     	wr_reg(0x000E,0x2B00);    delay(5);   
     	wr_reg(0x001E,0x00B0);    delay(5);   
-    	wr_reg(0x0001,0x2b3F);    delay(5);        //�����������320*240  0x6B3F  293f	2b3f 6b3f
+    	wr_reg(0x0001,0x2b3F);    delay(5);        
     	wr_reg(0x0002,0x0600);    delay(5);
     	wr_reg(0x0010,0x0000);    delay(5);
-    	wr_reg(0x0011,0x6078);    delay(5);        //0x4030           //�������ݸ�ʽ  16λɫ  ���� 0x6058	   6078
+    	wr_reg(0x0011,0x6078);    delay(5);        
     	wr_reg(0x0005,0x0000);    delay(5);
     	wr_reg(0x0006,0x0000);    delay(5);
     	wr_reg(0x0016,0xEF1C);    delay(5);
     	wr_reg(0x0017,0x0003);    delay(5);
-    	wr_reg(0x0007,0x0233);    delay(5);        //0x0233       
+    	wr_reg(0x0007,0x0233);    delay(5);               
     	wr_reg(0x000B,0x0000);    delay(5);
-    	wr_reg(0x000F,0x0000);    delay(5);        //ɨ�迪ʼ��ַ
+    	wr_reg(0x000F,0x0000);    delay(5);       
     	wr_reg(0x0041,0x0000);    delay(5);
     	wr_reg(0x0042,0x0000);    delay(5);
     	wr_reg(0x0048,0x0000);    delay(5);
@@ -505,8 +493,8 @@ void GLCD_Init (void) {
     	wr_reg(0x0023,0x0000);    delay(5);
     	wr_reg(0x0024,0x0000);    delay(5);
     	wr_reg(0x0025,0x8000);    delay(5);
-    	wr_reg(0x004f,0);        //����ַ0
-    	wr_reg(0x004e,0);        //����ַ0
+    	wr_reg(0x004f,0);        
+    	wr_reg(0x004e,0);        
   }
 }
 
@@ -715,174 +703,6 @@ void GLCD_DisplayString (unsigned int x, unsigned int y, unsigned char *s) {
     GLCD_DisplayChar(x+=CHAR_W,y, *s++);
   }
 }
-
-
-/*******************************************************************************
-* Clear given line                                                             *
-*   Parameter:      ln:       line number                                      *
-*   Return:                                                                    *
-*******************************************************************************/
-
-void GLCD_ClearLn (unsigned int ln) {
-
-  GLCD_WindowMax();
-  GLCD_DisplayString(ln, 0, "                    ");
-}
-
-/*******************************************************************************
-* Draw bargraph                                                                *
-*   Parameter:      x:        horizontal position                              *
-*                   y:        vertical position                                *
-*                   w:        maximum width of bargraph (in pixels)            *
-*                   val:      value of active bargraph (in 1/1024)             *
-*   Return:                                                                    *
-*******************************************************************************/
-
-void GLCD_Bargraph (unsigned int x, unsigned int y, unsigned int w, unsigned int h, unsigned int val) {
-  int i,j;
-
-  x = WIDTH-x-w;
-  if(driverCode==0x8989)
-  {
-  	wr_reg(0x44, y);                      /* Horizontal GRAM Start Address      */
-    wr_reg(0x44, y |((y+CHAR_H-1)<<8));   /* Horizontal GRAM End   Address (-1) */
-    wr_reg(0x45, x);                      /* Vertical   GRAM Start Address      */
-    wr_reg(0x46, x+w-1);                  /* Vertical   GRAM End   Address (-1) */
-  }
-  else
-  {
-  	wr_reg(0x50, y);                      /* Horizontal GRAM Start Address      */
-  	wr_reg(0x51, y+CHAR_H-1);             /* Horizontal GRAM End   Address (-1) */
-  	wr_reg(0x52, x);                      /* Vertical   GRAM Start Address      */
-  	wr_reg(0x53, x+w-1);                  /* Vertical   GRAM End   Address (-1) */
-  }
-
-  val = (val * w) >> 10;                /* Scale value for 24x12 characters   */
-  if(driverCode==0x8989)
-  {
-  	wr_reg(0x4e, y);
-  	wr_reg(0x4f, x);
-  }
-  else
-  {
-  	wr_reg(0x20, y);
-  	wr_reg(0x21, x);
-  }
-  LCD_CS(0)
-  wr_cmd(0x22);
-  wr_dat_start();
-  for (i = 0; i < h; i++) {
-    for (j = w-1; j >= 0; j--) {
-      if(j >= val) {
-        wr_dat_only(BackColor);
-      } else {
-        wr_dat_only(TextColor);
-      }
-    }
-  }
-  wr_dat_stop();
-}
-
-
-/*******************************************************************************
-* Display graphical bitmap image at position x horizontally and y vertically   *
-* (This function is optimized for 16 bits per pixel format, it has to be       *
-*  adapted for any other bits per pixel format)                                *
-*   Parameter:      x:        horizontal position                              *
-*                   y:        vertical position                                *
-*                   w:        width of bitmap                                  *
-*                   h:        height of bitmap                                 *
-*                   bitmap:   address at which the bitmap data resides         *
-*   Return:                                                                    *
-*******************************************************************************/
-
-void GLCD_Bitmap (unsigned int x, unsigned int y, unsigned int w, unsigned int h, unsigned char *bitmap) {
-  unsigned int    i, j;
-  unsigned short *bitmap_ptr = (unsigned short *)bitmap;
-
-  x = WIDTH-x-w;
-  if(driverCode==0x8989)
-  {
-  	wr_reg(0x44, y);                      /* Horizontal GRAM Start Address      */
-    wr_reg(0x44, y |((y+h-1)<<8));        /* Horizontal GRAM End   Address (-1) */
-    wr_reg(0x45, x);                      /* Vertical   GRAM Start Address      */
-    wr_reg(0x46, x+w-1);                  /* Vertical   GRAM End   Address (-1) */
-  	wr_reg(0x4e, y);
-  	wr_reg(0x4f, x);
-  }
-  else
-  {
-  	wr_reg(0x50, y);                      /* Horizontal GRAM Start Address      */
-    wr_reg(0x51, y+h-1);                  /* Horizontal GRAM End   Address (-1) */
-    wr_reg(0x52, x);                      /* Vertical   GRAM Start Address      */
-    wr_reg(0x53, x+w-1);                  /* Vertical   GRAM End   Address (-1) */
-  	wr_reg(0x20, y);
-  	wr_reg(0x21, x);
-  }
-  LCD_CS(0)
-  wr_cmd(0x22);
-  wr_dat_start();
-  for (j = 0; j < h; j++) {
-    bitmap_ptr += w-1;
-    for (i = 0; i < w; i++) {
-      wr_dat_only(*bitmap_ptr--);
-    }
-    bitmap_ptr += w+1;
-  }
-  wr_dat_stop();
-}
-
-
-/*******************************************************************************
-* Display graphical bmp file image at position x horizontally and y vertically *
-* (This function is optimized for 16 bits per pixel format, it has to be       *
-*  adapted for any other bits per pixel format)                                *
-*   Parameter:      x:        horizontal position                              *
-*                   y:        vertical position                                *
-*                   w:        width of bitmap                                  *
-*                   h:        height of bitmap                                 *
-*                   bmp:      address at which the bmp data resides            *
-*   Return:                                                                    *
-*******************************************************************************/
-
-void GLCD_Bmp (unsigned int x, unsigned int y, unsigned int w, unsigned int h, unsigned char *bmp) {
-  unsigned int    i, j;
-  unsigned short *bitmap_ptr = (unsigned short *)bmp;
-
-  x = WIDTH-x-w;
-
-  if(driverCode==0x8989)
-  {
-  	wr_reg(0x44, y);                      /* Horizontal GRAM Start Address      */
-    wr_reg(0x44, y |((y+h-1)<<8));        /* Horizontal GRAM End   Address (-1) */
-    wr_reg(0x45, x);                      /* Vertical   GRAM Start Address      */
-    wr_reg(0x46, x+w-1);                  /* Vertical   GRAM End   Address (-1) */
-  	wr_reg(0x4e, y);
-  	wr_reg(0x4f, x);
-  }
-  else
-  {
-  	wr_reg(0x50, y);                      /* Horizontal GRAM Start Address      */
-    wr_reg(0x51, y+h-1);                  /* Horizontal GRAM End   Address (-1) */
-    wr_reg(0x52, x);                      /* Vertical   GRAM Start Address      */
-    wr_reg(0x53, x+w-1);                  /* Vertical   GRAM End   Address (-1) */
-  	wr_reg(0x20, y);
-  	wr_reg(0x21, x);
-  }
-  LCD_CS(0)
-  wr_cmd(0x22);
-  wr_dat_start();
-  bitmap_ptr += (h*w)-1;
-  for (j = 0; j < h; j++) {
-    for (i = 0; i < w; i++) {
-      wr_dat_only(*bitmap_ptr--);
-    }
-  }
-  wr_dat_stop();
-}
-
-/******************************************************************************/
-
 
 
 /*******************************************************************************
