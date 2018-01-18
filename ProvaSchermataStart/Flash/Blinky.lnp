@@ -1,0 +1,21 @@
+--cpu Cortex-M3
+".\flash\startup_lpc17xx.o"
+".\flash\system_lpc17xx.o"
+".\flash\core_cm3.o"
+".\flash\blinky.o"
+".\flash\glcd_lpc1700.o"
+".\flash\glcd_ttt.o"
+".\flash\touchpanel.o"
+".\flash\lib_button.o"
+".\flash\funct_led.o"
+".\flash\lib_led.o"
+".\flash\irq_serial.o"
+".\flash\lib_serial.o"
+".\flash\funct_timer.o"
+".\flash\irq_timer.o"
+".\flash\lib_timer.o"
+".\flash\irq.o"
+--library_type=microlib --strict --scatter ".\Flash\Blinky.sct"
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Flash\Blinky.map" -o .\Flash\Blinky.axf

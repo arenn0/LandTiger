@@ -1,0 +1,15 @@
+.\flash\irq_button.o: button_EXINT\IRQ_button.c
+.\flash\irq_button.o: button_EXINT\button.h
+.\flash\irq_button.o: button_EXINT\../lpc17xx.h
+.\flash\irq_button.o: C:\Keil\ARM\RV31\INC\core_cm3.h
+.\flash\irq_button.o: C:\Keil\ARM\ARMCC\bin\..\include\stdint.h
+.\flash\irq_button.o: C:\Keil\ARM\RV31\INC\core_cmInstr.h
+.\flash\irq_button.o: C:\Keil\ARM\RV31\INC\core_cmFunc.h
+.\flash\irq_button.o: button_EXINT\../system_LPC17xx.h
+.\flash\irq_button.o: button_EXINT\../serial/serial.h
+.\flash\irq_button.o: C:\Keil\ARM\ARMCC\bin\..\include\string.h
+.\flash\irq_button.o: button_EXINT\../TouchPanel.h
+.\flash\irq_button.o: button_EXINT\../GLCD.h
+.\flash\irq_button.o: C:\Keil\ARM\RV31\INC\stdlib.h
+.\flash\irq_button.o: C:\Keil\ARM\ARMCC\bin\..\include\stdio.h
+.\flash\irq_button.o: button_EXINT\../GLCD_TTT.h

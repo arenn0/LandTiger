@@ -1,0 +1,15 @@
+.\flash\irq.o: IRQ.c
+.\flash\irq.o: ./button_EXINT/button.h
+.\flash\irq.o: lpc17xx.h
+.\flash\irq.o: C:\Keil_v5\ARM\CMSIS\Include\core_cm3.h
+.\flash\irq.o: C:\Keil_v5\ARM\ARMCC\bin\..\include\stdint.h
+.\flash\irq.o: C:\Keil_v5\ARM\CMSIS\Include\core_cmInstr.h
+.\flash\irq.o: C:\Keil_v5\ARM\CMSIS\Include\core_cmFunc.h
+.\flash\irq.o: system_LPC17xx.h
+.\flash\irq.o: serial/serial.h
+.\flash\irq.o: C:\Keil_v5\ARM\ARMCC\bin\..\include\string.h
+.\flash\irq.o: TouchPanel.h
+.\flash\irq.o: GLCD.h
+.\flash\irq.o: C:\Keil_v5\ARM\ARMCC\bin\..\include\stdlib.h
+.\flash\irq.o: C:\Keil_v5\ARM\ARMCC\bin\..\include\stdio.h
+.\flash\irq.o: GLCD_TTT.h
