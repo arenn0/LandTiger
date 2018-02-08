@@ -17,7 +17,7 @@ I (C:\Keil_v5\ARM\CMSIS\Include\core_cmInstr.h)(0x532C5A32)
 I (C:\Keil_v5\ARM\CMSIS\Include\core_cmFunc.h)(0x532C5A32)
 I (system_LPC17xx.h)(0x5A60E654)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x51C819B4)
-I (GLCD.h)(0x5A60E654)
+I (GLCD.h)(0x5A622F01)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x51C819B4)
 I (GLCD_TTT.h)(0x5A60EBB8)
 I (TouchPanel.h)(0x5A60E654)
@@ -26,18 +26,18 @@ I (./serial/serial.h)(0x5A60E654)
 I (./timer/timer.h)(0x5A60E654)
 I (./led/led.h)(0x5A60E654)
 I (./button_EXINT/button.h)(0x5A60E654)
-F (.\GLCD_LPC1700.c)(0x5A60E654)(-c --cpu Cortex-M3 -D__EVAL -D__MICROLIB -g -O2 --apcs=interwork --diag_suppress 550-I C:\Keil_v5\ARM\RV31\INC-I C:\Keil_v5\ARM\CMSIS\Include-I C:\Keil_v5\ARM\Inc\?NXP\LPC17xx-o .\flash\glcd_lpc1700.o --omf_browse .\flash\glcd_lpc1700.crf --depend .\flash\glcd_lpc1700.d)
+F (.\GLCD_LPC1700.c)(0x5A622F7F)(-c --cpu Cortex-M3 -D__EVAL -D__MICROLIB -g -O2 --apcs=interwork --diag_suppress 550-I C:\Keil_v5\ARM\RV31\INC-I C:\Keil_v5\ARM\CMSIS\Include-I C:\Keil_v5\ARM\Inc\?NXP\LPC17xx-o .\flash\glcd_lpc1700.o --omf_browse .\flash\glcd_lpc1700.crf --depend .\flash\glcd_lpc1700.d)
 I (lpc17xx.h)(0x5A60E654)
 I (C:\Keil_v5\ARM\CMSIS\Include\core_cm3.h)(0x532C5A32)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x51C819B4)
 I (C:\Keil_v5\ARM\CMSIS\Include\core_cmInstr.h)(0x532C5A32)
 I (C:\Keil_v5\ARM\CMSIS\Include\core_cmFunc.h)(0x532C5A32)
 I (system_LPC17xx.h)(0x5A60E654)
-I (GLCD.h)(0x5A60E654)
+I (GLCD.h)(0x5A622F01)
 I (Font_24x16.h)(0x5A60E654)
 F (.\GLCD_TTT.c)(0x5A60E654)(-c --cpu Cortex-M3 -D__EVAL -D__MICROLIB -g -O2 --apcs=interwork --diag_suppress 550-I C:\Keil_v5\ARM\RV31\INC-I C:\Keil_v5\ARM\CMSIS\Include-I C:\Keil_v5\ARM\Inc\?NXP\LPC17xx-o .\flash\glcd_ttt.o --omf_browse .\flash\glcd_ttt.crf --depend .\flash\glcd_ttt.d)
 I (GLCD_TTT.h)(0x5A60EBB8)
-I (GLCD.h)(0x5A60E654)
+I (GLCD.h)(0x5A622F01)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x51C819B4)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x51C819B4)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x51C819B4)
@@ -56,7 +56,7 @@ I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x51C819B4)
 I (C:\Keil_v5\ARM\CMSIS\Include\core_cmInstr.h)(0x532C5A32)
 I (C:\Keil_v5\ARM\CMSIS\Include\core_cmFunc.h)(0x532C5A32)
 I (system_LPC17xx.h)(0x5A60E654)
-I (GLCD.h)(0x5A60E654)
+I (GLCD.h)(0x5A622F01)
 I (GLCD_TTT.h)(0x5A60EBB8)
 F (.\TouchPanel.h)(0x5A60E654)()
 F (.\button_EXINT\lib_button.c)(0x5A60E654)(-c --cpu Cortex-M3 -D__EVAL -D__MICROLIB -g -O2 --apcs=interwork --diag_suppress 550-I C:\Keil_v5\ARM\RV31\INC-I C:\Keil_v5\ARM\CMSIS\Include-I C:\Keil_v5\ARM\Inc\?NXP\LPC17xx-o .\flash\lib_button.o --omf_browse .\flash\lib_button.crf --depend .\flash\lib_button.d)
@@ -139,7 +139,7 @@ I (system_LPC17xx.h)(0x5A60E654)
 I (serial/serial.h)(0x5A60E654)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x51C819B4)
 I (TouchPanel.h)(0x5A60E654)
-I (GLCD.h)(0x5A60E654)
+I (GLCD.h)(0x5A622F01)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x51C819B4)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x51C819B4)
 I (GLCD_TTT.h)(0x5A60EBB8)
