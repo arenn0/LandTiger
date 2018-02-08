@@ -1,1 +1,0 @@
--c --cpu Cortex-M3 -D__EVAL -g -O0 --apcs=interwork -I "C:\Program Files\Keil\ARM\INC" -I "C:\Program Files\Keil\ARM\INC\NXP\LPC17xx" -o "asciilib.o" --omf_browse "asciilib.crf" --depend "asciilib.d" "AsciiLib.c"

@@ -1,1 +1,0 @@
--c --cpu Cortex-M3 -D__EVAL -D__MICROLIB -g -O2 --apcs=interwork --diag_suppress 550 -I "C:\Program Files\Keil\ARM\INC" -I "C:\Program Files\Keil\ARM\INC\?NXP\LPC17xx" -o ".\Flash\blinky.o" --omf_browse ".\Flash\blinky.crf" --depend ".\Flash\blinky.d" "Blinky.c"
