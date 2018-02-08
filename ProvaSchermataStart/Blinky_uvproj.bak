@@ -471,11 +471,6 @@
           <GroupName>Interrupt</GroupName>
           <Files>
             <File>
-              <FileName>IRQ_button.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\button_EXINT\IRQ_button.c</FilePath>
-            </File>
-            <File>
               <FileName>lib_button.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\button_EXINT\lib_button.c</FilePath>
@@ -534,6 +529,11 @@
               <FileName>lib_timer.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\timer\lib_timer.c</FilePath>
+            </File>
+            <File>
+              <FileName>IRQ.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\IRQ.c</FilePath>
             </File>
           </Files>
         </Group>

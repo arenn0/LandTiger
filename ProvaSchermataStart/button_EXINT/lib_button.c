@@ -1,4 +1,10 @@
-
+/*--------------------------------------------------------------------------------------------
+Name: lib_button.c
+Purpose: Init and insert into NVIC  
+Note(s): This work is licensed under the Creative Commons Attribution 3.0 Italy License. 
+				 To view a copy of this license, visit http://creativecommons.org/licenses/by/3.0/it/ 
+				 or send a letter to Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
+--------------------------------------------------------------------------------------------*/
 #include "button.h"
 #include "../lpc17xx.h"
 

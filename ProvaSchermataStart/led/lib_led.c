@@ -1,12 +1,10 @@
-/*********************************************************************************************************
-**--------------File Info---------------------------------------------------------------------------------
-** File name:           timer.h
-** Last modified Date:  2014-09-25
-** Last Version:        V1.00
-** Descriptions:        Atomic led init functions
-** Correlated files:    lib_timer.c, funct_timer.c, IRQ_timer.c
-**--------------------------------------------------------------------------------------------------------       
-*********************************************************************************************************/
+/*--------------------------------------------------------------------------------------------
+Name: lib_led.c
+Purpose: Atomic led init functions
+Note(s): This work is licensed under the Creative Commons Attribution 3.0 Italy License. 
+				 To view a copy of this license, visit http://creativecommons.org/licenses/by/3.0/it/ 
+				 or send a letter to Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
+--------------------------------------------------------------------------------------------*/
 
 #include "../lpc17xx.h"
 #include "led.h"

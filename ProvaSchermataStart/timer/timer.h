@@ -1,16 +1,14 @@
-/*********************************************************************************************************
-**--------------File Info---------------------------------------------------------------------------------
-** File name:           timer.h
-** Last modified Date:  2014-09-25
-** Last Version:        V1.00
-** Descriptions:        Prototypes of functions included in the lib_timer, funct_timer, IRQ_timer .c files
-** Correlated files:    lib_timer.c, funct_timer.c, IRQ_timer.c
-**--------------------------------------------------------------------------------------------------------
-*********************************************************************************************************/
+/*--------------------------------------------------------------------------------------------
+Name: timer.h
+Purpose: Prototypes of functions included in the lib_timer, funct_timer, IRQ_timer .c files
+Note(s): This work is licensed under the Creative Commons Attribution 3.0 Italy License. 
+				 To view a copy of this license, visit http://creativecommons.org/licenses/by/3.0/it/ 
+				 or send a letter to Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
+--------------------------------------------------------------------------------------------*/
+
 #ifndef __TIMER_H
 #define __TIMER_H
 
-/* da capire quanto vale in millisecondi ms */
 #define TIME_INTERVAL	(9000000/100 - 1)
 
 /* funct_timer.c */
@@ -25,6 +23,4 @@ extern void TIMER0_IRQHandler (void);
 extern void TIMER1_IRQHandler (void);
 
 #endif /* end __TIMER_H */
-/*****************************************************************************
-**                            End Of File
-******************************************************************************/
+

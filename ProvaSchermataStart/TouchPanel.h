@@ -1,3 +1,11 @@
+/*--------------------------------------------------------------------------------------------
+Name: TouchPanel.h
+Purpose: Prototypes declaration for touch panel functions
+Note(s): This work is licensed under the Creative Commons Attribution 3.0 Italy License. 
+				 To view a copy of this license, visit http://creativecommons.org/licenses/by/3.0/it/ 
+				 or send a letter to Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
+--------------------------------------------------------------------------------------------*/
+
 #ifndef _TOUCHPANEL_H_
 #define _TOUCHPANEL_H_
 
@@ -10,10 +18,6 @@ typedef	struct POINT
    uint16_t x;
    uint16_t y;
 }Coordinate;
-
-
-
-
 
 #define	CHX 	        0x90 	
 #define	CHY 	        0xd0	
@@ -41,8 +45,5 @@ void Map_Pixel(Coordinate *touch);
 
 #endif
 
-/*********************************************************************************************************
-      END FILE
-*********************************************************************************************************/
 
 

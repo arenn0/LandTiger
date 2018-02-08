@@ -1,3 +1,10 @@
+/*--------------------------------------------------------------------------------------------
+Name: TouchPanel.c
+Purpose: Functions to init and read values from touch panel 
+Note(s): This work is licensed under the Creative Commons Attribution 3.0 Italy License. 
+				 To view a copy of this license, visit http://creativecommons.org/licenses/by/3.0/it/ 
+				 or send a letter to Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
+--------------------------------------------------------------------------------------------*/
 #include "TouchPanel.h"
 #include "GLCD.h"
 #include "GLCD_TTT.h"
@@ -14,7 +21,6 @@ Coordinate DisplayMargins[4] =   { {3750,250}, { 250, 250}, {3750,3800}, {250,38
 * Input          : - speed: speed
 * Output         : None
 * Return         : None
-* Attention		 : None
 *******************************************************************************/
 void LPC17xx_SPI_SetSpeed (uint8_t speed)
 {
@@ -31,7 +37,6 @@ void LPC17xx_SPI_SetSpeed (uint8_t speed)
 * Input          : None
 * Output         : None
 * Return         : None
-* Attention		 : None
 *******************************************************************************/
 static void ADS7843_SPI_Init(void) 
 { 
@@ -69,7 +74,6 @@ static void ADS7843_SPI_Init(void)
 * Input          : None
 * Output         : None
 * Return         : None
-* Attention		 : None
 *******************************************************************************/
 
 // P0.6 --> TP_CS
@@ -94,10 +98,9 @@ void TP_Init(void)
 /*******************************************************************************
 * Function Name  : DelayUS
 * Description    : Delay
-* Input          : 
+* Input          : - cnt : delay
 * Output         : None
 * Return         : None
-* Attention		 : None
 *******************************************************************************/
 static void DelayUS(uint16_t cnt)
 {
@@ -119,7 +122,6 @@ static void DelayUS(uint16_t cnt)
 * Input          : - cmd: command
 * Output         : None
 * Return         : None
-* Attention		 : None
 *******************************************************************************/
 static uint8_t WR_CMD (uint8_t cmd)  
 { 
@@ -142,7 +144,6 @@ static uint8_t WR_CMD (uint8_t cmd)
 * Input          : None
 * Output         : None
 * Return         : ADS7843 value
-* Attention		 : None
 *******************************************************************************/
 static int RD_AD(void)  
 { 
@@ -165,7 +166,6 @@ static int RD_AD(void)
 * Input          : None
 * Output         : None
 * Return         : ADS7843 x
-* Attention		 : None
 *******************************************************************************/
 int Read_X(void)  
 {  
@@ -185,7 +185,6 @@ int Read_X(void)
 * Input          : None
 * Output         : None
 * Return         : ADS7843 y
-* Attention		 : None
 *******************************************************************************/
 int Read_Y(void)  
 {  
@@ -199,14 +198,12 @@ int Read_Y(void)
   return i;     
 } 
 
-
 /*******************************************************************************
 * Function Name  : TP_GetAdXY
 * Description    : Higher Level function that reads x and y
 * Input          : None
 * Output         : None
-* Return         : 
-* Attention		 : None
+* Return         : None
 *******************************************************************************/
 void TP_GetAdXY(int *x,int *y)  
 { 
@@ -224,9 +221,9 @@ void TP_GetAdXY(int *x,int *y)
 * Input          : None
 * Output         : None
 * Return         : Coordinate
-* Attention		 : None
 *******************************************************************************/
-Coordinate *Read_Ads7846(void)
+
+Coordinate * Read_Ads7846(void)
 {
   static Coordinate  screen;
   int i,sumx=0,sumy=0,counterx=0,countery=0;
@@ -275,8 +272,7 @@ Coordinate *Read_Ads7846(void)
 * Description    : Map and rescale values into 320x240 values
 * Input          : None
 * Output         : None
-* Return         :
-* Attention		 : None
+* Return         : None
 *******************************************************************************/
 void Map_Pixel(Coordinate *touch){
 	

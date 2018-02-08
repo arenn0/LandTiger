@@ -1,4 +1,4 @@
-#include "LPC17xx.H"                    /* NXP LPC17xx definitions            */
+#include "LPC17xx.H"                    /* NXP LPC17xx definitions */
 #include "string.h"
 #include "GLCD.h"
 #include <stdlib.h>

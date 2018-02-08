@@ -1,17 +1,10 @@
-/*----------------------------------------------------------------------------
- * Name:    Serial.h
- * Purpose: MCB1700 Low level serial definitions
- * Note(s):
- *----------------------------------------------------------------------------
- * This file is part of the uVision/ARM development tools.
- * This software may only be used under the terms of a valid, current,
- * end user licence from KEIL for a compatible version of KEIL software
- * development tools. Nothing else gives you the right to use this software.
- *
- * This software is supplied "AS IS" without warranties of any kind.
- *
- * Copyright (c) 2009 Keil - An ARM Company. All rights reserved.
- *----------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------
+Name: Serial.h
+Purpose: Prototypes of functions for serial communication  
+Note(s): This work is licensed under the Creative Commons Attribution 3.0 Italy License. 
+				 To view a copy of this license, visit http://creativecommons.org/licenses/by/3.0/it/ 
+				 or send a letter to Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
+--------------------------------------------------------------------------------------------*/
 
 #ifndef __SERIAL_H
 #define __SERIAL_H

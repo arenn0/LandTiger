@@ -1,3 +1,11 @@
+/*--------------------------------------------------------------------------------------------
+Name: GLCD_LPC1700.c
+Purpose: Init and standard functions for GLCD panel
+Note(s): This work is licensed under the Creative Commons Attribution 3.0 Italy License. 
+				 To view a copy of this license, visit http://creativecommons.org/licenses/by/3.0/it/ 
+				 or send a letter to Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
+--------------------------------------------------------------------------------------------*/
+
 #include "lpc17xx.h"
 #include "GLCD.h"
 #include "Font_24x16.h"
@@ -20,7 +28,7 @@
 #define PIN_EN		(1 << 19)
 #define PIN_LE		(1 << 20)
 #define PIN_DIR		(1 << 21)
-#define PIN_CS      (1 << 22)
+#define PIN_CS    (1 << 22)
 #define PIN_RS		(1 << 23)
 #define PIN_WR		(1 << 24)
 #define PIN_RD		(1 << 25)   
@@ -86,7 +94,7 @@ void wait_delay(int count)
 }
 
 /*******************************************************************************
-* Send 1 byte over serial communication                                        *
+* 	Send 1 byte over serial communication                                      *
 *   Parameter:    byte:   byte to be sent                                      *
 *   Return:                                                                    *
 *******************************************************************************/
@@ -105,9 +113,9 @@ static __inline unsigned char lcd_send (unsigned short byte) {
 
 
 /*******************************************************************************
-* Write command to LCD controller                                              *
-*   Parameter:    c:      command to be written                                *
-*   Return:                                                                    *
+* 	Write command to LCD controller                                            *
+*   Parameter:    c: command to be written                                *
+*   Return: -                                                                   *
 *******************************************************************************/
 
 static __inline void wr_cmd (unsigned char c) {
@@ -122,9 +130,9 @@ static __inline void wr_cmd (unsigned char c) {
 
 
 /*******************************************************************************
-* Write data to LCD controller                                                 *
-*   Parameter:    c:      data to be written                                   *
-*   Return:                                                                    *
+* 	Write data to LCD controller                                               *
+*   Parameter:    c: data to be written                                 		   *
+*   Return: -                                                             	   *
 *******************************************************************************/
 
 static __inline void wr_dat (unsigned short c) {
@@ -138,9 +146,9 @@ static __inline void wr_dat (unsigned short c) {
 }
 
 /*******************************************************************************
-* Start of data writing to LCD controller                                      *
-*   Parameter:                                                                 *
-*   Return:                                                                    *
+* 	Start of data writing to LCD controller                                    *
+*   Parameter: -                                                               *
+*   Return: -                                                                  *
 *******************************************************************************/
 
 static __inline void wr_dat_start (void) {
@@ -150,9 +158,9 @@ static __inline void wr_dat_start (void) {
 
 
 /*******************************************************************************
-* Stop of data writing to LCD controller                                       *
-*   Parameter:                                                                 *
-*   Return:                                                                    *
+*   Stop of data writing to LCD controller                                     *
+*   Parameter: -                                                            	 *
+*   Return: -                                                                  *
 *******************************************************************************/
 
 static __inline void wr_dat_stop (void) {
@@ -162,9 +170,9 @@ static __inline void wr_dat_stop (void) {
 
 
 /*******************************************************************************
-* Data writing to LCD controller                                               *
-*   Parameter:    c:      data to be written                                   *
-*   Return:                                                                    *
+* 	Data writing to LCD controller                                             *
+*   Parameter:    c:  data to be written 		                                   *
+*   Return: -                                                                  *
 *******************************************************************************/
 
 static __inline void wr_dat_only (unsigned short c) {
@@ -177,7 +185,7 @@ static __inline void wr_dat_only (unsigned short c) {
 
 
 /*******************************************************************************
-* Write to LCD register                                                        *
+* 	Write to LCD register                                                      *
 *   Parameter:    reg:    register to be read                                  *
 *                 val:    value to write to register                           *
 *******************************************************************************/
@@ -192,9 +200,9 @@ static __inline void wr_reg (unsigned char reg, unsigned short val) {
 
 
 /*******************************************************************************
-* Initialize the Graphic LCD controller                                        *
-*   Parameter:                                                                 *
-*   Return:                                                                    *
+* 	Initialize the Graphic LCD controller                                      *
+*   Parameter: -                                                                 *
+*   Return: -                                                                   *
 *******************************************************************************/
 
 void GLCD_Init (void) { 
@@ -223,6 +231,7 @@ void GLCD_Init (void) {
   wr_reg(0x0012,0x0000);                                                                 
   wr_reg(0x0013,0x0000);                 
   delay(15);
+	
   wr_reg(0x0010,0x1590);   
   wr_reg(0x0011,0x0227);
   delay(15);
@@ -234,7 +243,6 @@ void GLCD_Init (void) {
   delay(15);
   wr_reg(0x0020,0x0000);                                                            
   wr_reg(0x0021,0x0000);           
-
 
   delay(15);
   wr_reg(0x0030,0x0007); 
@@ -248,6 +256,7 @@ void GLCD_Init (void) {
   wr_reg(0x003c,0x0701);
   wr_reg(0x003d,0x000f);
   delay(15);
+	
   wr_reg(0x0050,0x0000);        
   wr_reg(0x0051,0x00ef);   
   wr_reg(0x0052,0x0000);     
@@ -283,9 +292,9 @@ void GLCD_Init (void) {
 
 
 /*******************************************************************************
-* Set draw window region to whole screen                                       *
-*   Parameter:                                                                 *
-*   Return:                                                                    *
+* 	Set draw window region to whole screen                                     *
+*   Parameter: -                                                                *
+*   Return: -                                                                  *
 *******************************************************************************/
 
 void GLCD_WindowMax (void) {
@@ -299,9 +308,9 @@ void GLCD_WindowMax (void) {
 
 
 /*******************************************************************************
-* Draw a pixel in foreground color                                             *
-*   Parameter:      x:        horizontal position                              *
-*                   y:        vertical position                                *
+* 	Draw a pixel in foreground color                                           *
+*   Parameter:      x:  horizontal position                             			 *
+*                   y:  vertical position                              			   *
 *   Return:                                                                    *
 *******************************************************************************/
 
@@ -316,11 +325,12 @@ void GLCD_PutPixel (unsigned int x, unsigned int y) {
   wr_cmd(0x22);
   wr_dat(TextColor);
   LCD_CS(1)
+	
 }
 
 
 /*******************************************************************************
-* Set foreground color                                                         *
+* 	Set foreground color                                                       *
 *   Parameter:      color:    foreground color                                 *
 *   Return:                                                                    *
 *******************************************************************************/
@@ -328,25 +338,27 @@ void GLCD_PutPixel (unsigned int x, unsigned int y) {
 void GLCD_SetTextColor (unsigned short color) {
 
   TextColor = color;
+	
 }
 
 
 /*******************************************************************************
-* Set background color                                                         *
+* 	Set background color                                                       *
 *   Parameter:      color:    background color                                 *
-*   Return:                                                                    *
+*   Return: -                                                              *
 *******************************************************************************/
 
 void GLCD_SetBackColor (unsigned short color) {
 
   BackColor = color;
+	
 }
 
 
 /*******************************************************************************
-* Clear display                                                                *
+* 	Clear display                                                              *
 *   Parameter:      color:    display clearing color                           *
-*   Return:                                                                    *
+*   Return: -                                                                   *
 *******************************************************************************/
 
 void GLCD_Clear (unsigned short color) {
@@ -367,11 +379,11 @@ void GLCD_Clear (unsigned short color) {
 
 
 /*******************************************************************************
-* Draw character on given position                                             *
-*   Parameter:      x:        horizontal position                              *
-*                   y:        vertical position                                *
-*                   c:        pointer to character bitmap                      *
-*   Return:                                                                    *
+* 	Draw character on given position                                           *
+*   Parameter:      x:   horizontal position                              		 *
+*                   y:   vertical position                                		 *
+*                   c:   pointer to character bitmap                      		 *
+*   Return: -                                                                  *
 *******************************************************************************/
 
 void GLCD_DrawChar (unsigned int x, unsigned int y, unsigned short *c) {
@@ -406,10 +418,10 @@ void GLCD_DrawChar (unsigned int x, unsigned int y, unsigned short *c) {
 
 
 /*******************************************************************************
-* Disply character on given line                                               *
-*   Parameter:      x:        horizontal position                              *
-*                   y:        vertical position                                *
-*                   c:        pointer to character bitmap                      *
+* 	Disply character on given line                                             *
+*   Parameter:      x:  horizontal position                             			 *
+*                   y:  vertical position                            			     *
+*                   c:  pointer to character bitmap                    			   *
 *   Return:                                                                    *
 *******************************************************************************/
 
@@ -417,15 +429,16 @@ void GLCD_DisplayChar (unsigned int x, unsigned int y, unsigned char c) {
 
   c -= 32;
   GLCD_DrawChar(x, y, (unsigned short *)&Font_24x16[c * CHAR_H]);
+	
 }
 
 
 /*******************************************************************************
-* Disply string on given column                                                *
-*   Parameter:      x:        horizontal position                              *
-*                   y:        vertical position                                *
-*                   s:        pointer to string                                *
-*   Return:                                                                    *
+* 	Disply string on given column                                              *
+*   Parameter:      x:   horizontal position                             			 *
+*                   y:   vertical position                               			 *
+*                   s:   pointer to string                               			 *
+*   Return: -                                                                *
 *******************************************************************************/
 
 void GLCD_DisplayVerticalString (unsigned int x, unsigned int y, unsigned char *s) {
@@ -438,11 +451,11 @@ void GLCD_DisplayVerticalString (unsigned int x, unsigned int y, unsigned char *
 
 
 /*******************************************************************************
-* Disply string on given line                                                  *
-*   Parameter:      x:        horizontal position                              *
-*                   y:        vertical position                                *
-*                   c:        pointer to character bitmap                      *
-*   Return:                                                                    *
+* 	Disply string on given line                                                *
+*   Parameter:      x:   horizontal position                             	   	 *
+*                   y:   vertical position                                     *
+*                   c:   pointer to character bitmap                    	     *
+*   Return: -                                                                  *
 *******************************************************************************/
 
 void GLCD_DisplayString (unsigned int x, unsigned int y, unsigned char *s) {
@@ -465,19 +478,20 @@ void GLCD_DisplayString (unsigned int x, unsigned int y, unsigned char *s) {
 *                   y1:         vertical ending position                       *
 *                   color:      color of line                                  *
 *                   thickness:  thickness of line                              *
-*   Return:                                                                    *
+*   Return: -                                                                  *
 *******************************************************************************/
+
 void GLCD_DisplayLine(unsigned int x0, unsigned int y0, unsigned int x1, unsigned int y1, unsigned int color, unsigned int thickness){
 
   unsigned int i,j;
   GLCD_SetTextColor(color);
   
-  if(x0 == x1){ /*   Vertical Line    */
+  if(x0 == x1){ 					/*   Vertical Line    */
     for(i=x0-((thickness-1)/2); i<x0+((thickness-1)/2); i++)
       for(j=y0; j<=y1; j++)
         GLCD_PutPixel(i,j);
   }
-  if(y0 == y1){ /*   Horizontal Line   */
+  if(y0 == y1){ 					/*   Horizontal Line   */
     for(i=x0; i<=x1; i++)
       for(j=y0-((thickness-1)/2); j<y0+((thickness-1)/2); j++)
         GLCD_PutPixel(i,j);
@@ -486,10 +500,8 @@ void GLCD_DisplayLine(unsigned int x0, unsigned int y0, unsigned int x1, unsigne
 }
 
 
-
-
 /*******************************************************************************
-* Display Diagonal Line. It is supposed to draw a diagonal line. Could 		   *
+* Display Diagonal Line. It is supposed to draw a diagonal line. Could 		     *
 * degenerate into a point. For simmetry reasons, it is supposed that a odd 	   *
 * number is used as thickness.                                                 *
 * (This function is optimized for 16 bits per pixel format, it has to be       *
@@ -500,8 +512,9 @@ void GLCD_DisplayLine(unsigned int x0, unsigned int y0, unsigned int x1, unsigne
 *                   y1:         vertical ending position                       *
 *                   color:      color of line                                  *
 *                   thickness:  thickness of line                              *
-*   Return:                                                                    *
+*   Return: -                                                                  *
 *******************************************************************************/
+
 void GLCD_DisplayDiagonalLine(unsigned int x, unsigned int y, unsigned int height, unsigned int color, unsigned int thickness){
   unsigned int i,j;
   GLCD_SetTextColor(color);
@@ -512,7 +525,6 @@ void GLCD_DisplayDiagonalLine(unsigned int x, unsigned int y, unsigned int heigh
       GLCD_PutPixel(i,j);
  
 }
-
 
 /*******************************************************************************
 * Display Antidiagonal Line. It is supposed to draw an antidiagonal line.      *
@@ -526,7 +538,7 @@ void GLCD_DisplayDiagonalLine(unsigned int x, unsigned int y, unsigned int heigh
 *                   y1:         vertical ending position                       *
 *                   color:      color of line                                  *
 *                   thickness:  thickness of line                              *
-*   Return:                                                                    *
+*   Return: -                                                                  *
 *******************************************************************************/
 void GLCD_DisplayAntidiagonalLine(unsigned int x, unsigned int y, unsigned int height, unsigned int color, unsigned int thickness){
   unsigned int i,j;

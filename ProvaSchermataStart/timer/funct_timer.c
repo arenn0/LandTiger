@@ -1,29 +1,23 @@
-/*********************************************************************************************************
-**--------------File Info---------------------------------------------------------------------------------
-** File name:           funct_timer.h
-** Last modified Date:  2014-09-25
-** Last Version:        V1.00
-** Descriptions:        High level functions, possibly exploiting lib_*.c functions
-** Correlated files:    timer.h
-**--------------------------------------------------------------------------------------------------------       
-*********************************************************************************************************/
+/*--------------------------------------------------------------------------------------------
+Name: funct_timer.c
+Purpose: High level functions, exploiting lib_*.c functions
+Note(s): This work is licensed under the Creative Commons Attribution 3.0 Italy License. 
+				 To view a copy of this license, visit http://creativecommons.org/licenses/by/3.0/it/ 
+				 or send a letter to Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
+--------------------------------------------------------------------------------------------*/
+
 #include "../lpc17xx.h"
 #include "timer.h"
 
-/*****************************************************************************
-** Function name:		delayMs
-**
-** Descriptions:		Start the timer delay in milo seconds
-**						until elapsed
-**
-** parameters:			timer number, Delay value in milo second			 
-** 						
-** Returned value:		None
-** 
-** Comments [PB]:		Not a very good functions because it is 
-**						keeping the processor control while waiting
-**						count completion
-*****************************************************************************/
+/*******************************************************************************
+* Function Name  : delayMs
+* Description    : delay
+* Input          : - timer_num : timer number
+*									 - delayInMs : delay in milliseconds
+* Output         : None
+* Return         : None
+*******************************************************************************/
+
 void delayMs(uint8_t timer_num, uint32_t delayInMs)
 {
   if ( timer_num == 0 )
@@ -53,6 +47,3 @@ void delayMs(uint8_t timer_num, uint32_t delayInMs)
   return;
 }
 
-/******************************************************************************
-**                            End Of File
-******************************************************************************/

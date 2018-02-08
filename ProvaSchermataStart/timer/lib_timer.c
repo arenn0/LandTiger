@@ -1,24 +1,22 @@
-/*********************************************************************************************************
-**--------------File Info---------------------------------------------------------------------------------
-** File name:           lib_timer.c
-** Last modified Date:  2014-09-25
-** Last Version:        V1.00
-** Descriptions:        atomic functions to be used by higher sw levels
-** Correlated files:    lib_timer.c, funct_timer.c, IRQ_timer.c
-**--------------------------------------------------------------------------------------------------------
-*********************************************************************************************************/
+/*--------------------------------------------------------------------------------------------
+Name: lib_timer.c
+Purpose: Atomic functions to be used by higher sw levels
+Note(s): This work is licensed under the Creative Commons Attribution 3.0 Italy License. 
+				 To view a copy of this license, visit http://creativecommons.org/licenses/by/3.0/it/ 
+				 or send a letter to Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
+--------------------------------------------------------------------------------------------*/
+
 #include "../lpc17xx.h"
 #include "timer.h"
 
-/******************************************************************************
-** Function name:		enable_timer
-**
-** Descriptions:		Enable timer
-**
-** parameters:			timer number: 0 or 1
-** Returned value:		None
-**
-******************************************************************************/
+/*******************************************************************************
+* Function Name  : enable_timer
+* Description    : enable timer
+* Input          : - timer_num : 0 or 1 
+* Output         : None
+* Return         : None
+*******************************************************************************/
+
 void enable_timer( uint8_t timer_num )
 {
   if ( timer_num == 0 )
@@ -32,15 +30,13 @@ void enable_timer( uint8_t timer_num )
   return;
 }
 
-/******************************************************************************
-** Function name:		disable_timer
-**
-** Descriptions:		Disable timer
-**
-** parameters:			timer number: 0 or 1
-** Returned value:		None
-**
-******************************************************************************/
+/*******************************************************************************
+* Function Name  : disable_timer
+* Description    : disable timer
+* Input          : - timer_num : 0 or 1 
+* Output         : None
+* Return         : None
+*******************************************************************************/
 void disable_timer( uint8_t timer_num )
 {
   if ( timer_num == 0 )
@@ -54,15 +50,13 @@ void disable_timer( uint8_t timer_num )
   return;
 }
 
-/******************************************************************************
-** Function name:		reset_timer
-**
-** Descriptions:		Reset timer
-**
-** parameters:			timer number: 0 or 1
-** Returned value:		None
-**
-******************************************************************************/
+/*******************************************************************************
+* Function Name  : reset_timer
+* Description    : reset timer
+* Input          : - timer_num : 0 or 1 
+* Output         : None
+* Return         : None
+*******************************************************************************/
 void reset_timer( uint8_t timer_num )
 {
   uint32_t regVal;
@@ -81,6 +75,15 @@ void reset_timer( uint8_t timer_num )
   }
   return;
 }
+
+/*******************************************************************************
+* Function Name  : init_timer
+* Description    : init timer
+* Input          : - timer_num : 0 or 1 
+*									 - TimerInterval : timer interval
+* Output         : None
+* Return         : None
+*******************************************************************************/
 
 uint32_t init_timer ( uint8_t timer_num, uint32_t TimerInterval )
 {
@@ -159,6 +162,3 @@ uint32_t init_timer ( uint8_t timer_num, uint32_t TimerInterval )
   return (0);
 }
 
-/******************************************************************************
-**                            End Of File
-******************************************************************************/

@@ -1,3 +1,11 @@
+/*--------------------------------------------------------------------------------------------
+Name: GLCD_TTT.c
+Purpose: Functions to init and play TTT 
+Note(s): This work is licensed under the Creative Commons Attribution 3.0 Italy License. 
+				 To view a copy of this license, visit http://creativecommons.org/licenses/by/3.0/it/ 
+				 or send a letter to Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
+--------------------------------------------------------------------------------------------*/
+
 #include "GLCD_TTT.h"
 #include <stdint.h>
 
@@ -15,15 +23,15 @@ typedef struct{
 } cell;
 
 typedef struct{
-	point start;
+		point start;
     unsigned int width; 
     unsigned int height; 
     unsigned int color; 
     unsigned int thickness;
-	unsigned int horizontalDisp;
+		unsigned int horizontalDisp;
     unsigned int verticalDisp;
     unsigned int detach;
-	cell pos[3][3];
+		cell pos[3][3];
 } lattice;
 
 
@@ -31,8 +39,6 @@ static lattice lattice0;
 static int player = 0;
 static int nmoves = 0;
 // static positions coordinates;
-
-
 
 /*	PROTOTYPES	*/
 
@@ -60,18 +66,18 @@ void _wait_delay(int i){
 	for(;j<i;j++);
 }
 
-						  
-
+						 
 /*******************************************************************************
-* Display Lattice for Tic-Tac-Toe game.                                        *
+* 	Display Lattice for Tic-Tac-Toe game.                                      *
 *   Parameter:      x0:         horizontal starting position                   *
 *                   y0:         vertical starting position                     *
 *                   width:                                                     *
 *                   height:                                                    *
 *                   color:      color of line                                  *
 *                   thickness:  thickness of line                              *
-*   Return:                                                                    *
+*   Return: -                                                                  *
 *******************************************************************************/
+
 void GLCD_DisplayTTTLattice(unsigned int x0, unsigned int y0, unsigned int width, unsigned int height, unsigned int color, unsigned int thickness){
 
   unsigned int HorizontalDisp = width / 3;
@@ -79,35 +85,34 @@ void GLCD_DisplayTTTLattice(unsigned int x0, unsigned int y0, unsigned int width
   unsigned int detach = 10;
  
   TTT_init(x0,y0,width,height,color,thickness,HorizontalDisp,VerticalDisp,detach);
+
+  GLCD_DisplayLine(x0 + HorizontalDisp, y0 + detach, x0 + HorizontalDisp, y0 + height -detach, color, thickness); 				/*      1 Vertical Line       */
+  GLCD_DisplayLine(x0 + 2*HorizontalDisp, y0 + detach, x0 + 2*HorizontalDisp, y0 + height -detach, color, thickness); 		/*      2 Vertical Line       */
   
+	GLCD_DisplayLine(x0 + detach, y0 + VerticalDisp, x0 + width - detach, y0 + VerticalDisp, color, thickness); 						/*      1 Horizontal Line       */
+  GLCD_DisplayLine(x0 + detach, y0 + 2*VerticalDisp, x0 + width - detach, y0 + 2*VerticalDisp, color, thickness); 				/*      2 Horizontal Line       */
 
+  GLCD_DisplayLine(x0 , y0 , x0, y0 + height, color, thickness + 2); 																											/*      1 Lattice Vertical Line       */
+  GLCD_DisplayLine(x0 + width , y0 , x0 + width, y0 + height, color, thickness + 2); 																			/*      2 Lattice Vertical Line       */
 
-  GLCD_DisplayLine(x0 + HorizontalDisp, y0 + detach, x0 + HorizontalDisp, y0 + height -detach, color, thickness); /*      1 Vertical Line       */
-  GLCD_DisplayLine(x0 + 2*HorizontalDisp, y0 + detach, x0 + 2*HorizontalDisp, y0 + height -detach, color, thickness); /*      2 Vertical Line       */
-  
-	GLCD_DisplayLine(x0 + detach, y0 + VerticalDisp, x0 + width - detach, y0 + VerticalDisp, color, thickness); /*      1 Horizontal Line       */
-  GLCD_DisplayLine(x0 + detach, y0 + 2*VerticalDisp, x0 + width - detach, y0 + 2*VerticalDisp, color, thickness); /*      2 Horizontal Line       */
-
-  GLCD_DisplayLine(x0 , y0 , x0, y0 + height, color, thickness + 2); /*      1 Lattice Vertical Line       */
-  GLCD_DisplayLine(x0 + width , y0 , x0 + width, y0 + height, color, thickness + 2); /*      2 Lattice Vertical Line       */
-
-  GLCD_DisplayLine(x0 , y0, x0 + width, y0, color, thickness + 2); /*      1 Lattice Horizontal Line       */
-  GLCD_DisplayLine(x0 , y0 + height, x0 + width, y0 + height, color, thickness + 2); /*      2 Lattice Horizontal Line       */
+  GLCD_DisplayLine(x0 , y0, x0 + width, y0, color, thickness + 2); 																												/*      1 Lattice Horizontal Line       */
+  GLCD_DisplayLine(x0 , y0 + height, x0 + width, y0 + height, color, thickness + 2); 																			/*      2 Lattice Horizontal Line       */
 }
 
-/************************************************************************************
-* Initialization for TTT structure                                                       *
+/*****************************************************************************************
+* 	Initialization for TTT structure                                                     *
 *   Parameter:      x0:             horizontal starting position                         *
 *                   y0:             vertical starting position                           *
 *                   width:                                                               *
 *                   height:                                                              *
 *                   color:          color of line                                        *
-*                   thickness:      thickness of line                                   *
+*                   thickness:      thickness of line                                    *
 *                    horizontalDisp: displacement between two adjacent vertical lines    *
 *                    verticalDisp:   displacement between two adjacent horizontal lines  *
 *                    detach;         number of empty pixel between border and lattice    *
-*   Return:                                                                              *
-************************************************************************************/
+*   Return: -                                                                            *
+*****************************************************************************************/
+
 void TTT_init(unsigned int x0, unsigned int y0, unsigned int width, unsigned int height, unsigned int color, unsigned int thickness, unsigned int horizontalDisp, unsigned int verticalDisp, unsigned int detach){
   lattice0.start.x=x0;	
   lattice0.start.y=y0;
@@ -148,9 +153,16 @@ void TTT_init(unsigned int x0, unsigned int y0, unsigned int width, unsigned int
 }
 
 
+/*******************************************************************************
+* 	Coordinates where tp print TTT move (for each cell)                        *
+*																																							 *
+*   Parameter:      i:      	 row                   													 *
+*                   j:         column                     										 *   
+*   Return: 				point : coordinates																				 *
+*		Note:           i and j start from 1 instead of 0 to enumerate the number  *
+*										of rows/colums of the lattice     												 *          
+*******************************************************************************/
 
-/*    Coordinates where tp print TTT move (for each cell)                                           */
-/*    - i and j start from 1 instead of 0 to enumerate the number of rows/colums of the lattice    */
 point computePos(unsigned int i, unsigned int j){
   point p;
   p.x = lattice0.start.x + j * lattice0.horizontalDisp - lattice0.horizontalDisp/2 - CHAR_W/2;
@@ -158,7 +170,16 @@ point computePos(unsigned int i, unsigned int j){
   return p;
 }
 
-/*    Command used to represent one move into the lattice in the correct position     */
+/********************************************************************************
+* 	Command used to represent one move into the lattice in the correct position *                        
+*																																							  *
+*   Parameter:      ln:      	 line                   												  *
+*                   col:       column                                           *
+*                   color:		 color																					  *
+*										move:			 player 0 or 1																	  *
+*   Return: 				None																											  *                                                           
+********************************************************************************/
+
 void TTT_DisplayMove(unsigned int ln, unsigned int col, unsigned int color, unsigned int move){
 	if(!TTT_CheckMove(ln,col,' '))  // if 1 full, move not authorized
 		return;
@@ -169,7 +190,15 @@ void TTT_DisplayMove(unsigned int ln, unsigned int col, unsigned int color, unsi
 	TTT_CheckVictory(ln,col,move);
 }
 
-/*    Check for victory configuration     */
+/********************************************************************************
+* 	Check for victory configuration 																						*                        
+*																																							  *
+*   Parameter:      ln:      	 line                   												  *
+*                   col:       column                                           *																					  
+*										move:			 player 0 or 1																	  *
+*   Return: 				None																											  *                                                           
+********************************************************************************/
+
 void TTT_CheckVictory(unsigned int ln,unsigned int col,unsigned int move){
 	point c;
 	int victory = 0;
@@ -238,12 +267,30 @@ void TTT_CheckVictory(unsigned int ln,unsigned int col,unsigned int move){
 	}
 		
 }
-/* Make your move and insert into lattice */
+
+/********************************************************************************
+* 	Make your move and insert into lattice 																			*                        
+*																																							  *
+*   Parameter:      x:      	x position read from touchscreen                  *
+*                   y:        y position read from touchscreen                  *																					  
+*   Return: 				None																											  *                                                           
+********************************************************************************/
+
 void TTT_YourMove(int x, int y){
 	 Map_Into_Lattice(&x,&y);
 	 TTT_DisplayMove(x, y, Red,  player);
 }
-/* Assign the correct cell of the TTT lattice and check for offset validity */
+
+/********************************************************************************
+* 	Assign the correct cell of the TTT lattice and check for offset validity		*                        
+*																																							  *
+*   Parameter:      x:      	x position read from touchscreen                  *
+*                   y:        y position read from touchscreen                  *																					  
+*   Return: 				None																												*
+*   Note:						Values of x and y are overwritten with the correct cell 		*
+*										coordinates of the lattice                        					*                             
+********************************************************************************/
+
 void Map_Into_Lattice(int *x, int *y){
 		point posizioni[NCELLS];
 		int distanze[NCELLS],i,min;
@@ -251,8 +298,6 @@ void Map_Into_Lattice(int *x, int *y){
 		if((*x) < lattice0.start.x || ((*x)> lattice0.start.x +lattice0.width) || ((*y) < lattice0.start.y) || ((*y) > (lattice0.start.y+lattice0.height))){
 			return;
 		}
-	
-	
 	
 		posizioni[0]=computePos(1,1);
 		posizioni[0].x+=CHAR_W/2;

@@ -1,3 +1,10 @@
+/*--------------------------------------------------------------------------------------------
+Name: IRQ_serial.c
+Purpose: Set up serial communication to test different handler (including touch panel)  
+Note(s): This work is licensed under the Creative Commons Attribution 3.0 Italy License. 
+				 To view a copy of this license, visit http://creativecommons.org/licenses/by/3.0/it/ 
+				 or send a letter to Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
+--------------------------------------------------------------------------------------------*/
 #include "../led/led.h"
 #include "Serial.h"
 #include "../LPC17xx.H"                              /* LPC17xx definitions    */

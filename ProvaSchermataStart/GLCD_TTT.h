@@ -1,3 +1,10 @@
+/*--------------------------------------------------------------------------------------------
+Name: GLCD_TTT.h
+Purpose: Prototypes declaration for TTT functions 
+Note(s): This work is licensed under the Creative Commons Attribution 3.0 Italy License. 
+				 To view a copy of this license, visit http://creativecommons.org/licenses/by/3.0/it/ 
+				 or send a letter to Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
+--------------------------------------------------------------------------------------------*/
 #ifndef _GLCD_TTT_H
 #define _GLCD_TTT_H
 
