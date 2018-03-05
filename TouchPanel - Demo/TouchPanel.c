@@ -1,4 +1,3 @@
-/*--------------------------------------------------------------------------------------------
 Name: TouchPanel.c
 Purpose: Functions to init and read values from touch panel 
 Note(s): This work is licensed under the Creative Commons Attribution 3.0 Italy License. 
@@ -9,15 +8,21 @@ Note(s): This work is licensed under the Creative Commons Attribution 3.0 Italy 
 #include "GLCD.h"
 #include "GLCD_TTT.h"
 
+#define NRead 20 // Number of inputs read for every EINT3 interrupt (triggered by each touch)
 
-#define CONVX 10.69411765 // Rescaling factor to map the read value
-#define CONVY 14.91596639 // Rescaling factor to map the read value
+#define CONVX 10.69411765 // Rescaling factor to map the coordinate x 
+#define CONVY 14.91596639 // Rescaling factor to map the coordinate y
+
+//Screen border points: {{top left corner}, {top right corner}, {bottom left corner}, {bottom right corner}}
+//These values refer to margin coordinates read before rescaling.
 
 Coordinate DisplayMargins[4] =   { {3750,250}, { 250, 250}, {3750,3800}, {250,3800}} ;
 
 /*******************************************************************************
 * Function Name  : LPC17xx_SPI_SetSpeed
-* Description    : Set clock speed to desired value
+* Description    : Set clock speed to desired value.
+*		   The used pins refer to SSP controller to communicate with SPI 
+* 		   for backward compatibility.
 * Input          : - speed: speed
 * Output         : None
 * Return         : None
@@ -26,14 +31,16 @@ void LPC17xx_SPI_SetSpeed (uint8_t speed)
 {
 	speed &= 0xFE;
 	if ( speed < 2  ) {
-		speed = 2 ;
+		speed = 2 ;   //min possible value
 	}
 	LPC_SSP1->CPSR = speed;
 }
 
 /*******************************************************************************
 * Function Name  : ADS7843_SPI_Init
-* Description    : ADS7843 SPI initialization
+* Description    : ADS7843 SPI initialization.
+* 		   The used pins refer to SSP controller to communicate with SPI 
+* 		   for backward compatibility.
 * Input          : None
 * Output         : None
 * Return         : None
@@ -56,7 +63,7 @@ static void ADS7843_SPI_Init(void)
 	LPC_SSP1->CR0  = 0x0007;                    /* 8Bit, CPOL=0, CPHA=0         */
 	LPC_SSP1->CR1  = 0x0002;                    /* SSP1 enable, master          */
 
-	LPC17xx_SPI_SetSpeed ( SPI_SPEED_400kHz );
+	LPC17xx_SPI_SetSpeed ( SPI_SPEED_400kHz );   //Default speed setting 
 
 	/* wait for busy gone */
 	while( LPC_SSP1->SR & ( 1 << SSPSR_BSY ) );
@@ -82,14 +89,14 @@ static void ADS7843_SPI_Init(void)
 
 void TP_Init(void) 
 { 
-	LPC_PINCON->PINSEL4    |= (1 << 26); // P2.13 as EINT3
+	LPC_PINCON->PINSEL4    |= (1 << 26); // P2.13 as EINT3 (touch panel interrupt) 
 	
   LPC_GPIO0->FIODIR |=  (1<<6);   /* P0.6 CS is output */
   LPC_GPIO2->FIODIR |=  (0<<13);  /* P2.13 TP_INT is input (touch screen) */
   TP_CS(1); 
   ADS7843_SPI_Init(); 
 	
-  LPC_SC->EXTMODE += 0x8;			// Set EINT3 in the external interrupt mode registeer
+  LPC_SC->EXTMODE += 0x8;			// Set EINT3 in the external interrupt mode register
 	
 	NVIC_EnableIRQ(EINT3_IRQn); // Enable EINT3 in the Nested Vector Interrupt Controller
 
@@ -97,7 +104,7 @@ void TP_Init(void)
 
 /*******************************************************************************
 * Function Name  : DelayUS
-* Description    : Delay
+* Description    : Delay, roughly cnt * 1 millisecond
 * Input          : - cnt : delay
 * Output         : None
 * Return         : None
@@ -118,10 +125,12 @@ static void DelayUS(uint16_t cnt)
 
 /*******************************************************************************
 * Function Name  : WR_CMD
-* Description    : ADS7843D write command
+* Description    : ADS7843D write command.
+* 		   The used pins refer to SSP controller to communicate with SPI 
+* 		   for backward compatibility. 
 * Input          : - cmd: command
 * Output         : None
-* Return         : None
+* Return         : Received value
 *******************************************************************************/
 static uint8_t WR_CMD (uint8_t cmd)  
 { 
@@ -130,7 +139,7 @@ static uint8_t WR_CMD (uint8_t cmd)
   while (LPC_SSP1->SR & (1 << SSPSR_BSY) ); 	     /* Wait for transfer to finish */
   LPC_SSP1->DR = cmd;
   while (LPC_SSP1->SR & (1 << SSPSR_BSY) ); 	     /* Wait for transfer to finish */
-  while( !( LPC_SSP1->SR & ( 1 << SSPSR_RNE ) ) );	 /* Wait untill the Rx FIFO is not empty */
+  while( !( LPC_SSP1->SR & ( 1 << SSPSR_RNE ) ) );	 /* Wait until the Rx FIFO is not empty */
   byte_r = LPC_SSP1->DR;
 
   return byte_r;                                     /* Return received value */
@@ -149,10 +158,10 @@ static int RD_AD(void)
 { 
   unsigned short buf,temp; 
 
-  temp = WR_CMD(0x00);
+  temp = WR_CMD(0x00);   //NOP
   buf = temp<<8; 
   DelayUS(5); 
-  temp = WR_CMD(0x00);;
+  temp = WR_CMD(0x00);   //NOP 
   buf |= temp; 
   buf>>=3; 
   buf&=0xfff; 
@@ -190,9 +199,9 @@ int Read_Y(void)
 {  
   int i; 
   TP_CS(0); 
-  DelayUS(1); 
+  DelayUS(5); 
   WR_CMD(CHY); 
-  DelayUS(1); 
+  DelayUS(5); 
   i=RD_AD(); 
   TP_CS(1); 
   return i;     
@@ -227,10 +236,10 @@ Coordinate * Read_Ads7846(void)
 {
   static Coordinate  screen;
   int i,sumx=0,sumy=0,counterx=0,countery=0;
-  int TP_X[1],TP_Y[1];
+  int TP_X[1],TP_Y[1];    // X and Y coordinates
 
   uint8_t count=0;
-  int buffer[2][20]={{0},{0}};  
+  int buffer[2][NRead]={{0},{0}};  
   do					       
   {		   
     TP_GetAdXY(TP_X,TP_Y);  
@@ -239,28 +248,35 @@ Coordinate * Read_Ads7846(void)
 	  count++; 
 		delay(1);
   }
-  while(!TP_INT_IN && count<20);  
-  screen.x=0;
-	screen.y=0;
-	
+  while(!TP_INT_IN && count<NRead);  
+  screen.x=0;  // flag wrong data read
+  screen.y=0;  // flag wrong data read
+
+
 	for (i=0;i< count;i++){
-		if(!(buffer[0][i]>3750 || buffer[0][i]<250)){
-				sumx+=buffer[0][i];
+		// Sum over x
+		if(!(buffer[0][i]>3750 || buffer[0][i]<250)){ 
+			  // X coordinate in display margins
+			  sumx+=buffer[0][i];  
 			  counterx++;
 		}
+		// Sum over y
 		if(!(buffer[1][i]>3750 || buffer[1][i]<250)){
-				sumy+=buffer[1][i];
-				countery++;
+		          // Y coordinate in display margins
+			  sumy+=buffer[1][i];
+			  countery++;
 		}	
 	}
 	if(counterx!=0 && countery!=0){
+		// Average
 		screen.x=sumx/counterx;
 		screen.y=sumy/countery;
 	}
 	
-	Map_Pixel(&screen);
+	Map_Pixel(&screen);   
   if(screen.x > 320 ||screen.y > 240){
-		screen.x=0;
+	  // flag wrong data 
+ 	  screen.x=0;
 	  screen.y=0;
 	}
 	return &screen;
@@ -276,7 +292,7 @@ Coordinate * Read_Ads7846(void)
 *******************************************************************************/
 void Map_Pixel(Coordinate *touch){
 	
-	touch->x = 320 - (touch->x - DisplayMargins[1].x )/CONVX;
-	touch->y = (touch->y - DisplayMargins[0].y)/CONVY + 1;
+	touch->x = 320 - (touch->x - DisplayMargins[1].x )/CONVX;   // Read value of X decreases from left to right
+	touch->y = (touch->y - DisplayMargins[0].y)/CONVY + 1;   // Read value of Y increases from top to bottom, however the screen works in the same way
 	return;
 }
